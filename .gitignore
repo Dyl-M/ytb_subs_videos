@@ -351,3 +351,9 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+
+.idea/
+API_KEY.txt
+PocketTube_DB.json
+code_secret_client_518997527256-l5lclk78j4lmt3ijpp2st38h9nfed1np.apps.googleusercontent.com.json
+client_secret_CLIENTID.json

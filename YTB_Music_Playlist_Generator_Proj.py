@@ -76,8 +76,8 @@ def video_selection(original_list, up_date, down_date):
     return_list = []
     print("Number of video to manage : {}".format(len(original_list)))
     for video in original_list:
-        date_org_format = video["snippet"]["publishedAt"].replace("T", " ").replace("Z", "")
-        date_new_format = datetime.strptime(date_org_format, "%Y-%m-%d %H:%M:%S.%f") + timedelta(hours=1)
+        date_org_format = video["snippet"]["publishedAt"].replace("T", " ").replace("Z", "").replace(".000", "")
+        date_new_format = datetime.strptime(date_org_format, "%Y-%m-%d %H:%M:%S") + timedelta(hours=1)
         if down_date <= date_new_format <= up_date:
             return_list.append(
                 {"id": video["snippet"]["resourceId"]["videoId"], "date": date_new_format,
@@ -161,11 +161,12 @@ channel_db = music_channel_in_json("PocketTube_DB.json")
 """ - 2. Récupération des vidéos entre 2 dates souhaitées -  """
 
 today = datetime.today()
-prev_date = today - timedelta(days=3)
-# Exemple de format : prev_date = datetime.strptime("2019/07/19", '%Y/%m/%d')
 
+"""Exemple de format : """
+# prev_date = today - timedelta(days=3)
+prev_date = datetime.strptime("2020/01/16", '%Y/%m/%d')
 
-final_list = managing_db(channel_db, today, prev_date)
+# final_list = managing_db(channel_db, today, prev_date)
 
 # print("Channel 1 to 9")
 # all_the_music_i_want1 = get_all_videos(channel_db[0:10], today, prev_date)
@@ -207,11 +208,11 @@ final_list = managing_db(channel_db, today, prev_date)
 
 """ - 3. Ouverture des playlists temporaires non-modifiables -  """
 
-print(temp_playlist_builder(final_list))
+# print(temp_playlist_builder(final_list))
 
 """ - 4. Création & ouverture des playlists temporaires modifiables -  """
 
-# open_edited_url("url_playlist")
+open_edited_url("url_playlist")
 
 """ - TESTS - """
 # print(len(all_the_music_i_want))

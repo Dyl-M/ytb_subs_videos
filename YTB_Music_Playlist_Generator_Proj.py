@@ -7,28 +7,32 @@ import webbrowser
 
 """ - CREDITS - """
 
-# Base de données de catégorie de chaîne par https://yousub.info/, application PocketTube - YouTube Subs. Manager.
+"""
+Base de données de catégorie de chaîne par https://yousub.info/, application PocketTube - YouTube Subs. Manager.
 
-# Fonction de récupération des vidéos par "Indian Pythonista"
+Fonction de récupération des vidéos par "Indian Pythonista"
 
-# Code Original : https://github.com/nikhilkumarsingh/YouTubeAPI-Examples/blob/master/4.Channel-Vids.ipynb
-# GitHub : https://github.com/nikhilkumarsingh
-# YouTube : https://www.youtube.com/channel/UCkUq-s6z57uJFUFBvZIVTyg
+Code Original : https://github.com/nikhilkumarsingh/YouTubeAPI-Examples/blob/master/4.Channel-Vids.ipynb
+GitHub : https://github.com/nikhilkumarsingh
+YouTube : https://www.youtube.com/channel/UCkUq-s6z57uJFUFBvZIVTyg
+"""
 
 """ - INFORMATION DE SCRIPT """
 
-# Nom : YTB_Music_Playlist_Generator_Proj.py
-# Objectif : créer un script capable de capter les vidéos des chaines YouTube musicales entre 2 dates pour en faire une
-# playlist d'écoute personelle.
+"""
+Nom : YTB_Music_Playlist_Generator_Proj.py
+Objectif : créer un script capable de capter les vidéos des chaines YouTube musicales entre 2 dates pour en faire une
+playlist d'écoute personelle.
 
-# Sommaire des phases
+Sommaire des phases
 
-# 1. Importer une liste d'URL de chaine YouTube musicale (cf. dossier JSON).
-# 2. Récupération des vidéos entre 2 dates souhaitées.
-# 3. Ouverture des playlists temporaires non-modifiables.
-# 4. Création & ouverture des playlists temporaires modifiables.
+1. Importer une liste d'URL de chaine YouTube musicale (cf. dossier JSON).
+2. Récupération des vidéos entre 2 dates souhaitées.
+3. Ouverture des playlists temporaires non-modifiables.
+4. Création & ouverture des playlists temporaires modifiables.
 
 # La phase 4 est a éxécuté après un traitement préalable dans un naviguateur web pouvant gérer facilement des favoris.
+"""
 
 """ - ELEMENTS PREPARATOIRE - """
 

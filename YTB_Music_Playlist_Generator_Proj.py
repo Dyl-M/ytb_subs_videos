@@ -1,9 +1,11 @@
 # -*- coding: utf-8 -*-
 
-from googleapiclient.discovery import build
-from datetime import datetime, timedelta
 import json
+import sys
 import webbrowser
+from apiclient.discovery import build
+from datetime import datetime, timedelta
+from dateutil.relativedelta import relativedelta
 
 """ - CREDITS - """
 
@@ -38,7 +40,7 @@ Sommaire des phases
 
 reader = open("API_KEY.txt", "r")
 api_key = reader.read()
-youtube = build('youtube', 'v3', developerKey=api_key)
+youtube = build('youtube', version='v3', developerKey=api_key)
 
 """ - FONCTION LOCALES - """
 
@@ -74,6 +76,8 @@ def get_channel_videos(channel_id):
 
 def video_selection(original_list, up_date, down_date):
     return_list = []
+    a_year_list = []
+    a_year_ago = datetime.today() - relativedelta(years=1)
     print("Number of video to manage : {}".format(len(original_list)))
     for video in original_list:
         date_org_format = video["snippet"]["publishedAt"].replace("T", " ").replace("Z", "").replace(".000", "")
@@ -82,20 +86,32 @@ def video_selection(original_list, up_date, down_date):
             return_list.append(
                 {"id": video["snippet"]["resourceId"]["videoId"], "date": date_new_format,
                  "title": video["snippet"]["title"]})
-        print("[VIDEO] Progress : {} of {} DONE".format(original_list.index(video) + 1, len(original_list)))
-    print("{} videos selected.".format(len(return_list)))
-    return return_list
+        if a_year_ago <= date_new_format:
+            a_year_list.append(
+                {"id": video["snippet"]["resourceId"]["videoId"], "date": date_new_format,
+                 "title": video["snippet"]["title"]})
+    return [return_list, len(a_year_list)]
 
 
 def get_all_videos(channel_list, up_date, down_date):
     print("Number of channel to explore : {}\n".format(len(channel_list)))
     all_channels_content = []
     for channelid in channel_list:
-        print("[CHANNEL] Progress : {} of {}".format(channel_list.index(channelid) + 1, len(channel_list)))
+        print("[CHANNEL] Progress : {} out of {}".format(channel_list.index(channelid) + 1, len(channel_list)))
         content_raw = get_channel_videos(channelid)
-        content_reformat = video_selection(content_raw, up_date, down_date)
+        selection_lists = video_selection(content_raw, up_date, down_date)
+        content_reformat = selection_lists[0]
+        a_year_len = selection_lists[1]
         all_channels_content += content_reformat
-        print("Channel n°{} DONE.\n".format(channel_list.index(channelid) + 1))
+        if a_year_len == 0:
+            status = "CHANNEL n°{} (ID: {}) DONE.\nStatus: INACTIVE\n".format(channel_list.index(channelid) + 1,
+                                                                              channelid)
+            webbrowser.open("https://www.youtube.com/channel/{}".format(channelid))
+        else:
+            status = "CHANNEL n°{} (ID: {}) DONE.\nStatus: ACTIVE ({} video(s) in a year)\nNumber of video(s)" \
+                     " selected: {}.\n".format(channel_list.index(channelid) + 1, channelid, a_year_len,
+                                               len(content_reformat))
+        print(status)
     return all_channels_content
 
 
@@ -107,10 +123,8 @@ def open_lot_url(list_of_url):
 def temp_playlist_builder(list_videos):
     str_ids = ""
     list_of_playlist = []
-    print("{} videos to manage.".format(len(list_videos)))
     for element in list_videos:
         modulo = (list_videos.index(element) + 1) % 50
-        print("Progresse : {} of {}".format(list_videos.index(element) + 1, len(list_videos)))
         if list_videos.index(element) + 1 != len(list_videos) and modulo != 0:
             str_ids += "{},".format(element["id"])
         else:
@@ -120,7 +134,9 @@ def temp_playlist_builder(list_videos):
     for id_chain in ids_lists:
         playlist_txt_format = "http://www.youtube.com/watch_videos?video_ids={}".format(id_chain)
         list_of_playlist.append(playlist_txt_format)
-    print("Task done. Number of temp. playlist : {}.".format(len(list_of_playlist)))
+    to_print = "Temporal playlists created.\nNumber of temp. playlist : {}\nNumber of videos : {}".format(
+        len(list_of_playlist), len(list_videos))
+    print(to_print)
     open_lot_url(list_of_playlist)
     return list_of_playlist
 
@@ -141,11 +157,11 @@ def managing_db(channel_data_base, date_sup, date_inf):
     born_sup = 10
     while born_inf <= len(channel_data_base):
         if born_sup + 1 > len(channel_data_base):
-            print("Channel {} to {}".format(born_inf, len(channel_data_base)))
+            print("Channel {} to {}\n".format(born_inf + 1, len(channel_data_base)))
             return_list += get_all_videos(channel_data_base[born_inf:], date_sup, date_inf)
             born_inf += 10
         else:
-            print("Channel {} to {}".format(born_inf, born_sup - 1))
+            print("Channel {} to {}\n".format(born_inf + 1, born_sup))
             return_list += get_all_videos(channel_data_base[born_inf:born_sup], date_sup, date_inf)
             born_inf += 10
             born_sup += 10
@@ -163,17 +179,22 @@ channel_db = music_channel_in_json("PocketTube_DB.json")
 today = datetime.today()
 
 """ Exemple de format : """
-prev_date = today - timedelta(days=2)
-# prev_date = datetime.strptime("2020/01/16", '%Y/%m/%d')
-# Dernière date : 2020-05-07 13:45:53.291576
+# prev_date = today - timedelta(days=2)
+prev_date = datetime.strptime("2020-06-27 12:48:13", '%Y-%m-%d %H:%M:%S')
+# Dernière date : 2020-07-03 15:48:41
 
 """ - 3. Ouverture des playlists temporaires non-modifiables -  """
 
-# final_list = managing_db(channel_db, today, prev_date)
-
-# print(temp_playlist_builder(final_list))
-# print(today)
+# orig_stdout = sys.stdout
+# with open('Logs/Log_{:%Y-%m-%d_%H.%M.%S}.txt'.format(today), 'w', encoding="utf-8") as file:
+#     sys.stdout = file
+#     final_list = managing_db(channel_db, today, prev_date)
+#     print(temp_playlist_builder(final_list))
+#     print("")
+#     print("Execution date: {:%Y-%m-%d %H:%M:%S}".format(today))
+#     sys.stdout = orig_stdout
+#     file.close()
 
 """ - 4. Création & ouverture des playlists temporaires modifiables -  """
 
-open_edited_url("url_playlist")
+# open_edited_url("url_playlist")

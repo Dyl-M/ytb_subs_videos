@@ -30,14 +30,14 @@ YouTube : https://www.youtube.com/channel/UCkUq-s6z57uJFUFBvZIVTyg
 """ - INFORMATION DE SCRIPT """
 
 """
-Nom : YTB_Music_Playlist_Generator_Proj.py
+Nom : youtube_playlist_generator.py
 Objectif : créer un script capable de capter les vidéos des chaines YouTube musicales entre 2 dates pour en faire une
 playlist d'écoute personelle.
 
 Sommaire des phases
 
 1. Importer une liste d'URL de chaine YouTube musicale (cf. dossier JSON).
-<<2. Récupération des vidéos entre 2 dates souhaitées.
+2. Récupération des vidéos entre 2 dates souhaitées.
 3. Ouverture des playlists temporaires non-modifiables.
 4. Création & ouverture des playlists temporaires modifiables.
 
@@ -140,9 +140,9 @@ def temp_playlist_builder(videos_dict):
     mix_playlists = list()
     chunk_durations = list()
     all_ids = [video["id"] for video in videos_dict]
-    chunck50 = [list(subl) for subl in np.array_split(np.array(all_ids), len(all_ids) // 50 + 1)]
+    chunk50 = [list(subl) for subl in np.array_split(np.array(all_ids), len(all_ids) // 50 + 1)]
 
-    for a_chunk in chunck50:
+    for a_chunk in chunk50:
         chunk_durations += get_vid_duration(a_chunk)
 
     duration_list = [{"id": an_id, "duration": dur} for an_id, dur in zip(all_ids, chunk_durations)]
@@ -150,17 +150,17 @@ def temp_playlist_builder(videos_dict):
     mix_ids = [elem["id"] for elem in duration_list if elem["duration"] > timedelta(seconds=1200)]
 
     if music_ids:
-        music_chunck50 = [list(subl2) for subl2 in np.array_split(np.array(music_ids), len(music_ids) // 50 + 1)]
-        for a_chuck in music_chunck50:
-            playlist_txt_format = f"http://www.youtube.com/watch_videos?video_ids={','.join(a_chuck)}"
+        music_chunk50 = [list(subl2) for subl2 in np.array_split(np.array(music_ids), len(music_ids) // 50 + 1)]
+        for a_chunk in music_chunk50:
+            playlist_txt_format = f"http://www.youtube.com/watch_videos?video_ids={','.join(a_chunk)}"
             music_playlists.append(playlist_txt_format)
     else:
         music_ids = list()
 
     if mix_ids:
-        mix_chunck50 = [list(subl3) for subl3 in np.array_split(np.array(mix_ids), len(mix_ids) // 50 + 1)]
-        for a_chuck in mix_chunck50:
-            playlist_txt_format = f"http://www.youtube.com/watch_videos?video_ids={','.join(a_chuck)}"
+        mix_chunk50 = [list(subl3) for subl3 in np.array_split(np.array(mix_ids), len(mix_ids) // 50 + 1)]
+        for a_chunk in mix_chunk50:
+            playlist_txt_format = f"http://www.youtube.com/watch_videos?video_ids={','.join(a_chunk)}"
             mix_playlists.append(playlist_txt_format)
     else:
         mix_ids = list()
@@ -240,8 +240,9 @@ channel_db = music_channel_in_json("PocketTube_DB.json")
 today = datetime.today()
 
 """ Exemple de format : """
+
 # prev_date = today - timedelta(days=2)
-a_date = "2020-10-15 19:33:28"
+a_date = "2020-11-09 12:18:32"
 prev_date = datetime.strptime(a_date, '%Y-%m-%d %H:%M:%S')
 
 """ - 3. Ouverture des playlists temporaires non-modifiables -  """
@@ -251,6 +252,3 @@ prev_date = datetime.strptime(a_date, '%Y-%m-%d %H:%M:%S')
 """ - 4. Création & ouverture des playlists temporaires modifiables -  """
 
 # open_edited_url("url_playlist")
-
-# print(dict_obj)
-# print(dict_obj['chrome'][0:10])

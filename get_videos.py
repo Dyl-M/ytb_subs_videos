@@ -3,17 +3,18 @@
 import json
 import numpy as np
 import os
-import sys
 import webbrowser
 from datetime import datetime, timedelta, timezone
 from dateutil.relativedelta import relativedelta
 from Google import Create_Service
-from googleapiclient.discovery import build
-from google_auth_oauthlib import flow
 from isodate import parse_duration
 from os import listdir, remove
 from os.path import isfile, join, getctime
 from time import sleep
+
+# import sys
+# from googleapiclient.discovery import build
+# from google_auth_oauthlib import flow
 
 """ - CREDITS - """
 
@@ -212,7 +213,7 @@ def get_all_videos(channel_ids_list, latest_date, oldest_date):
     :param channel_ids_list: list of channel from 'get_channel_list'.
     :param latest_date: Upper bound of time interval. (Corresponding with 'video_in_period' function)
     :param oldest_date: Lower bound of time interval. (Corresponding with 'video_in_period' function)
-    :return: #TODO
+    :return: a dictionary containing list of video's id and information to write into log.
     """
 
     log_str = str()
@@ -239,6 +240,7 @@ def get_all_videos(channel_ids_list, latest_date, oldest_date):
             to_print += f"Number of videos uploaded in a year: 0\n" \
                         f"STATUS: INACTIVE\n"
             if channel_id not in channels_url_exeception:
+                # Ignore exceptions.
                 webbrowser.open(f"https://www.youtube.com/channel/{channelid}")
 
         to_print += f"\nTotal number of videos selected so far: {len(all_video_ids)}\n{'/' * 50}\n"
@@ -276,6 +278,11 @@ def duration_filter(dict_ids_and_durations, minute_threshold=10):
 
 
 def clean_logs(directory):
+    """
+    A function clean oldest log files.
+    :param directory: Logs folder path.
+    """
+
     files = [{"file_name": f"{directory}/{file}", "date_crea": getctime(f"{directory}/{file}")} for file in
              listdir(f"{directory}") if isfile(join(f"{directory}", file))][:-10]
     if not files:
@@ -288,6 +295,17 @@ def clean_logs(directory):
 
 def execution(path_channel_data_base_json, path_playlist_ids_json, latest_date, oldest_date, short_vid_index,
               long_vid_index):
+    """
+    Full execution of the process.
+
+    :param path_channel_data_base_json: file path to channel data_base (Corresponding with 'get_channel_list' function)
+    :param path_playlist_ids_json: file path to playlists URL (Corresponding with 'read_json' function)
+    :param latest_date: Upper bound of time interval. (Corresponding with 'get_all_videos' function)
+    :param oldest_date: Lower bound of time interval. (Corresponding with 'get_all_videos' function)
+    :param short_vid_index: key value corresponding to short videos playlist in playlist_ids_json file
+    :param long_vid_index: key value corresponding to long videos playlist in playlist_ids_json file
+    """
+
     today_date = datetime.today()
 
     log = f"Date of execution: {today_date:%Y-%m-%d %H:%M:%S}\n" \
@@ -329,16 +347,17 @@ def execution(path_channel_data_base_json, path_playlist_ids_json, latest_date, 
 
 " - MAIN PROGRAM -"
 
-music_channels_test = "PocketTube_DB.json"
-playlist_ids_json = "temp_playlist.json"
+if __name__ == "__main__":
+    music_channels_test = "PocketTube_DB.json"
+    playlist_ids_json = "temp_playlist.json"
 
-today = datetime.today()
-a_date = "2020-11-12 10:48:19"
-prev_date = datetime.strptime(a_date, '%Y-%m-%d %H:%M:%S')
+    today = datetime.today()
+    a_date = "2020-11-12 10:48:19"
+    prev_date = datetime.strptime(a_date, '%Y-%m-%d %H:%M:%S')
 
-execution(path_channel_data_base_json=music_channels_test,
-          path_playlist_ids_json=playlist_ids_json,
-          latest_date=today,
-          oldest_date=prev_date,
-          short_vid_index="music",
-          long_vid_index="mix")
+    execution(path_channel_data_base_json=music_channels_test,
+              path_playlist_ids_json=playlist_ids_json,
+              latest_date=today,
+              oldest_date=prev_date,
+              short_vid_index="music",
+              long_vid_index="mix")

@@ -1,0 +1,790 @@
+Channel 1 to 10
+
+Number of channels to explore : 10
+
+[CHANNEL] Progress : 1 out of 10
+Number of video to manage : 761
+CHANNEL n°1 (ID: UCvNjdDE6xRuvYVhUGAl2BIQ) DONE.
+Status: ACTIVE (102 video(s) in a year)
+Number of videos selected: 1.
+
+[CHANNEL] Progress : 2 out of 10
+Number of video to manage : 4368
+CHANNEL n°2 (ID: UCalCDSmZAYD73tqVZ4l8yJg) DONE.
+Status: ACTIVE (468 video(s) in a year)
+Number of videos selected: 1.
+
+[CHANNEL] Progress : 3 out of 10
+Number of video to manage : 292
+CHANNEL n°3 (ID: UCmKm7HJdOfkWLyml-fzKlVg) DONE.
+Status: ACTIVE (33 video(s) in a year)
+Number of videos selected: 1.
+
+[CHANNEL] Progress : 4 out of 10
+Number of video to manage : 11
+CHANNEL n°4 (ID: UC3XZCxTQ55JkT35W27Jtbyg) DONE.
+Status: ACTIVE (2 video(s) in a year)
+Number of videos selected: 0.
+
+[CHANNEL] Progress : 5 out of 10
+Number of video to manage : 1142
+CHANNEL n°5 (ID: UCMRrge2ToIanH-mU-2sYWFw) DONE.
+Status: ACTIVE (79 video(s) in a year)
+Number of videos selected: 0.
+
+[CHANNEL] Progress : 6 out of 10
+Number of video to manage : 2798
+CHANNEL n°6 (ID: UCwIgPuUJXuf2nY-nKsEvLOg) DONE.
+Status: ACTIVE (356 video(s) in a year)
+Number of videos selected: 2.
+
+[CHANNEL] Progress : 7 out of 10
+Number of video to manage : 231
+CHANNEL n°7 (ID: UCtjqUbiFV_-fmcttR30CU_A) DONE.
+Status: ACTIVE (4 video(s) in a year)
+Number of videos selected: 0.
+
+[CHANNEL] Progress : 8 out of 10
+Number of video to manage : 399
+CHANNEL n°8 (ID: UC9EzN5XNxhxqHZevM9kSuaw) DONE.
+Status: ACTIVE (24 video(s) in a year)
+Number of videos selected: 0.
+
+[CHANNEL] Progress : 9 out of 10
+Number of video to manage : 1175
+CHANNEL n°9 (ID: UCU2KRSjJd1_NnBc2re0efDQ) DONE.
+Status: ACTIVE (103 video(s) in a year)
+Number of videos selected: 1.
+
+[CHANNEL] Progress : 10 out of 10
+Number of video to manage : 12516
+CHANNEL n°10 (ID: UCGZXYc32ri4D0gSLPf2pZXQ) DONE.
+Status: ACTIVE (653 video(s) in a year)
+Number of videos selected: 2.
+
+Channel 11 to 20
+
+Number of channels to explore : 10
+
+[CHANNEL] Progress : 1 out of 10
+Number of video to manage : 712
+CHANNEL n°1 (ID: UCj6PgTET0VZkAPxoTVBLY4g) DONE.
+Status: ACTIVE (5 video(s) in a year)
+Number of videos selected: 0.
+
+[CHANNEL] Progress : 2 out of 10
+Number of video to manage : 1878
+CHANNEL n°2 (ID: UCu5jfQcpRLm9xhmlSd5S8xw) DONE.
+Status: ACTIVE (136 video(s) in a year)
+Number of videos selected: 0.
+
+[CHANNEL] Progress : 3 out of 10
+Number of video to manage : 1079
+CHANNEL n°3 (ID: UCCvVpbYRgYjMN7mG7qQN0Pg) DONE.
+Status: ACTIVE (259 video(s) in a year)
+Number of videos selected: 1.
+
+[CHANNEL] Progress : 4 out of 10
+Number of video to manage : 49
+CHANNEL n°4 (ID: UC3hV4vnwzTUPSb7CAx4mXvg) DONE.
+Status: ACTIVE (2 video(s) in a year)
+Number of videos selected: 0.
+
+[CHANNEL] Progress : 5 out of 10
+Number of video to manage : 45
+CHANNEL n°5 (ID: UCix2xQdHe26jSiZjfUwQ9hA) DONE.
+Status: ACTIVE (23 video(s) in a year)
+Number of videos selected: 0.
+
+[CHANNEL] Progress : 6 out of 10
+Number of video to manage : 484
+CHANNEL n°6 (ID: UCLxqd1S685Mpyk9wy8jkVJQ) DONE.
+Status: ACTIVE (56 video(s) in a year)
+Number of videos selected: 0.
+
+[CHANNEL] Progress : 7 out of 10
+Number of video to manage : 201
+CHANNEL n°7 (ID: UC32W3Kpoh6T6pG5PrWm0LTQ) DONE.
+Status: ACTIVE (72 video(s) in a year)
+Number of videos selected: 0.
+
+[CHANNEL] Progress : 8 out of 10
+Number of video to manage : 2824
+CHANNEL n°8 (ID: UCrUT57KGEzrCrmLb4PRgluw) DONE.
+Status: ACTIVE (179 video(s) in a year)
+Number of videos selected: 0.
+
+[CHANNEL] Progress : 9 out of 10
+Number of video to manage : 1278
+CHANNEL n°9 (ID: UCZRiXu9UWkOnavBTc8DHq4g) DONE.
+Status: ACTIVE (348 video(s) in a year)
+Number of videos selected: 1.
+
+[CHANNEL] Progress : 10 out of 10
+Number of video to manage : 1571
+CHANNEL n°10 (ID: UC7tD6Ifrwbiy-BoaAHEinmQ) DONE.
+Status: ACTIVE (145 video(s) in a year)
+Number of videos selected: 0.
+
+Channel 21 to 30
+
+Number of channels to explore : 10
+
+[CHANNEL] Progress : 1 out of 10
+Number of video to manage : 151
+CHANNEL n°1 (ID: UCOwp0yt9MI-w7jiwctWa8_w) DONE.
+Status: ACTIVE (127 video(s) in a year)
+Number of videos selected: 1.
+
+[CHANNEL] Progress : 2 out of 10
+Number of video to manage : 135
+CHANNEL n°2 (ID: UC8y7Xa0E1Lo6PnVsu2KJbOA) DONE.
+Status: ACTIVE (24 video(s) in a year)
+Number of videos selected: 0.
+
+[CHANNEL] Progress : 3 out of 10
+Number of video to manage : 872
+CHANNEL n°3 (ID: UCBInzKtl4sdgN6zBEzNDV7w) DONE.
+Status: ACTIVE (64 video(s) in a year)
+Number of videos selected: 0.
+
+[CHANNEL] Progress : 4 out of 10
+Number of video to manage : 304
+CHANNEL n°4 (ID: UCpl_hLTsmqiWTJEiErCOk_g) DONE.
+Status: ACTIVE (70 video(s) in a year)
+Number of videos selected: 0.
+
+[CHANNEL] Progress : 5 out of 10
+Number of video to manage : 50
+CHANNEL n°5 (ID: UCOcAqO8axXJf5tPXA9N1PcQ) DONE.
+Status: ACTIVE (5 video(s) in a year)
+Number of videos selected: 0.
+
+[CHANNEL] Progress : 6 out of 10
+Number of video to manage : 269
+CHANNEL n°6 (ID: UCPgH1KIGI1Zrp0mqy99kgkg) DONE.
+Status: ACTIVE (41 video(s) in a year)
+Number of videos selected: 0.
+
+[CHANNEL] Progress : 7 out of 10
+Number of video to manage : 73
+CHANNEL n°7 (ID: UCKhvCrZV95i7-czm8dHCzEQ) DONE.
+Status: ACTIVE (13 video(s) in a year)
+Number of videos selected: 0.
+
+[CHANNEL] Progress : 8 out of 10
+Number of video to manage : 2504
+CHANNEL n°8 (ID: UCO0sfpPwj3PGVVH_jiqBA6A) DONE.
+Status: ACTIVE (609 video(s) in a year)
+Number of videos selected: 2.
+
+[CHANNEL] Progress : 9 out of 10
+Number of video to manage : 1273
+CHANNEL n°9 (ID: UCXvSeBDvzmPO05k-0RyB34w) DONE.
+Status: ACTIVE (240 video(s) in a year)
+Number of videos selected: 1.
+
+[CHANNEL] Progress : 10 out of 10
+Number of video to manage : 556
+CHANNEL n°10 (ID: UCxZElbCNUCxM9aORoDI6E4g) DONE.
+Status: ACTIVE (75 video(s) in a year)
+Number of videos selected: 0.
+
+Channel 31 to 40
+
+Number of channels to explore : 10
+
+[CHANNEL] Progress : 1 out of 10
+Number of video to manage : 285
+CHANNEL n°1 (ID: UC0YlhwQabxkHb2nfRTzsTTA) DONE.
+Status: ACTIVE (42 video(s) in a year)
+Number of videos selected: 0.
+
+[CHANNEL] Progress : 2 out of 10
+Number of video to manage : 9
+CHANNEL n°2 (ID: UCIKxvRizmZF7siPvUSaL0ng) DONE.
+Status: ACTIVE (9 video(s) in a year)
+Number of videos selected: 0.
+
+[CHANNEL] Progress : 3 out of 10
+Number of video to manage : 1340
+CHANNEL n°3 (ID: UCIKF1msqN7lW9gplsifOPkQ) DONE.
+Status: ACTIVE (181 video(s) in a year)
+Number of videos selected: 0.
+
+[CHANNEL] Progress : 4 out of 10
+Number of video to manage : 1169
+CHANNEL n°4 (ID: UCDVKYPXwdYUQfgA05CkyFSg) DONE.
+Status: ACTIVE (71 video(s) in a year)
+Number of videos selected: 0.
+
+[CHANNEL] Progress : 5 out of 10
+Number of video to manage : 110
+CHANNEL n°5 (ID: UC-SygDfqa_ALKX3M3HE16vw) DONE.
+Status: ACTIVE (53 video(s) in a year)
+Number of videos selected: 1.
+
+[CHANNEL] Progress : 6 out of 10
+Number of video to manage : 1683
+CHANNEL n°6 (ID: UCPfyre-gaEZkTl5oCoxtkSQ) DONE.
+Status: ACTIVE (125 video(s) in a year)
+Number of videos selected: 1.
+
+[CHANNEL] Progress : 7 out of 10
+Number of video to manage : 74
+CHANNEL n°7 (ID: UChU2sXodPC6WFTQvw5m3NKw) DONE.
+Status: ACTIVE (15 video(s) in a year)
+Number of videos selected: 0.
+
+[CHANNEL] Progress : 8 out of 10
+Number of video to manage : 215
+CHANNEL n°8 (ID: UC8tyyA-UIbefEexcLatHmUQ) DONE.
+Status: ACTIVE (60 video(s) in a year)
+Number of videos selected: 0.
+
+[CHANNEL] Progress : 9 out of 10
+Number of video to manage : 979
+CHANNEL n°9 (ID: UCPT5Q93YbgJ_7du1gV7UHQQ) DONE.
+Status: ACTIVE (108 video(s) in a year)
+Number of videos selected: 2.
+
+[CHANNEL] Progress : 10 out of 10
+Number of video to manage : 60
+CHANNEL n°10 (ID: UCxGKfJ-Xf8lgdX9PC00YMrA) DONE.
+Status: ACTIVE (13 video(s) in a year)
+Number of videos selected: 0.
+
+Channel 41 to 50
+
+Number of channels to explore : 10
+
+[CHANNEL] Progress : 1 out of 10
+Number of video to manage : 245
+CHANNEL n°1 (ID: UCivgedmwoy8PH8bpaWeXT_Q) DONE.
+Status: ACTIVE (10 video(s) in a year)
+Number of videos selected: 0.
+
+[CHANNEL] Progress : 2 out of 10
+Number of video to manage : 191
+CHANNEL n°2 (ID: UCLLVQloTOSNkIF9uSdh_lWQ) DONE.
+Status: ACTIVE (71 video(s) in a year)
+Number of videos selected: 1.
+
+[CHANNEL] Progress : 3 out of 10
+Number of video to manage : 23
+CHANNEL n°3 (ID: UCLOGIsYh9g6_YDRnJHet-aQ) DONE.
+Status: ACTIVE (12 video(s) in a year)
+Number of videos selected: 0.
+
+[CHANNEL] Progress : 4 out of 10
+Number of video to manage : 584
+CHANNEL n°4 (ID: UCWp8Rc0qh08RZKlWxNfQ6PQ) DONE.
+Status: ACTIVE (339 video(s) in a year)
+Number of videos selected: 2.
+
+[CHANNEL] Progress : 5 out of 10
+Number of video to manage : 1230
+CHANNEL n°5 (ID: UCj_Y-xJ2DRDGP4ilfzplCOQ) DONE.
+Status: ACTIVE (283 video(s) in a year)
+Number of videos selected: 1.
+
+[CHANNEL] Progress : 6 out of 10
+Number of video to manage : 311
+CHANNEL n°6 (ID: UCLnzhrD2Te8g6x83MhMkkWA) DONE.
+Status: ACTIVE (22 video(s) in a year)
+Number of videos selected: 0.
+
+[CHANNEL] Progress : 7 out of 10
+Number of video to manage : 463
+CHANNEL n°7 (ID: UC_OtnV-9QZmBj6oWBelMoZw) DONE.
+Status: ACTIVE (39 video(s) in a year)
+Number of videos selected: 0.
+
+[CHANNEL] Progress : 8 out of 10
+Number of video to manage : 64
+CHANNEL n°8 (ID: UCFgzZg_dsL8PLlZMe0VNa6A) DONE.
+Status: ACTIVE (13 video(s) in a year)
+Number of videos selected: 0.
+
+[CHANNEL] Progress : 9 out of 10
+Number of video to manage : 2334
+CHANNEL n°9 (ID: UC1WKD9pJt5Sa4DCVaoJSAGw) DONE.
+Status: ACTIVE (229 video(s) in a year)
+Number of videos selected: 1.
+
+[CHANNEL] Progress : 10 out of 10
+Number of video to manage : 2
+CHANNEL n°10 (ID: UCd-9JELFGru-WnXiCAZudbw) DONE.
+Status: ACTIVE (1 video(s) in a year)
+Number of videos selected: 0.
+
+Channel 51 to 60
+
+Number of channels to explore : 10
+
+[CHANNEL] Progress : 1 out of 10
+Number of video to manage : 404
+CHANNEL n°1 (ID: UCBYg9_11ErMsFFNR66TRuLA) DONE.
+Status: ACTIVE (83 video(s) in a year)
+Number of videos selected: 1.
+
+[CHANNEL] Progress : 2 out of 10
+Number of video to manage : 149
+CHANNEL n°2 (ID: UCFMjkrMT7Gvg84v0av-DIwA) DONE.
+Status: ACTIVE (44 video(s) in a year)
+Number of videos selected: 0.
+
+[CHANNEL] Progress : 3 out of 10
+Number of video to manage : 329
+CHANNEL n°3 (ID: UC1vdi4J54ucetZoFAfQenMg) DONE.
+Status: ACTIVE (33 video(s) in a year)
+Number of videos selected: 0.
+
+[CHANNEL] Progress : 4 out of 10
+Number of video to manage : 148
+CHANNEL n°4 (ID: UCyC_4jvPzLiSkJkLIkA7B8g) DONE.
+Status: ACTIVE (23 video(s) in a year)
+Number of videos selected: 1.
+
+[CHANNEL] Progress : 5 out of 10
+Number of video to manage : 1208
+CHANNEL n°5 (ID: UCSXm6c-n6lsjtyjvdD0bFVw) DONE.
+Status: ACTIVE (162 video(s) in a year)
+Number of videos selected: 0.
+
+[CHANNEL] Progress : 6 out of 10
+Number of video to manage : 404
+CHANNEL n°6 (ID: UCbr_gpafjcwT_MjV6K3Nh5g) DONE.
+Status: ACTIVE (55 video(s) in a year)
+Number of videos selected: 1.
+
+[CHANNEL] Progress : 7 out of 10
+Number of video to manage : 97
+CHANNEL n°7 (ID: UCp1onwPbFRBtgniH2Gm0TCg) DONE.
+Status: ACTIVE (37 video(s) in a year)
+Number of videos selected: 0.
+
+[CHANNEL] Progress : 8 out of 10
+Number of video to manage : 178
+CHANNEL n°8 (ID: UC5H_KXkPbEsGs0tFt8R35mA) DONE.
+Status: ACTIVE (51 video(s) in a year)
+Number of videos selected: 0.
+
+[CHANNEL] Progress : 9 out of 10
+Number of video to manage : 24
+CHANNEL n°9 (ID: UCF1FENB3dyH9qRLcQpIwovA) DONE.
+Status: ACTIVE (3 video(s) in a year)
+Number of videos selected: 0.
+
+[CHANNEL] Progress : 10 out of 10
+Number of video to manage : 1193
+CHANNEL n°10 (ID: UCiiN5Ld9pGMwcYrLUJfYlCQ) DONE.
+Status: ACTIVE (126 video(s) in a year)
+Number of videos selected: 3.
+
+Channel 61 to 70
+
+Number of channels to explore : 10
+
+[CHANNEL] Progress : 1 out of 10
+Number of video to manage : 316
+CHANNEL n°1 (ID: UCp8OOssjSjGZRVYK6zWbNLg) DONE.
+Status: ACTIVE (112 video(s) in a year)
+Number of videos selected: 1.
+
+[CHANNEL] Progress : 2 out of 10
+Number of video to manage : 1593
+CHANNEL n°2 (ID: UCJ6td3C9QlPO9O_J5dF4ZzA) DONE.
+Status: ACTIVE (117 video(s) in a year)
+Number of videos selected: 1.
+
+[CHANNEL] Progress : 3 out of 10
+Number of video to manage : 2736
+CHANNEL n°3 (ID: UC5nc_ZtjKW1htCVZVRxlQAQ) DONE.
+Status: ACTIVE (306 video(s) in a year)
+Number of videos selected: 1.
+
+[CHANNEL] Progress : 4 out of 10
+Number of video to manage : 784
+CHANNEL n°4 (ID: UCuCFbUOszL3QkYVUWZzKH8Q) DONE.
+Status: ACTIVE (198 video(s) in a year)
+Number of videos selected: 0.
+
+[CHANNEL] Progress : 5 out of 10
+Number of video to manage : 1815
+CHANNEL n°5 (ID: UCaAlh3Iy7rAcO3MgD_O3Kkg) DONE.
+Status: ACTIVE (177 video(s) in a year)
+Number of videos selected: 1.
+
+[CHANNEL] Progress : 6 out of 10
+Number of video to manage : 706
+CHANNEL n°6 (ID: UCl8iwAEa4i5LsFMXbiI2J-g) DONE.
+Status: ACTIVE (84 video(s) in a year)
+Number of videos selected: 1.
+
+[CHANNEL] Progress : 7 out of 10
+Number of video to manage : 834
+CHANNEL n°7 (ID: UC_aEa8K-EOJ3D6gOs7HcyNg) DONE.
+Status: ACTIVE (154 video(s) in a year)
+Number of videos selected: 0.
+
+[CHANNEL] Progress : 8 out of 10
+Number of video to manage : 111
+CHANNEL n°8 (ID: UC0qXX3G-8nxJmyCK4G5BuLQ) DONE.
+Status: ACTIVE (27 video(s) in a year)
+Number of videos selected: 0.
+
+[CHANNEL] Progress : 9 out of 10
+Number of video to manage : 424
+CHANNEL n°9 (ID: UC-EVnno6x6-aAG6g1ZVoN3A) DONE.
+Status: ACTIVE (71 video(s) in a year)
+Number of videos selected: 0.
+
+[CHANNEL] Progress : 10 out of 10
+Number of video to manage : 1009
+CHANNEL n°10 (ID: UC8nidfOKkcgpO6tfc9OSdBQ) DONE.
+Status: ACTIVE (4 video(s) in a year)
+Number of videos selected: 0.
+
+Channel 71 to 80
+
+Number of channels to explore : 10
+
+[CHANNEL] Progress : 1 out of 10
+Number of video to manage : 259
+CHANNEL n°1 (ID: UCZDbwxi1owenInykTi6Y8Bw) DONE.
+Status: ACTIVE (44 video(s) in a year)
+Number of videos selected: 0.
+
+[CHANNEL] Progress : 2 out of 10
+Number of video to manage : 914
+CHANNEL n°2 (ID: UCCYyPjBATsUOdwpqrvr8z-Q) DONE.
+Status: ACTIVE (175 video(s) in a year)
+Number of videos selected: 0.
+
+[CHANNEL] Progress : 3 out of 10
+Number of video to manage : 1664
+CHANNEL n°3 (ID: UC3ifTl5zKiCAhHIBQYcaTeg) DONE.
+Status: ACTIVE (223 video(s) in a year)
+Number of videos selected: 1.
+
+[CHANNEL] Progress : 4 out of 10
+Number of video to manage : 433
+CHANNEL n°4 (ID: UCO6Rq8SSY5ui4ptyMkLirIQ) DONE.
+Status: ACTIVE (69 video(s) in a year)
+Number of videos selected: 0.
+
+[CHANNEL] Progress : 5 out of 10
+Number of video to manage : 37
+CHANNEL n°5 (ID: UCZe-1I-T8m9m5ctLdNx4SNg) DONE.
+Status: ACTIVE (24 video(s) in a year)
+Number of videos selected: 0.
+
+[CHANNEL] Progress : 6 out of 10
+Number of video to manage : 33
+CHANNEL n°6 (ID: UC_DRS3lamW6T1_iheYLhEkQ) DONE.
+Status: ACTIVE (13 video(s) in a year)
+Number of videos selected: 0.
+
+[CHANNEL] Progress : 7 out of 10
+Number of video to manage : 2070
+CHANNEL n°7 (ID: UCnhHe0_bk_1_0So41vsZvWw) DONE.
+Status: ACTIVE (253 video(s) in a year)
+Number of videos selected: 2.
+
+[CHANNEL] Progress : 8 out of 10
+Number of video to manage : 139
+CHANNEL n°8 (ID: UCPZUQqtVDmcjm4NY5FkzqLA) DONE.
+Status: ACTIVE (30 video(s) in a year)
+Number of videos selected: 0.
+
+[CHANNEL] Progress : 9 out of 10
+Number of video to manage : 36
+CHANNEL n°9 (ID: UCXLrdG_ZVt4US1iV40ytiQQ) DONE.
+Status: ACTIVE (20 video(s) in a year)
+Number of videos selected: 0.
+
+[CHANNEL] Progress : 10 out of 10
+Number of video to manage : 1457
+CHANNEL n°10 (ID: UCzTR9iSH-TFC4-ocDS_ll4A) DONE.
+Status: ACTIVE (361 video(s) in a year)
+Number of videos selected: 1.
+
+Channel 81 to 90
+
+Number of channels to explore : 10
+
+[CHANNEL] Progress : 1 out of 10
+Number of video to manage : 167
+CHANNEL n°1 (ID: UChAhCmcGr2sDO27t_t6ndbA) DONE.
+Status: ACTIVE (17 video(s) in a year)
+Number of videos selected: 0.
+
+[CHANNEL] Progress : 2 out of 10
+Number of video to manage : 223
+CHANNEL n°2 (ID: UCNwFuUbJXKQpP1ot1ZEE6Yg) DONE.
+Status: ACTIVE (81 video(s) in a year)
+Number of videos selected: 1.
+
+[CHANNEL] Progress : 3 out of 10
+Number of video to manage : 447
+CHANNEL n°3 (ID: UC3S6m1mbQbyYed33uK3-n1w) DONE.
+Status: ACTIVE (224 video(s) in a year)
+Number of videos selected: 1.
+
+[CHANNEL] Progress : 4 out of 10
+Number of video to manage : 37
+CHANNEL n°4 (ID: UCtwSCDjbQKShJU0kIzBgTdA) DONE.
+Status: ACTIVE (13 video(s) in a year)
+Number of videos selected: 0.
+
+[CHANNEL] Progress : 5 out of 10
+Number of video to manage : 53
+CHANNEL n°5 (ID: UCqn1V54Y8IwTsjPrQHKtzGw) DONE.
+Status: ACTIVE (1 video(s) in a year)
+Number of videos selected: 0.
+
+[CHANNEL] Progress : 6 out of 10
+Number of video to manage : 9848
+CHANNEL n°6 (ID: UCpDJl2EmP7Oh90Vylx0dZtA) DONE.
+Status: ACTIVE (655 video(s) in a year)
+Number of videos selected: 4.
+
+[CHANNEL] Progress : 7 out of 10
+Number of video to manage : 553
+CHANNEL n°7 (ID: UCB-7IEpKGIdXkgGUObE5D5A) DONE.
+Status: ACTIVE (238 video(s) in a year)
+Number of videos selected: 1.
+
+[CHANNEL] Progress : 8 out of 10
+Number of video to manage : 1288
+CHANNEL n°8 (ID: UCLTZddgA_La9H4Ngg99t_QQ) DONE.
+Status: ACTIVE (136 video(s) in a year)
+Number of videos selected: 0.
+
+[CHANNEL] Progress : 9 out of 10
+Number of video to manage : 225
+CHANNEL n°9 (ID: UC0n9yiP-AD2DpuuYCDwlNxQ) DONE.
+Status: ACTIVE (16 video(s) in a year)
+Number of videos selected: 0.
+
+[CHANNEL] Progress : 10 out of 10
+Number of video to manage : 217
+CHANNEL n°10 (ID: UCPk3RMMXAfLhMJPFpQhye9g) DONE.
+Status: ACTIVE (44 video(s) in a year)
+Number of videos selected: 1.
+
+Channel 91 to 100
+
+Number of channels to explore : 10
+
+[CHANNEL] Progress : 1 out of 10
+Number of video to manage : 28
+CHANNEL n°1 (ID: UCRD5h8GEUzygdTL_sdU9_DQ) DONE.
+Status: ACTIVE (14 video(s) in a year)
+Number of videos selected: 0.
+
+[CHANNEL] Progress : 2 out of 10
+Number of video to manage : 1459
+CHANNEL n°2 (ID: UCsN8M73DMWa8SPp5o_0IAQQ) DONE.
+Status: ACTIVE (123 video(s) in a year)
+Number of videos selected: 0.
+
+[CHANNEL] Progress : 3 out of 10
+Number of video to manage : 2094
+CHANNEL n°3 (ID: UC65afEgL62PGFWXY7n6CUbA) DONE.
+Status: ACTIVE (261 video(s) in a year)
+Number of videos selected: 1.
+
+[CHANNEL] Progress : 4 out of 10
+Number of video to manage : 2068
+CHANNEL n°4 (ID: UCa10nxShhzNrCE1o2ZOPztg) DONE.
+Status: ACTIVE (331 video(s) in a year)
+Number of videos selected: 1.
+
+[CHANNEL] Progress : 5 out of 10
+Number of video to manage : 1701
+CHANNEL n°5 (ID: UCFUMI05jgO_O88Px8qfCQeQ) DONE.
+Status: ACTIVE (468 video(s) in a year)
+Number of videos selected: 1.
+
+[CHANNEL] Progress : 6 out of 10
+Number of video to manage : 318
+CHANNEL n°6 (ID: UCU4gE6_3JrqOXBlA2npWiBw) DONE.
+Status: ACTIVE (55 video(s) in a year)
+Number of videos selected: 0.
+
+[CHANNEL] Progress : 7 out of 10
+Number of video to manage : 4167
+CHANNEL n°7 (ID: UC4rasfm9J-X4jNl9SvXp8xA) DONE.
+Status: ACTIVE (305 video(s) in a year)
+Number of videos selected: 1.
+
+[CHANNEL] Progress : 8 out of 10
+Number of video to manage : 381
+CHANNEL n°8 (ID: UCX9fOfRkHANZM8iFWhMSpNg) DONE.
+Status: ACTIVE (11 video(s) in a year)
+Number of videos selected: 0.
+
+[CHANNEL] Progress : 9 out of 10
+Number of video to manage : 457
+CHANNEL n°9 (ID: UC_GPMS6hGLIKyafmNUsjY7g) DONE.
+Status: ACTIVE (52 video(s) in a year)
+Number of videos selected: 0.
+
+[CHANNEL] Progress : 10 out of 10
+Number of video to manage : 94
+CHANNEL n°10 (ID: UC_FSjhzXRorZRJTLkzf3INw) DONE.
+Status: ACTIVE (12 video(s) in a year)
+Number of videos selected: 0.
+
+Channel 101 to 110
+
+Number of channels to explore : 10
+
+[CHANNEL] Progress : 1 out of 10
+Number of video to manage : 144
+CHANNEL n°1 (ID: UC2ZsqkwvxEpw-aYAIJHTRDg) DONE.
+Status: ACTIVE (7 video(s) in a year)
+Number of videos selected: 0.
+
+[CHANNEL] Progress : 2 out of 10
+Number of video to manage : 59
+CHANNEL n°2 (ID: UCVBXlR7YhYUr-DfNG1XLrHA) DONE.
+Status: ACTIVE (25 video(s) in a year)
+Number of videos selected: 1.
+
+[CHANNEL] Progress : 3 out of 10
+Number of video to manage : 1565
+CHANNEL n°3 (ID: UCMOgdURr7d8pOVlc-alkfRg) DONE.
+Status: ACTIVE (177 video(s) in a year)
+Number of videos selected: 0.
+
+[CHANNEL] Progress : 4 out of 10
+Number of video to manage : 1193
+CHANNEL n°4 (ID: UCALs6y97IVNeuzPg-j56lOg) DONE.
+Status: ACTIVE (435 video(s) in a year)
+Number of videos selected: 2.
+
+[CHANNEL] Progress : 5 out of 10
+Number of video to manage : 222
+CHANNEL n°5 (ID: UCSJ4gkVC6NrvII8umztf0Ow) DONE.
+Status: ACTIVE (98 video(s) in a year)
+Number of videos selected: 0.
+
+[CHANNEL] Progress : 6 out of 10
+Number of video to manage : 16
+CHANNEL n°6 (ID: UCanckzLzf4nz_BdCvv6HNmQ) DONE.
+Status: ACTIVE (13 video(s) in a year)
+Number of videos selected: 0.
+
+[CHANNEL] Progress : 7 out of 10
+Number of video to manage : 53
+CHANNEL n°7 (ID: UCKKKYE55BVswHgKihx5YXew) DONE.
+Status: ACTIVE (13 video(s) in a year)
+Number of videos selected: 0.
+
+[CHANNEL] Progress : 8 out of 10
+Number of video to manage : 31
+CHANNEL n°8 (ID: UCqMDNf3Pn5L7pcNkuSEeO3w) DONE.
+Status: ACTIVE (3 video(s) in a year)
+Number of videos selected: 0.
+
+[CHANNEL] Progress : 9 out of 10
+Number of video to manage : 15
+CHANNEL n°9 (ID: UCh8awPsk105z9y9-BwEduGw) DONE.
+Status: ACTIVE (2 video(s) in a year)
+Number of videos selected: 0.
+
+[CHANNEL] Progress : 10 out of 10
+Number of video to manage : 20
+CHANNEL n°10 (ID: UCCAwb5g_P59JrABdzYLUDlg) DONE.
+Status: ACTIVE (11 video(s) in a year)
+Number of videos selected: 0.
+
+Channel 111 to 120
+
+Number of channels to explore : 10
+
+[CHANNEL] Progress : 1 out of 10
+Number of video to manage : 62
+CHANNEL n°1 (ID: UCp6bpinXPzdx7d7-gekWzZQ) DONE.
+Status: ACTIVE (13 video(s) in a year)
+Number of videos selected: 0.
+
+[CHANNEL] Progress : 2 out of 10
+Number of video to manage : 469
+CHANNEL n°2 (ID: UCIDA4NNU3jL8zqfs5huy0zA) DONE.
+Status: ACTIVE (176 video(s) in a year)
+Number of videos selected: 0.
+
+[CHANNEL] Progress : 3 out of 10
+Number of video to manage : 19
+CHANNEL n°3 (ID: UCDAaatJidv4z_5aE71bV6yg) DONE.
+Status: ACTIVE (1 video(s) in a year)
+Number of videos selected: 0.
+
+[CHANNEL] Progress : 4 out of 10
+Number of video to manage : 128
+CHANNEL n°4 (ID: UCuQvsnvJcFQEtX_C_X7AtOw) DONE.
+Status: ACTIVE (20 video(s) in a year)
+Number of videos selected: 0.
+
+[CHANNEL] Progress : 5 out of 10
+Number of video to manage : 4
+CHANNEL n°5 (ID: UCbAEthmNnJk8JVZP8FWXqZg) DONE.
+Status: ACTIVE (4 video(s) in a year)
+Number of videos selected: 0.
+
+[CHANNEL] Progress : 6 out of 10
+Number of video to manage : 15
+CHANNEL n°6 (ID: UCulBShlQjLBSwC9bbJqAdVw) DONE.
+Status: ACTIVE (3 video(s) in a year)
+Number of videos selected: 0.
+
+[CHANNEL] Progress : 7 out of 10
+Number of video to manage : 6
+CHANNEL n°7 (ID: UC4YCVy0ggUoFd2NVU2z04WA) DONE.
+Status: INACTIVE
+
+[CHANNEL] Progress : 8 out of 10
+Number of video to manage : 44
+CHANNEL n°8 (ID: UCun6F0FTfhvPGhOZvgbK8yg) DONE.
+Status: ACTIVE (7 video(s) in a year)
+Number of videos selected: 0.
+
+[CHANNEL] Progress : 9 out of 10
+Number of video to manage : 245
+CHANNEL n°9 (ID: UCVGTuylKPv8SfVDSyho5WFw) DONE.
+Status: ACTIVE (68 video(s) in a year)
+Number of videos selected: 0.
+
+[CHANNEL] Progress : 10 out of 10
+Number of video to manage : 1024
+CHANNEL n°10 (ID: UCCTYQM7L9G_Lr2w8KH6C-Tw) DONE.
+Status: ACTIVE (103 video(s) in a year)
+Number of videos selected: 0.
+
+Channel 121 to 122
+
+Number of channels to explore : 2
+
+[CHANNEL] Progress : 1 out of 2
+Number of video to manage : 173
+CHANNEL n°1 (ID: UC_TVqp_SyG6j5hG-xVRy95A) DONE.
+Status: ACTIVE (5 video(s) in a year)
+Number of videos selected: 0.
+
+[CHANNEL] Progress : 2 out of 2
+Number of video to manage : 181
+CHANNEL n°2 (ID: UCB0qpLkjzVlVZ4c8nKiCEyw) DONE.
+Status: ACTIVE (2 video(s) in a year)
+Number of videos selected: 0.
+
+Temporary playlists created.
+Number of temp. playlists : 2
+Number of potential music videos : 48
+Number of potential mix videos : 5
+[['http://www.youtube.com/watch_videos?video_ids=wXLooigsMLo,lKiHj6rwbqg,FE48eEMMl88,z8jvc_gGOaI,s4eh-3-_Bxw,ciMXSNsZVik,jQ24tVaIoks,u9q7kMoCgPg,9lp6NR3VCWc,nQj6D1LsP6A,rD9b8Vn47RU,sJrvCJD2dXg,Zq_wWaDjmWE,KQz1Cp08-8k,mQ5-8rJNnxE,ZgSFN-Fvs1I,laKkfk57vhA,QjtGRkjK_ws,P7Fl4IyXyyM,61zMppxVhV0,J42-stEbm80,VgzTfdzj_Ho,8Zpx_MX-P-8,ztpUZ0O_VVA,CeOUNlug0EA,7D__tpVdigQ,eQmBYefEFL4,TQE48tMjcXE,4ZSjgSgnldU,rG6CWGzPQKQ,TjycUW1A114,HTQL2ap_PuQ,vVOvCRI7VRk,KzQnQyevVag,Xg6VMUVLdhc,KZltd4Ooo5E,k-IagcmteJ0,qbL-WzeO6ME,esTwTQlz3B0,AkZAmpTSOgA,ZGvll5Flr10,zOMDAmE5ths,GFg-KypRlJo,5NPj4ACva_k,yKwrc7MFjI8,4ryLjaaRiyM,VVmNKcZo14E,8wsc673F6h0'], ['http://www.youtube.com/watch_videos?video_ids=KE4eLijsSgE,uNMcnJbor1k,WhiP9W3kYyE,xuoQFuLnRpM,WCLSSvk7yNg']]
+
+Date of execution: 2020-11-07 11:53:20

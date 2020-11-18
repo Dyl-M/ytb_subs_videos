@@ -12,10 +12,6 @@ from os import listdir, remove
 from os.path import isfile, join, getctime
 from time import sleep
 
-# import sys
-# from googleapiclient.discovery import build
-# from google_auth_oauthlib import flow
-
 """ - CREDITS - """
 
 """
@@ -36,7 +32,7 @@ YouTube: https://www.youtube.com/channel/UCkUq-s6z57uJFUFBvZIVTyg
 
 Objective: create a script able to capture videos from YouTube music channels between 2 dates to make two
 personal playlists. The first one containing short videos, and the second one containing longer videos (by default,
-music mixes).
+music / mixes).
 
 Summary
 
@@ -55,6 +51,7 @@ SCOPES = ['https://www.googleapis.com/auth/youtube']
 
 service = Create_Service(CLIENT_SECRET_FILE, API_NAME, API_VERSION, SCOPES)
 
+# Possible inactive channels to ignore.
 channels_url_exeception = {"UCd-9JELFGru-WnXiCAZudbw", "UC4YCVy0ggUoFd2NVU2z04WA"}
 
 """ - LOCAL FUNCTIONS - """
@@ -130,12 +127,12 @@ def api_add_to_playlist(playlist_id, ids_list):
     return to_print
 
 
-def get_channel_list(json_path, category="MUSIQUE"):
+def get_channel_list(json_path, category):
     """
     A function to get the list of channel to explore.
 
     :param json_path: the file path to the .json file with channels' IDs, classified by categories (such as "MUSIQUE").
-    :param category: a channel category to explore ("MUSIQUE" by default, feel free to change it).
+    :param category: a channel category to explore.
     :return: the list of channel's id in the said category.
     """
 
@@ -248,10 +245,14 @@ def get_all_videos(channel_ids_list, latest_date, oldest_date):
         log_str += f"{to_print}"
         print(to_print)
 
+    if len(all_video_ids) * 50 > 8000:
+        print("Warning! API cost could be higher than 8000.")
+        log_str += "\nWarning! API cost could be higher than 8000."
+
     return {"all_video_ids": all_video_ids, "log_str": log_str}
 
 
-def duration_filter(dict_ids_and_durations, minute_threshold=10):
+def duration_filter(dict_ids_and_durations, minute_threshold):
     """
     A function to sort short and long videos in two list.
 
@@ -280,30 +281,46 @@ def duration_filter(dict_ids_and_durations, minute_threshold=10):
 def clean_logs(directory):
     """
     A function clean oldest log files.
-    :param directory: Logs folder path.
-    """
 
+    :param directory: Logs folder path.
+    :return: short string saying if some logs were removed or not.
+    """
+    to_log = str()
     files = [{"file_name": f"{directory}/{file}", "date_crea": getctime(f"{directory}/{file}")} for file in
              listdir(f"{directory}") if isfile(join(f"{directory}", file))][:-10]
+
     if not files:
+
         print("No log removed.")
+        to_log += "No log removed."
+
     else:
+
         for file in files:
             remove(file["file_name"])
             print(f"{file['file_name']} removed!")
+            to_log += f"{file['file_name']} removed!\n"
+
+    return to_log
 
 
-def execution(path_channel_data_base_json, path_playlist_ids_json, latest_date, oldest_date, short_vid_index,
-              long_vid_index):
+def execution(path_channel_data_base_json, path_playlist_ids_json, latest_date, oldest_date,
+              selected_category="MUSIQUE", short_vid_index="music", long_vid_index="mix", min_dur_long_vids=10):
     """
     Full execution of the process.
 
-    :param path_channel_data_base_json: file path to channel data_base (Corresponding with 'get_channel_list' function)
-    :param path_playlist_ids_json: file path to playlists URL (Corresponding with 'read_json' function)
+    :param path_channel_data_base_json: file path to channel data_base. (Corresponding with 'get_channel_list' function)
+    :param path_playlist_ids_json: file path to playlists URL. (Corresponding with 'read_json' function)
     :param latest_date: Upper bound of time interval. (Corresponding with 'get_all_videos' function)
     :param oldest_date: Lower bound of time interval. (Corresponding with 'get_all_videos' function)
-    :param short_vid_index: key value corresponding to short videos playlist in playlist_ids_json file
-    :param long_vid_index: key value corresponding to long videos playlist in playlist_ids_json file
+    :param selected_category: channel's category to explore ("MUSIQUE" by default, feel free to change it).
+                              (Corresponding with 'get_channel_list' function)
+    :param short_vid_index: key value corresponding to short videos playlist in 'playlist_ids_json' file ("music by
+                            default, feel free to change it).
+    :param long_vid_index: key value corresponding to long videos playlist in 'playlist_ids_json' file ("mix" by
+                           default, feel free to change it).
+    :param min_dur_long_vids: minimum duration to consider that a video is long (10 minutes by default, feel free to
+                              change it). (Corresponding with 'minute_threshold' argument in 'duration_filter' function)
     """
 
     today_date = datetime.today()
@@ -314,7 +331,7 @@ def execution(path_channel_data_base_json, path_playlist_ids_json, latest_date, 
 
     print(log)
 
-    music_channels = get_channel_list(path_channel_data_base_json)
+    music_channels = get_channel_list(path_channel_data_base_json, category=selected_category)
     playlist_ids = read_json(path_playlist_ids_json)
 
     all_vids = get_all_videos(music_channels, latest_date=latest_date, oldest_date=oldest_date)
@@ -322,11 +339,11 @@ def execution(path_channel_data_base_json, path_playlist_ids_json, latest_date, 
 
     duration_dict = api_get_videos_duration(all_vids["all_video_ids"])
 
-    duration_filter_dict = duration_filter(duration_dict)
+    duration_filter_dict = duration_filter(duration_dict, minute_threshold=min_dur_long_vids)
     log += f'{duration_filter_dict["logs"]}\n'
 
     print("Adding videos into playlists...\n")
-    log += "Adding videos into playlists...\n"
+    log += "Adding videos into playlists...\n\n"
 
     log_short_vid_text = api_add_to_playlist(playlist_ids[short_vid_index], duration_filter_dict["short_videos"])
     log += f'{log_short_vid_text}\n'
@@ -334,13 +351,16 @@ def execution(path_channel_data_base_json, path_playlist_ids_json, latest_date, 
     log_long_vid_text = api_add_to_playlist(playlist_ids[long_vid_index], duration_filter_dict["long_videos"])
     log += f'{log_long_vid_text}\n'
 
-    print("- ALL DONE! -")
-    log += "- ALL DONE!- "
+    print("- ALL DONE! -\n")
+    log += "- ALL DONE! -\n"
+
+    log += f"\n{clean_logs('Logs')}"
 
     with open(f'Logs/Log_{today_date:%Y-%m-%d_%H.%M.%S}.txt', 'w', encoding="utf-8") as file:
         file.write(log)
 
-    clean_logs("Logs")
+    sleep(5)
+
     webbrowser.open(f"https://www.youtube.com/playlist?list={playlist_ids[short_vid_index]}")
     webbrowser.open(f"https://www.youtube.com/playlist?list={playlist_ids[long_vid_index]}")
 
@@ -352,12 +372,14 @@ if __name__ == "__main__":
     playlist_ids_json = "temp_playlist.json"
 
     today = datetime.today()
-    a_date = "2020-11-12 10:48:19"
+    a_date = today - timedelta(days=7)
     prev_date = datetime.strptime(a_date, '%Y-%m-%d %H:%M:%S')
 
     execution(path_channel_data_base_json=music_channels_test,
               path_playlist_ids_json=playlist_ids_json,
               latest_date=today,
               oldest_date=prev_date,
+              selected_category="MUSIQUE",
               short_vid_index="music",
-              long_vid_index="mix")
+              long_vid_index="mix",
+              min_dur_long_vids=10)

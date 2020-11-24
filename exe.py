@@ -18,7 +18,7 @@ For more information, see 'get_videos.py' file.
 """ - Local Functions - """
 
 
-def last_exe(logs_directory):
+def get_last_exe_date(logs_directory):
     """
     A function to get the last script execution date from logs' directory (so from most recent log file).
 
@@ -47,7 +47,7 @@ today = datetime.today()
 # a_date = "2020-11-16 10:42:27"
 # previous_date = datetime.strptime(a_date, '%Y-%m-%d %H:%M:%S')
 
-previous_date = last_exe("Logs")
+previous_date = get_last_exe_date("Logs")
 
 gv.execution(path_channel_data_base_json=music_channels_test,
              path_playlist_ids_json=playlist_ids_json,

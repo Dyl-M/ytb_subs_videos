@@ -10,6 +10,7 @@ from Google import Create_Service
 from isodate import parse_duration
 from os import listdir, remove
 from os.path import isfile, join, getctime
+from pprint import pformat
 from time import sleep
 
 """ - CREDITS - """
@@ -88,6 +89,7 @@ def api_get_channel_videos(a_channel_id):
 def api_get_videos_duration(list_videos_ids):
     """
     A function to get the duration of 50 videos at once.
+
     :param list_videos_ids: A list of video IDs, maximum size 50.
     :return: a dictionary associating video id and duration of said video.
     """
@@ -107,6 +109,7 @@ def api_get_videos_duration(list_videos_ids):
 def api_add_to_playlist(playlist_id, ids_list):
     """
     A function to add selected video to a playlist.
+
     :param playlist_id: A specified playlist ID.
     :param ids_list: List of videos's ID
     :return: small text for logs.
@@ -269,9 +272,9 @@ def duration_filter(dict_ids_and_durations, minute_threshold):
 
     to_print = f"- END OF THE RETRIEVING PROCESS -\n\n" \
                f"Number of short videos: {len(short_videos)}\n" \
-               f"[{', '.join(short_videos)}]\n\n" \
+               f'{pformat([f"https://www.youtube.com/watch?v={element}" for element in short_videos])}\n\n' \
                f"Number of long videos: {len(long_videos)}\n" \
-               f"[{', '.join(long_videos)}]\n"
+               f'{pformat([f"https://www.youtube.com/watch?v={element}" for element in long_videos])}\n'
 
     print(to_print)
 
@@ -287,7 +290,7 @@ def clean_logs(directory):
     """
     to_log = str()
     files = [{"file_name": f"{directory}/{file}", "date_crea": getctime(f"{directory}/{file}")} for file in
-             listdir(f"{directory}") if isfile(join(f"{directory}", file))][:-10]
+             listdir(f"{directory}") if isfile(join(f"{directory}", file))][:-9]
 
     if not files:
 

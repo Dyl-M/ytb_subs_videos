@@ -44,7 +44,7 @@ playlist_ids_json = "temp_playlist.json"
 
 today = datetime.today()
 
-# a_date = "2020-11-16 10:42:27"
+# a_date = "2020-01-01 00:00:00"
 # previous_date = datetime.strptime(a_date, '%Y-%m-%d %H:%M:%S')
 
 previous_date = get_last_exe_date("Logs")

@@ -53,7 +53,7 @@ SCOPES = ['https://www.googleapis.com/auth/youtube']
 service = Create_Service(CLIENT_SECRET_FILE, API_NAME, API_VERSION, SCOPES)
 
 # Possible inactive channels to ignore.
-channels_url_exeception = {"UCd-9JELFGru-WnXiCAZudbw", "UC4YCVy0ggUoFd2NVU2z04WA"}
+channels_url_exeception = {"UC4YCVy0ggUoFd2NVU2z04WA"}
 
 """ - LOCAL FUNCTIONS - """
 

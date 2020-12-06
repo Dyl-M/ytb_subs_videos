@@ -356,7 +356,6 @@ MigrationBackup/
 
 .idea/
 API_KEY.txt
-PocketTube_DB.json
 temp_playlist.json
 code_secret_client.json
 token_youtube_v3.pickle

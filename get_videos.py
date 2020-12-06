@@ -241,7 +241,7 @@ def get_all_videos(channel_ids_list, latest_date, oldest_date):
                         f"STATUS: INACTIVE\n"
             if channel_id not in channels_url_exeception:
                 # Ignore exceptions.
-                webbrowser.open(f"https://www.youtube.com/channel/{channelid}")
+                webbrowser.open(f"https://www.youtube.com/channel/{channel_id}")
 
         to_print += f"\nTotal number of videos selected so far: {len(all_video_ids)}\n{'/' * 50}\n"
 

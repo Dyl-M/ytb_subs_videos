@@ -361,3 +361,7 @@ code_secret_client.json
 token_youtube_v3.pickle
 RejectedFunctions_and_Tests.py
 youtube_playlist_generator.py
+/get_BIG5.py
+/playlist_2020.pkl
+/playlist_2019.pkl
+/playlist_2019_duos.pkl

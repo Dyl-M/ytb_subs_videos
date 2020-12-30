@@ -39,7 +39,7 @@ def get_last_exe_date(logs_directory):
 
 """ - Main - """
 
-music_channels_test = "PocketTube_DB.json"
+music_channels = "PocketTube_DB.json"
 playlist_ids_json = "temp_playlist.json"
 
 today = datetime.today()
@@ -49,7 +49,7 @@ today = datetime.today()
 
 previous_date = get_last_exe_date("Logs")
 
-gv.execution(path_channel_data_base_json=music_channels_test,
+gv.execution(path_channel_data_base_json=music_channels,
              path_playlist_ids_json=playlist_ids_json,
              latest_date=today,
              oldest_date=previous_date,

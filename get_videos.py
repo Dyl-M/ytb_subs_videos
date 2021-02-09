@@ -7,6 +7,7 @@ import webbrowser
 from datetime import datetime, timedelta, timezone
 from dateutil.relativedelta import relativedelta
 from Google import Create_Service
+from googleapiclient.errors import HttpError
 from isodate import parse_duration
 from os import listdir, remove
 from os.path import isfile, join, getctime
@@ -46,7 +47,7 @@ Summary
 """ - PREPARATORY ELEMENTS - """
 
 CLIENT_SECRET_FILE = 'code_secret_client.json'
-API_NAME = 'youtube'
+API_NAME = 'YouTube'
 API_VERSION = 'v3'
 SCOPES = ['https://www.googleapis.com/auth/youtube']
 
@@ -120,13 +121,22 @@ def api_add_to_playlist(playlist_id, ids_list):
         print(to_print)
         sleep(1)
         for video_id in ids_list:
-            the_body = {
-                "snippet": {"playlistId": playlist_id, "resourceId": {"videoId": video_id, "kind": "youtube#video"}}}
 
-            service.playlistItems().insert(part="snippet", body=the_body).execute()
-        return to_print
+            try:
+                the_body = {"snippet": {"playlistId": playlist_id,
+                                        "resourceId": {"videoId": video_id, "kind": "youtube#video"}}}
+
+                service.playlistItems().insert(part="snippet", body=the_body).execute()
+
+            except HttpError:
+
+                error_message = f"Problem encountered with this video: https://www.youtube.com/watch?v={video_id}"
+                print(error_message)
+                to_print += error_message + '\n'
+
     else:
         to_print = "No video in this list.\n"
+
     return to_print
 
 

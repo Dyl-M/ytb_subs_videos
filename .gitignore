@@ -355,17 +355,14 @@ MigrationBackup/
 # True ignore
 
 .idea/
-API_KEY.txt
-temp_playlist.json
-code_secret_client.json
-token_youtube_v3.pickle
-RejectedFunctions_and_Tests.py
-youtube_playlist_generator.py
-/get_BIG5.py
-/playlist_2020.pkl
-/playlist_2019.pkl
-/playlist_2019_duos.pkl
-/exe_perso.py
-/time_series.csv
-/graph.png
-/test.py
+/code/exe_perso.py
+/code/get_BIG5.py
+/code/RejectedFunctions_and_Tests.py
+/code/test.py
+/code/token_youtube_v3.pickle
+/code/youtube_playlist_generator.py
+/files/API_KEY.txt
+/files/code_secret_client.json
+/files/graph.png
+/files/temp_playlist.json
+/files/time_series.csv

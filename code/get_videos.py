@@ -46,7 +46,7 @@ Summary
 
 """ - PREPARATORY ELEMENTS - """
 
-CLIENT_SECRET_FILE = 'code_secret_client.json'
+CLIENT_SECRET_FILE = '../files/code_secret_client.json'
 API_NAME = 'YouTube'
 API_VERSION = 'v3'
 SCOPES = ['https://www.googleapis.com/auth/youtube']
@@ -400,7 +400,7 @@ def execution(path_channel_data_base_json, path_playlist_ids_json, latest_date, 
 
     log += f"\n{clean_logs('Logs')}"
 
-    with open(f'Logs/Log_{today_date:%Y-%m-%d_%H.%M.%S}.txt', 'w', encoding="utf-8") as file:
+    with open(f'../Logs/Log_{today_date:%Y-%m-%d_%H.%M.%S}.txt', 'w', encoding="utf-8") as file:
         file.write(log)
 
     sleep(5)
@@ -412,8 +412,8 @@ def execution(path_channel_data_base_json, path_playlist_ids_json, latest_date, 
 " - MAIN PROGRAM -"
 
 if __name__ == "__main__":
-    music_channels_test = "PocketTube_DB.json"
-    playlist_ids_json = "temp_playlist.json"
+    music_channels_test = "../files/PocketTube_DB.json"
+    playlist_ids_json = "../files/temp_playlist.json"
 
     today = datetime.today()
     a_date = today - timedelta(days=7)

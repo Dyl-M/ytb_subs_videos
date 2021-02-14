@@ -53,8 +53,11 @@ SCOPES = ['https://www.googleapis.com/auth/youtube']
 
 service = Create_Service(CLIENT_SECRET_FILE, API_NAME, API_VERSION, SCOPES)
 
-# Possible inactive channels to ignore.
-channels_url_exeception = {"UC4YCVy0ggUoFd2NVU2z04WA", 'UCh8awPsk105z9y9-BwEduGw'}
+channels_url_exeception = {"UC4YCVy0ggUoFd2NVU2z04WA",
+                           'UCh8awPsk105z9y9-BwEduGw'}  # Possible inactive channels to ignore.
+
+# channels_ignored = {'UC0n9yiP-AD2DpuuYCDwlNxQ'}
+channels_ignored = {''}
 
 """ - LOCAL FUNCTIONS - """
 
@@ -117,22 +120,28 @@ def api_add_to_playlist(playlist_id, ids_list):
     """
 
     if ids_list:
+
+        chunks10 = [list(sub_list) for sub_list in np.array_split(np.array(ids_list), len(ids_list) // 10 + 1)]
         to_print = f"Estimated cost: {len(ids_list) * 50}\n"
         print(to_print)
-        sleep(1)
-        for video_id in ids_list:
 
-            try:
-                the_body = {"snippet": {"playlistId": playlist_id,
-                                        "resourceId": {"videoId": video_id, "kind": "youtube#video"}}}
+        for chunk in chunks10:
+            sleep(5)
+            for video_id in chunk:
+                sleep(1)
+                print(f"Adding https://www.youtube.com/watch?v={video_id}...")
 
-                service.playlistItems().insert(part="snippet", body=the_body).execute()
+                try:
+                    the_body = {"snippet": {"playlistId": playlist_id,
+                                            "resourceId": {"videoId": video_id, "kind": "youtube#video"}}}
 
-            except HttpError:
+                    service.playlistItems().insert(part="snippet", body=the_body).execute()
 
-                error_message = f"Problem encountered with this video: https://www.youtube.com/watch?v={video_id}"
-                print(error_message)
-                to_print += error_message + '\n'
+                except HttpError:
+
+                    error_message = f"Problem encountered with this video: https://www.youtube.com/watch?v={video_id}"
+                    print(error_message)
+                    to_print += error_message + '\n'
 
     else:
         to_print = "No video in this list.\n"
@@ -229,6 +238,7 @@ def get_all_videos(channel_ids_list, latest_date, oldest_date):
     log_str = str()
     all_video_ids = list()
     count = int()
+    ignored_report = list()
 
     nb_channels = len(channel_ids_list)
 
@@ -236,26 +246,47 @@ def get_all_videos(channel_ids_list, latest_date, oldest_date):
         count += 1
 
         channel_selection = video_selection(api_get_channel_videos(channel_id), latest_date, oldest_date)
-        all_video_ids += channel_selection["selection_list"]
 
         to_print = f"Channel {count} out of {nb_channels} ({count * 100 / nb_channels:.2f} %).\n\n" \
                    f"Channel ID: {channel_id}\n" \
                    f"Channel Name: {channel_selection['channel_name']}\n\n" \
                    f"Number of selected videos: {len(channel_selection['selection_list'])}\n"
 
-        if channel_selection["a_year_ago_count"] != 0:
+        if channel_id in channels_ignored or len(channel_selection['selection_list']) * 50 > 800:
+            to_print += f"Number of videos uploaded in a year: {channel_selection['a_year_ago_count']}\n" \
+                        f"STATUS: IGNORED\n"
+            if channel_id in channels_ignored:
+                ignored_report.append({'channel_id': channel_id,
+                                       'channel_name': channel_selection['channel_name'],
+                                       'cause': 'In ignored set.',
+                                       'n': len(channel_selection['selection_list'])})
+            else:
+                ignored_report.append({'channel_id': channel_id,
+                                       'cause': 'To many videos selected',
+                                       'n': len(channel_selection['selection_list'])})
+
+        elif channel_selection["a_year_ago_count"] != 0:
             to_print += f"Number of videos uploaded in a year: {channel_selection['a_year_ago_count']}\n" \
                         f"STATUS: ACTIVE\n"
+            all_video_ids += channel_selection["selection_list"]
+
         else:
             to_print += f"Number of videos uploaded in a year: 0\n" \
                         f"STATUS: INACTIVE\n"
+
             if channel_id not in channels_url_exeception:
                 # Ignore exceptions.
                 webbrowser.open(f"https://www.youtube.com/channel/{channel_id}")
 
         to_print += f"\nTotal number of videos selected so far: {len(all_video_ids)}\n{'/' * 50}\n"
 
-        log_str += f"{to_print}"
+        log_str += f"{to_print}\n"
+
+        for ignored_elem in ignored_report:
+            log_str += f'Channel "{ignored_elem["channel_name"]}"' \
+                       f' ({ignored_elem["channel_id"]}) ignored - ' \
+                       f'Cause: {ignored_elem["cause"]} - N_Videos: {ignored_elem["n"]}\n'
+
         print(to_print)
 
     if len(all_video_ids) * 50 > 8000:

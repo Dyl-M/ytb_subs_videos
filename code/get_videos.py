@@ -398,7 +398,7 @@ def execution(path_channel_data_base_json, path_playlist_ids_json, latest_date, 
     print("- ALL DONE! -\n")
     log += "- ALL DONE! -\n"
 
-    log += f"\n{clean_logs('Logs')}"
+    log += f"\n{clean_logs('../Logs')}"
 
     with open(f'../Logs/Log_{today_date:%Y-%m-%d_%H.%M.%S}.txt', 'w', encoding="utf-8") as file:
         file.write(log)

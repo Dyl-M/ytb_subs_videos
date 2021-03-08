@@ -98,8 +98,10 @@ def api_get_videos_duration(list_videos_ids):
     :return: a dictionary associating video id and duration of said video.
     """
     durations = list()
-    chunks50 = [list(sub_list) for sub_list in
-                np.array_split(np.array(list_videos_ids), len(list_videos_ids) // 50 + 1)]
+    # chunks50 = [list(sub_list) for sub_list in
+    #             np.array_split(np.array(list_videos_ids), len(list_videos_ids) // 50 + 1)]
+
+    chunks50 = divide_chunks(list_videos_ids, 50)
 
     for chunk in chunks50:
         request = service.videos().list(id=",".join(chunk), part='contentDetails', maxResults=50).execute()
@@ -121,7 +123,10 @@ def api_add_to_playlist(playlist_id, ids_list):
 
     if ids_list:
 
-        chunks10 = [list(sub_list) for sub_list in np.array_split(np.array(ids_list), len(ids_list) // 10 + 1)]
+        # chunks10 = [list(sub_list) for sub_list in np.array_split(np.array(ids_list), len(ids_list) // 10 + 1)]
+
+        chunks10 = divide_chunks(ids_list, 10)
+
         to_print = f"Estimated cost: {len(ids_list) * 50}\n"
         print(to_print)
 
@@ -147,6 +152,11 @@ def api_add_to_playlist(playlist_id, ids_list):
         to_print = "No video in this list.\n"
 
     return to_print
+
+
+def divide_chunks(a_list, n):
+    for i in range(0, len(a_list), n):
+        yield a_list[i:i + n]
 
 
 def get_channel_list(json_path, category):
@@ -184,8 +194,8 @@ def video_in_period(latest_date, oldest_date, video_date):
     """
 
     # Date transposed to UTC timezone.
-    latest_date_utc = latest_date.astimezone(tz=timezone.utc).replace(tzinfo=None)
-    oldest_date_utc = oldest_date.astimezone(tz=timezone.utc).replace(tzinfo=None)
+    latest_date_utc = latest_date.astimezone(tz=timezone.utc).replace(second=0, microsecond=0, tzinfo=None)
+    oldest_date_utc = oldest_date.astimezone(tz=timezone.utc).replace(second=0, microsecond=0, tzinfo=None)
 
     if oldest_date_utc <= video_date <= latest_date_utc:
         return True

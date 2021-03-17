@@ -123,30 +123,29 @@ def api_add_to_playlist(playlist_id, ids_list):
 
     if ids_list:
 
-        # chunks10 = [list(sub_list) for sub_list in np.array_split(np.array(ids_list), len(ids_list) // 10 + 1)]
-
-        chunks10 = divide_chunks(ids_list, 10)
-
         to_print = f"Estimated cost: {len(ids_list) * 50}\n"
         print(to_print)
 
-        for chunk in chunks10:
-            sleep(5)
-            for video_id in chunk:
-                sleep(1)
-                print(f"Adding https://www.youtube.com/watch?v={video_id}...")
+        cpt = 1
 
-                try:
-                    the_body = {"snippet": {"playlistId": playlist_id,
-                                            "resourceId": {"videoId": video_id, "kind": "youtube#video"}}}
+        for video_id in ids_list:
 
-                    service.playlistItems().insert(part="snippet", body=the_body).execute()
+            print(f"{cpt:02d}. Adding https://www.youtube.com/watch?v={video_id}...")
 
-                except HttpError:
+            sleep(1 + (cpt - 1) / 10)
+            cpt += 1
 
-                    error_message = f"Problem encountered with this video: https://www.youtube.com/watch?v={video_id}"
-                    print(error_message)
-                    to_print += error_message + '\n'
+            try:
+                the_body = {"snippet": {"playlistId": playlist_id,
+                                        "resourceId": {"videoId": video_id, "kind": "youtube#video"}}}
+
+                service.playlistItems().insert(part="snippet", body=the_body).execute()
+
+            except HttpError:
+
+                error_message = f"Problem encountered with this video: https://www.youtube.com/watch?v={video_id}"
+                print(error_message)
+                to_print += error_message + '\n'
 
     else:
         to_print = "No video in this list.\n"
@@ -193,9 +192,9 @@ def video_in_period(latest_date, oldest_date, video_date):
     :return: True / False depending if the video's upload date is defined period or not.
     """
 
-    # Date transposed to UTC timezone.
-    latest_date_utc = latest_date.astimezone(tz=timezone.utc).replace(second=0, microsecond=0, tzinfo=None)
-    oldest_date_utc = oldest_date.astimezone(tz=timezone.utc).replace(second=0, microsecond=0, tzinfo=None)
+    # Date transposed to UTC / GMT timezone.
+    latest_date_utc = latest_date.astimezone(tz=timezone.utc)
+    oldest_date_utc = oldest_date.astimezone(tz=timezone.utc)
 
     if oldest_date_utc <= video_date <= latest_date_utc:
         return True
@@ -220,16 +219,26 @@ def video_selection(api_videos_list, latest_date, oldest_date):
     a_year_ago_count = int()
     a_year_ago = datetime.today() - relativedelta(years=1)
 
+    # cpt_test = 1
+
     for video in api_videos_list:
 
         # Convert date string in ISO 8601 format into a datetime object.
-        upload_date = datetime.strptime(video["snippet"]["publishedAt"], "%Y-%m-%dT%H:%M:%SZ")
+        upload_date = datetime.strptime(video["snippet"]["publishedAt"], "%Y-%m-%dT%H:%M:%S%z")
 
         if video_in_period(latest_date, oldest_date, upload_date):
             selection_list.append(video["snippet"]["resourceId"]["videoId"])
 
-        if upload_date >= a_year_ago:
+        if video_in_period(latest_date, a_year_ago, upload_date):
             a_year_ago_count += 1
+
+        # if cpt_test <= 10:
+        #     print(
+        #         f'Oldest Date: {oldest_date.astimezone(tz=timezone.utc)}\n'
+        #         f'Upload Date: {upload_date}\n'
+        #         f'Latest Date: {latest_date.astimezone(tz=timezone.utc)}\n'
+        #         f'Boolean: {video_in_period(latest_date, oldest_date, upload_date)}\n')
+        #     cpt_test += 1
 
     return {"selection_list": selection_list, "a_year_ago_count": a_year_ago_count, "channel_name": channel_name}
 
@@ -427,7 +436,7 @@ if __name__ == "__main__":
 
     today = datetime.today()
     a_date = today - timedelta(days=7)
-    prev_date = datetime.strptime(a_date, '%Y-%m-%d %H:%M:%S')
+    prev_date = datetime.strftime(a_date, '%Y-%m-%d %H:%M:%S')
 
     execution(path_channel_data_base_json=music_channels_test,
               path_playlist_ids_json=playlist_ids_json,

@@ -366,5 +366,6 @@ MigrationBackup/
 /files/graph.png
 /files/temp_playlist.json
 /files/time_series.csv
-/files/output.xlsx
+/files/output*.xlsx
 /code/sort_DB.py
+files/Specific_logs/

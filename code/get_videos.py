@@ -4,7 +4,9 @@ import json
 import numpy as np
 import os
 import webbrowser
+
 from datetime import datetime, timedelta, timezone
+from dateutil import tz
 from dateutil.relativedelta import relativedelta
 from Google import Create_Service
 from googleapiclient.errors import HttpError
@@ -79,7 +81,8 @@ def api_get_channel_videos(a_channel_id):
 
     while 1:
 
-        request = service.playlistItems().list(playlistId=playlist_id, part='snippet', maxResults=50,
+        request = service.playlistItems().list(playlistId=playlist_id, part=['snippet', 'contentDetails'],
+                                               maxResults=50,
                                                pageToken=next_page_token).execute()
         lst_of_videos += request['items']
         next_page_token = request.get('nextPageToken')
@@ -192,9 +195,10 @@ def video_in_period(latest_date, oldest_date, video_date):
     :return: True / False depending if the video's upload date is defined period or not.
     """
 
-    # Date transposed to UTC / GMT timezone.
-    latest_date_utc = latest_date.astimezone(tz=timezone.utc)
-    oldest_date_utc = oldest_date.astimezone(tz=timezone.utc)
+    tz_local = tz.tzlocal()
+
+    latest_date_utc = latest_date.astimezone(tz_local)
+    oldest_date_utc = oldest_date.astimezone(tz_local)
 
     if oldest_date_utc <= video_date <= latest_date_utc:
         return True
@@ -224,7 +228,7 @@ def video_selection(api_videos_list, latest_date, oldest_date):
     for video in api_videos_list:
 
         # Convert date string in ISO 8601 format into a datetime object.
-        upload_date = datetime.strptime(video["snippet"]["publishedAt"], "%Y-%m-%dT%H:%M:%S%z")
+        upload_date = datetime.strptime(video["contentDetails"]["videoPublishedAt"], "%Y-%m-%dT%H:%M:%S%z")
 
         if video_in_period(latest_date, oldest_date, upload_date):
             selection_list.append(video["snippet"]["resourceId"]["videoId"])

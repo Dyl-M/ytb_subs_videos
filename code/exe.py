@@ -5,6 +5,7 @@ import glob
 import os
 import re
 from datetime import datetime
+from Google import Create_Service
 
 """ - SCRIPT INFORMATION - """
 
@@ -14,6 +15,15 @@ from datetime import datetime
 
 For more information, see 'get_videos.py' file.
 """
+
+""" - Google Service Creation - """
+
+CLIENT_SECRET_FILE = '../files/code_secret_client.json'
+API_NAME = 'YouTube'
+API_VERSION = 'v3'
+SCOPES = ['https://www.googleapis.com/auth/youtube']
+
+service = Create_Service(CLIENT_SECRET_FILE, API_NAME, API_VERSION, SCOPES)
 
 """ - Local Functions - """
 
@@ -53,6 +63,7 @@ gv.execution(path_channel_data_base_json=music_channels,
              path_playlist_ids_json=playlist_ids_json,
              latest_date=today,
              oldest_date=previous_date,
+             api_service=service,
              selected_category="MUSIQUE",
              short_vid_index="music",
              long_vid_index="mix",

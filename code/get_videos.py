@@ -13,7 +13,7 @@ from googleapiclient.errors import HttpError
 from isodate import parse_duration
 from os import listdir, remove
 from os.path import isfile, join, getctime
-from pprint import pformat
+from pprint import pformat, pprint
 from time import sleep
 
 """ - CREDITS - """
@@ -48,15 +48,9 @@ Summary
 
 """ - PREPARATORY ELEMENTS - """
 
-CLIENT_SECRET_FILE = '../files/code_secret_client.json'
-API_NAME = 'YouTube'
-API_VERSION = 'v3'
-SCOPES = ['https://www.googleapis.com/auth/youtube']
-
-service = Create_Service(CLIENT_SECRET_FILE, API_NAME, API_VERSION, SCOPES)
-
 channels_url_exeception = {"UC4YCVy0ggUoFd2NVU2z04WA",
-                           'UCh8awPsk105z9y9-BwEduGw'}  # Possible inactive channels to ignore.
+                           'UCh8awPsk105z9y9-BwEduGw',
+                           'UC3hV4vnwzTUPSb7CAx4mXvg'}  # Possible inactive channels to ignore.
 
 # channels_ignored = {'UC0n9yiP-AD2DpuuYCDwlNxQ'}
 channels_ignored = {''}
@@ -64,26 +58,27 @@ channels_ignored = {''}
 """ - LOCAL FUNCTIONS - """
 
 
-def api_get_channel_videos(a_channel_id):
+def api_get_channel_videos(a_channel_id, api_service):
     """
     A function to get all videos published / uploaded by a YouTube channel. Public, unlisted and premiere type videos
     will be retrieved by this function.
 
     :param a_channel_id: A channel ID (https://www.youtube.com/channel/[THIS PART]).
+    :param api_service: API Google Token generated with Google.py call.
     :return: All video uploaded to this channel.
     """
 
     lst_of_videos = list()
     next_page_token = None
 
-    request = service.channels().list(id=a_channel_id, part='contentDetails').execute()
+    request = api_service.channels().list(id=a_channel_id, part='contentDetails').execute()
     playlist_id = request['items'][0]['contentDetails']['relatedPlaylists']['uploads']
 
     while 1:
 
-        request = service.playlistItems().list(playlistId=playlist_id, part=['snippet', 'contentDetails'],
-                                               maxResults=50,
-                                               pageToken=next_page_token).execute()
+        request = api_service.playlistItems().list(playlistId=playlist_id, part=['snippet', 'contentDetails'],
+                                                   maxResults=50,
+                                                   pageToken=next_page_token).execute()
         lst_of_videos += request['items']
         next_page_token = request.get('nextPageToken')
 
@@ -93,11 +88,12 @@ def api_get_channel_videos(a_channel_id):
     return lst_of_videos
 
 
-def api_get_videos_duration(list_videos_ids):
+def api_get_videos_duration(list_videos_ids, api_service):
     """
     A function to get the duration of 50 videos at once.
 
     :param list_videos_ids: A list of video IDs, maximum size 50.
+    :param api_service: API Google Token generated with Google.py call.
     :return: a dictionary associating video id and duration of said video.
     """
     durations = list()
@@ -107,7 +103,7 @@ def api_get_videos_duration(list_videos_ids):
     chunks50 = divide_chunks(list_videos_ids, 50)
 
     for chunk in chunks50:
-        request = service.videos().list(id=",".join(chunk), part='contentDetails', maxResults=50).execute()
+        request = api_service.videos().list(id=",".join(chunk), part='contentDetails', maxResults=50).execute()
         durations += [parse_duration(element["contentDetails"]["duration"]) for element in request["items"]]
 
     id_and_duration = {video_id: duration for video_id, duration in zip(list_videos_ids, durations)}
@@ -115,12 +111,13 @@ def api_get_videos_duration(list_videos_ids):
     return id_and_duration
 
 
-def api_add_to_playlist(playlist_id, ids_list):
+def api_add_to_playlist(playlist_id, ids_list, api_service):
     """
     A function to add selected video to a playlist.
 
     :param playlist_id: A specified playlist ID.
     :param ids_list: List of videos's ID
+    :param api_service: API Google Token generated with Google.py call.
     :return: small text for logs.
     """
 
@@ -142,7 +139,7 @@ def api_add_to_playlist(playlist_id, ids_list):
                 the_body = {"snippet": {"playlistId": playlist_id,
                                         "resourceId": {"videoId": video_id, "kind": "youtube#video"}}}
 
-                service.playlistItems().insert(part="snippet", body=the_body).execute()
+                api_service.playlistItems().insert(part="snippet", body=the_body).execute()
 
             except HttpError:
 
@@ -227,27 +224,32 @@ def video_selection(api_videos_list, latest_date, oldest_date):
 
     for video in api_videos_list:
 
-        # Convert date string in ISO 8601 format into a datetime object.
-        upload_date = datetime.strptime(video["contentDetails"]["videoPublishedAt"], "%Y-%m-%dT%H:%M:%S%z")
+        try:
+            # Convert date string in ISO 8601 format into a datetime object.
+            upload_date = datetime.strptime(video["contentDetails"]["videoPublishedAt"], "%Y-%m-%dT%H:%M:%S%z")
 
-        if video_in_period(latest_date, oldest_date, upload_date):
-            selection_list.append(video["snippet"]["resourceId"]["videoId"])
+            if video_in_period(latest_date, oldest_date, upload_date):
+                selection_list.append(video["snippet"]["resourceId"]["videoId"])
 
-        if video_in_period(latest_date, a_year_ago, upload_date):
-            a_year_ago_count += 1
+            if video_in_period(latest_date, a_year_ago, upload_date):
+                a_year_ago_count += 1
 
-        # if cpt_test <= 10:
-        #     print(
-        #         f'Oldest Date: {oldest_date.astimezone(tz=timezone.utc)}\n'
-        #         f'Upload Date: {upload_date}\n'
-        #         f'Latest Date: {latest_date.astimezone(tz=timezone.utc)}\n'
-        #         f'Boolean: {video_in_period(latest_date, oldest_date, upload_date)}\n')
-        #     cpt_test += 1
+            # if cpt_test <= 10:
+            #     print(
+            #         f'Oldest Date: {oldest_date.astimezone(tz=timezone.utc)}\n'
+            #         f'Upload Date: {upload_date}\n'
+            #         f'Latest Date: {latest_date.astimezone(tz=timezone.utc)}\n'
+            #         f'Boolean: {video_in_period(latest_date, oldest_date, upload_date)}\n')
+            #     cpt_test += 1
 
-    return {"selection_list": selection_list, "a_year_ago_count": a_year_ago_count, "channel_name": channel_name}
+            return {"selection_list": selection_list, "a_year_ago_count": a_year_ago_count,
+                    "channel_name": channel_name}
+
+        except KeyError:
+            webbrowser.open(f'https://www.youtube.com/watch?v={video}')
 
 
-def get_all_videos(channel_ids_list, latest_date, oldest_date):
+def get_all_videos(channel_ids_list, latest_date, oldest_date, api_service):
     """
     A function to get all videos from all channels in selected category. The function will also open in a web browser
     inactive YouTube channel link (one year without a video).
@@ -255,6 +257,7 @@ def get_all_videos(channel_ids_list, latest_date, oldest_date):
     :param channel_ids_list: list of channel from 'get_channel_list'.
     :param latest_date: Upper bound of time interval. (Corresponding with 'video_in_period' function)
     :param oldest_date: Lower bound of time interval. (Corresponding with 'video_in_period' function)
+    :param api_service: API Google Token generated with Google.py call.
     :return: a dictionary containing list of video's id and information to write into log.
     """
 
@@ -268,7 +271,7 @@ def get_all_videos(channel_ids_list, latest_date, oldest_date):
     for channel_id in channel_ids_list:
         count += 1
 
-        channel_selection = video_selection(api_get_channel_videos(channel_id), latest_date, oldest_date)
+        channel_selection = video_selection(api_get_channel_videos(channel_id, api_service), latest_date, oldest_date)
 
         to_print = f"Channel {count} out of {nb_channels} ({count * 100 / nb_channels:.2f} %).\n\n" \
                    f"Channel ID: {channel_id}\n" \
@@ -371,7 +374,7 @@ def clean_logs(directory):
     return to_log
 
 
-def execution(path_channel_data_base_json, path_playlist_ids_json, latest_date, oldest_date,
+def execution(path_channel_data_base_json, path_playlist_ids_json, latest_date, oldest_date, api_service,
               selected_category="MUSIQUE", short_vid_index="music", long_vid_index="mix", min_dur_long_vids=10):
     """
     Full execution of the process.
@@ -380,6 +383,7 @@ def execution(path_channel_data_base_json, path_playlist_ids_json, latest_date, 
     :param path_playlist_ids_json: file path to playlists URL. (Corresponding with 'read_json' function)
     :param latest_date: Upper bound of time interval. (Corresponding with 'get_all_videos' function)
     :param oldest_date: Lower bound of time interval. (Corresponding with 'get_all_videos' function)
+    :param api_service: API Google Token generated with Google.py call.
     :param selected_category: channel's category to explore ("MUSIQUE" by default, feel free to change it).
                               (Corresponding with 'get_channel_list' function)
     :param short_vid_index: key value corresponding to short videos playlist in 'playlist_ids_json' file ("music by
@@ -401,10 +405,10 @@ def execution(path_channel_data_base_json, path_playlist_ids_json, latest_date, 
     music_channels = get_channel_list(path_channel_data_base_json, category=selected_category)
     playlist_ids = read_json(path_playlist_ids_json)
 
-    all_vids = get_all_videos(music_channels, latest_date=latest_date, oldest_date=oldest_date)
+    all_vids = get_all_videos(music_channels, latest_date=latest_date, oldest_date=oldest_date, api_service=api_service)
     log += f'{all_vids["log_str"]}\n'
 
-    duration_dict = api_get_videos_duration(all_vids["all_video_ids"])
+    duration_dict = api_get_videos_duration(all_vids["all_video_ids"], api_service)
 
     duration_filter_dict = duration_filter(duration_dict, minute_threshold=min_dur_long_vids)
     log += f'{duration_filter_dict["logs"]}\n'
@@ -412,10 +416,12 @@ def execution(path_channel_data_base_json, path_playlist_ids_json, latest_date, 
     print("Adding videos into playlists...\n")
     log += "Adding videos into playlists...\n\n"
 
-    log_short_vid_text = api_add_to_playlist(playlist_ids[short_vid_index], duration_filter_dict["short_videos"])
+    log_short_vid_text = api_add_to_playlist(playlist_ids[short_vid_index], duration_filter_dict["short_videos"],
+                                             api_service)
     log += f'{log_short_vid_text}\n'
 
-    log_long_vid_text = api_add_to_playlist(playlist_ids[long_vid_index], duration_filter_dict["long_videos"])
+    log_long_vid_text = api_add_to_playlist(playlist_ids[long_vid_index], duration_filter_dict["long_videos"],
+                                            api_service)
     log += f'{log_long_vid_text}\n'
 
     print("- ALL DONE! -\n")
@@ -435,6 +441,13 @@ def execution(path_channel_data_base_json, path_playlist_ids_json, latest_date, 
 " - MAIN PROGRAM -"
 
 if __name__ == "__main__":
+    CLIENT_SECRET_FILE = '../files/code_secret_client.json'
+    API_NAME = 'YouTube'
+    API_VERSION = 'v3'
+    SCOPES = ['https://www.googleapis.com/auth/youtube']
+
+    my_service = Create_Service(CLIENT_SECRET_FILE, API_NAME, API_VERSION, SCOPES)
+
     music_channels_test = "../files/PocketTube_DB.json"
     playlist_ids_json = "../files/temp_playlist.json"
 
@@ -446,6 +459,7 @@ if __name__ == "__main__":
               path_playlist_ids_json=playlist_ids_json,
               latest_date=today,
               oldest_date=prev_date,
+              api_service=my_service,
               selected_category="MUSIQUE",
               short_vid_index="music",
               long_vid_index="mix",

@@ -106,7 +106,7 @@ def api_get_videos_duration(list_videos_ids, api_service):
         request = api_service.videos().list(id=",".join(chunk), part='contentDetails', maxResults=50).execute()
         durations += [parse_duration(element["contentDetails"]["duration"]) for element in request["items"]]
 
-    id_and_duration = {video_id: duration for video_id, duration in zip(list_videos_ids, durations)}
+    id_and_duration = dict(zip(list_videos_ids, durations))
 
     return id_and_duration
 

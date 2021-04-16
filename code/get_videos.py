@@ -1,11 +1,9 @@
 # -*- coding: utf-8 -*-
 
 import json
-import numpy as np
-import os
 import webbrowser
 
-from datetime import datetime, timedelta, timezone
+from datetime import datetime, timedelta  # , timezone
 from dateutil import tz
 from dateutil.relativedelta import relativedelta
 from Google import Create_Service
@@ -13,8 +11,12 @@ from googleapiclient.errors import HttpError
 from isodate import parse_duration
 from os import listdir, remove
 from os.path import isfile, join, getctime
-from pprint import pformat, pprint
 from time import sleep
+
+# import os
+# import numpy as np
+# from pprint import pformat, pprint
+
 
 """ - CREDITS - """
 

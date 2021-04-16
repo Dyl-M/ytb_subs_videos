@@ -68,7 +68,7 @@ def api_get_channel_videos(a_channel_id, api_service):
     :return: All video uploaded to this channel.
     """
 
-    lst_of_videos = list()
+    lst_of_videos = []
     next_page_token = None
 
     request = api_service.channels().list(id=a_channel_id, part='contentDetails').execute()
@@ -96,7 +96,7 @@ def api_get_videos_duration(list_videos_ids, api_service):
     :param api_service: API Google Token generated with Google.py call.
     :return: a dictionary associating video id and duration of said video.
     """
-    durations = list()
+    durations = []
     # chunks50 = [list(sub_list) for sub_list in
     #             np.array_split(np.array(list_videos_ids), len(list_videos_ids) // 50 + 1)]
 
@@ -216,7 +216,7 @@ def video_selection(api_videos_list, latest_date, oldest_date):
     # Get the channel name to write into logs.
     channel_name = api_videos_list[0]["snippet"]["channelTitle"]
 
-    selection_list = list()
+    selection_list = []
     a_year_ago_count = int()
     a_year_ago = datetime.today() - relativedelta(years=1)
 
@@ -262,9 +262,9 @@ def get_all_videos(channel_ids_list, latest_date, oldest_date, api_service):
     """
 
     log_str = str()
-    all_video_ids = list()
+    all_video_ids = []
     count = int()
-    ignored_report = list()
+    ignored_report = []
 
     nb_channels = len(channel_ids_list)
 

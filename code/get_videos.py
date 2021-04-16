@@ -199,8 +199,7 @@ def video_in_period(latest_date, oldest_date, video_date):
 
     if oldest_date_utc <= video_date <= latest_date_utc:
         return True
-    else:
-        return False
+    return False
 
 
 def video_selection(api_videos_list, latest_date, oldest_date):

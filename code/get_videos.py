@@ -241,13 +241,16 @@ def video_selection(api_videos_list, latest_date, oldest_date):
             #         f'Upload Date: {upload_date}\n'
             #         f'Latest Date: {latest_date.astimezone(tz=timezone.utc)}\n'
             #         f'Boolean: {video_in_period(latest_date, oldest_date, upload_date)}\n')
-            #     cpt_test += 1
-
-            return {"selection_list": selection_list, "a_year_ago_count": a_year_ago_count,
-                    "channel_name": channel_name}
+            #
+            #     sleep(3)
 
         except KeyError:
             webbrowser.open(f'https://www.youtube.com/watch?v={video}')
+
+        # cpt_test += 1
+
+    return {"selection_list": selection_list, "a_year_ago_count": a_year_ago_count,
+            "channel_name": channel_name}
 
 
 def get_all_videos(channel_ids_list, latest_date, oldest_date, api_service):

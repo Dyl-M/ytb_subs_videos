@@ -65,7 +65,6 @@ def api_get_channel_videos(a_channel_id, api_service):
     :param api_service: API Google Token generated with Google.py call.
     :return: All video uploaded to this channel.
     """
-
     lst_of_videos = []
     next_page_token = None
 
@@ -94,8 +93,6 @@ def api_get_videos_duration(list_videos_ids, api_service):
     :return: a dictionary associating video id and duration of said video.
     """
     durations = []
-    # chunks50 = [list(sub_list) for sub_list in
-    #             np.array_split(np.array(list_videos_ids), len(list_videos_ids) // 50 + 1)]
 
     chunks50 = divide_chunks(list_videos_ids, 50)
 
@@ -116,7 +113,6 @@ def api_add_to_playlist(playlist_id, ids_list, api_service):
     :param api_service: API Google Token generated with Google.py call.
     :return: small text for logs.
     """
-
     if ids_list:
 
         to_print = f"Estimated cost: {len(ids_list) * 50}\n"
@@ -166,7 +162,6 @@ def get_channel_list(json_path, category):
     :param category: a channel category to explore.
     :return: the list of channel's id in the said category.
     """
-
     with open(json_path) as json_file:
         data = json.load(json_file)
 
@@ -195,7 +190,6 @@ def video_in_period(latest_date, oldest_date, video_date):
     :param video_date: video's upload date, in ISO 8601 format, corresponding to UTC+00 (GMT) timezone.
     :return: True / False depending if the video's upload date is defined period or not.
     """
-
     tz_local = tz.tzlocal()
 
     latest_date_utc = latest_date.astimezone(tz_local)
@@ -214,9 +208,7 @@ def video_selection(api_videos_list, latest_date, oldest_date):
     :param oldest_date: Lower bound of time interval. (Corresponding with 'video_in_period' function)
     :return: a dictionary containing selected videos and number of video uploaded in a year.
     """
-
-    # Get the channel name to write into logs.
-    channel_name = api_videos_list[0]["snippet"]["channelTitle"]
+    channel_name = api_videos_list[0]["snippet"]["channelTitle"]  # Get the channel name to write into logs.
 
     selection_list = []
     a_year_ago_count = int()
@@ -255,7 +247,6 @@ def get_all_videos(channel_ids_list, latest_date, oldest_date, api_service):
     :param api_service: API Google Token generated with Google.py call.
     :return: a dictionary containing list of video's id and information to write into log.
     """
-
     log_str = str()
     all_video_ids = []
     count = int()
@@ -292,8 +283,8 @@ def get_all_videos(channel_ids_list, latest_date, oldest_date, api_service):
             all_video_ids += channel_selection["selection_list"]
 
         else:
-            to_print += f"Number of videos uploaded in a year: 0\n" \
-                        f"STATUS: INACTIVE\n"
+            to_print += "Number of videos uploaded in a year: 0\n" \
+                        "STATUS: INACTIVE\n"
 
             if channel_id not in channels_url_exception:
                 # Ignore exceptions.
@@ -324,9 +315,7 @@ def duration_filter(dict_ids_and_durations, minute_threshold):
     :param minute_threshold: minimum number of minutes to consider a video as a long video (10 minutes by default).
     :return: dictionary separating short and long videos.
     """
-
-    # Threshold passed in second to fit 'timedelta'.
-    delta_sec = minute_threshold * 60
+    delta_sec = minute_threshold * 60  # Threshold passed in second to fit 'timedelta'.
 
     short_videos = [key for key, value in dict_ids_and_durations.items() if value <= timedelta(seconds=delta_sec)]
     long_videos = [key for key, value in dict_ids_and_durations.items() if value > timedelta(seconds=delta_sec)]
@@ -385,7 +374,6 @@ def execution(path_channel_data_base_json, path_playlist_ids_json, latest_date, 
     :param min_dur_long_vid: minimum duration to consider that a video is long (10 minutes by default, feel free to
                               change it). (Corresponding with 'minute_threshold' argument in 'duration_filter' function)
     """
-
     today_date = datetime.today()
 
     log = f"Date of execution: {today_date:%Y-%m-%d %H:%M:%S}\n" \

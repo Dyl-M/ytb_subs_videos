@@ -7,16 +7,15 @@ import re
 from datetime import datetime
 from Google import Create_Service
 
-""" - SCRIPT INFORMATION - """
+"""- SCRIPT INFORMATION -
 
-"""
 @file_name: exe.py
 @author: Dylan "dyl-m" Monfret
 
 For more information, see 'get_videos.py' file.
 """
 
-""" - Google Service Creation - """
+" - Google Service Creation - "
 
 CLIENT_SECRET_FILE = '../files/code_secret_client.json'
 API_NAME = 'YouTube'
@@ -25,12 +24,11 @@ SCOPES = ['https://www.googleapis.com/auth/youtube']
 
 service = Create_Service(CLIENT_SECRET_FILE, API_NAME, API_VERSION, SCOPES)
 
-""" - Local Functions - """
+" - Local Functions - "
 
 
 def get_last_exe_date(logs_directory):
-    """
-    A function to get the last script execution date from logs' directory (so from most recent log file).
+    """A function to get the last script execution date from logs' directory (so from most recent log file).
 
     :param logs_directory: Logs' directory.
     :return: last execution date as datetime.datetime object.
@@ -47,7 +45,7 @@ def get_last_exe_date(logs_directory):
     return date
 
 
-""" - Main - """
+" - Main - "
 
 music_channels = "../files/PocketTube_DB.json"
 playlist_ids_json = "../files/temp_playlist.json"

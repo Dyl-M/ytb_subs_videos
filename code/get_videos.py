@@ -23,7 +23,7 @@ Channel database with categories created with https://yousub.info/, PocketTube -
 
 Video retrieving function ('api_get_channel_videos') by "Indian Pythonista".
 
-Original code: https://github.com/nikhilkumarsingh/YouTubeAPI-Examples/blob/master/4.Channel-Vids.ipynb
+Original code: https://github.com/nikhilkumarsingh/YouTubeAPI-Examples/blob/master/4.Channel-vid.ipynb
 GitHub: https://github.com/nikhilkumarsingh
 YouTube: https://www.youtube.com/channel/UCkUq-s6z57uJFUFBvZIVTyg
 """
@@ -47,9 +47,9 @@ Summary
 
 " - PREPARATORY ELEMENTS - "
 
-channels_url_exeception = {"UC4YCVy0ggUoFd2NVU2z04WA",
-                           'UCh8awPsk105z9y9-BwEduGw',
-                           'UC3hV4vnwzTUPSb7CAx4mXvg'}  # Possible inactive channels to ignore.
+channels_url_exception = {"UC4YCVy0ggUoFd2NVU2z04WA",
+                          'UCh8awPsk105z9y9-BwEduGw',
+                          'UC3hV4vnwzTUPSb7CAx4mXvg'}  # Possible inactive channels to ignore.
 
 # channels_ignored = {'UC0n9yiP-AD2DpuuYCDwlNxQ'}
 channels_ignored = {''}
@@ -58,8 +58,8 @@ channels_ignored = {''}
 
 
 def api_get_channel_videos(a_channel_id, api_service):
-    """A function to get all videos published / uploaded by a YouTube channel. Public, unlisted and premiere type
-    videos will be retrieved by this function.
+    """Get all videos published / uploaded by a YouTube channel. Public, unlisted and premiere type videos will be
+    retrieved by this function.
 
     :param a_channel_id: A channel ID (https://www.youtube.com/channel/[THIS PART]).
     :param api_service: API Google Token generated with Google.py call.
@@ -87,7 +87,7 @@ def api_get_channel_videos(a_channel_id, api_service):
 
 
 def api_get_videos_duration(list_videos_ids, api_service):
-    """A function to get the duration of 50 videos at once.
+    """Get the duration of 50 videos at once.
 
     :param list_videos_ids: A list of video IDs, maximum size 50.
     :param api_service: API Google Token generated with Google.py call.
@@ -109,10 +109,10 @@ def api_get_videos_duration(list_videos_ids, api_service):
 
 
 def api_add_to_playlist(playlist_id, ids_list, api_service):
-    """A function to add selected video to a playlist.
+    """Add selected video to a playlist.
 
     :param playlist_id: A specified playlist ID.
-    :param ids_list: List of videos's ID
+    :param ids_list: List of videos' ID
     :param api_service: API Google Token generated with Google.py call.
     :return: small text for logs.
     """
@@ -160,7 +160,7 @@ def divide_chunks(a_list, n):
 
 
 def get_channel_list(json_path, category):
-    """A function to get the list of channel to explore.
+    """Get the list of channel to explore.
 
     :param json_path: the file path to the .json file with channels' IDs, classified by categories (such as "MUSIQUE").
     :param category: a channel category to explore.
@@ -176,7 +176,7 @@ def get_channel_list(json_path, category):
 
 
 def read_json(json_path):
-    """A function to read JSON files.
+    """Read JSON files.
 
     :param json_path: file path to JSON file.
     :return: file data as list / dict.
@@ -188,7 +188,7 @@ def read_json(json_path):
 
 
 def video_in_period(latest_date, oldest_date, video_date):
-    """A function returning a Boolean indicating if a said video was uploaded in a specified period.
+    """Return a Boolean indicating if a said video was uploaded in a specified period.
 
     :param latest_date: Upper bound of time interval.
     :param oldest_date: Lower bound of time interval.
@@ -207,7 +207,7 @@ def video_in_period(latest_date, oldest_date, video_date):
 
 
 def video_selection(api_videos_list, latest_date, oldest_date):
-    """A function giving videos uploaded by a channel in a specified period and the number of videos upload in a year.
+    """Give videos uploaded by a channel in a specified period and the number of videos upload in a year.
 
     :param api_videos_list: list of videos got from 'api_get_channel_videos' function.
     :param latest_date: Upper bound of time interval. (Corresponding with 'video_in_period' function)
@@ -236,15 +236,6 @@ def video_selection(api_videos_list, latest_date, oldest_date):
             if video_in_period(latest_date, a_year_ago, upload_date):
                 a_year_ago_count += 1
 
-            # if cpt_test <= 10:
-            #     print(
-            #         f'Oldest Date: {oldest_date.astimezone(tz=timezone.utc)}\n'
-            #         f'Upload Date: {upload_date}\n'
-            #         f'Latest Date: {latest_date.astimezone(tz=timezone.utc)}\n'
-            #         f'Boolean: {video_in_period(latest_date, oldest_date, upload_date)}\n')
-            #
-            #     sleep(3)
-
         except KeyError:
             webbrowser.open(f'https://www.youtube.com/watch?v={video}')
 
@@ -255,8 +246,8 @@ def video_selection(api_videos_list, latest_date, oldest_date):
 
 
 def get_all_videos(channel_ids_list, latest_date, oldest_date, api_service):
-    """A function to get all videos from all channels in selected category. The function will also open in a web browser
-    inactive YouTube channel link (one year without a video).
+    """Get all videos from all channels in selected category. The function will also open in a web browser inactive
+    YouTube channel link (one year without a video).
 
     :param channel_ids_list: list of channel from 'get_channel_list'.
     :param latest_date: Upper bound of time interval. (Corresponding with 'video_in_period' function)
@@ -304,7 +295,7 @@ def get_all_videos(channel_ids_list, latest_date, oldest_date, api_service):
             to_print += f"Number of videos uploaded in a year: 0\n" \
                         f"STATUS: INACTIVE\n"
 
-            if channel_id not in channels_url_exeception:
+            if channel_id not in channels_url_exception:
                 # Ignore exceptions.
                 webbrowser.open(f"https://www.youtube.com/channel/{channel_id}")
 
@@ -327,7 +318,7 @@ def get_all_videos(channel_ids_list, latest_date, oldest_date, api_service):
 
 
 def duration_filter(dict_ids_and_durations, minute_threshold):
-    """A function to sort short and long videos in two list.
+    """Sort short and long videos in two list.
 
     :param dict_ids_and_durations: dictionary of video's id and associated duration (from 'api_get_videos_duration').
     :param minute_threshold: minimum number of minutes to consider a video as a long video (10 minutes by default).
@@ -352,13 +343,13 @@ def duration_filter(dict_ids_and_durations, minute_threshold):
 
 
 def clean_logs(directory):
-    """A function clean oldest log files.
+    """Clean oldest log files.
 
     :param directory: Logs folder path.
     :return: short string saying if some logs were removed or not.
     """
     to_log = str()
-    files = [{"file_name": f"{directory}/{file}", "date_crea": getctime(f"{directory}/{file}")} for file in
+    files = [{"file_name": f"{directory}/{file}", "creation_date": getctime(f"{directory}/{file}")} for file in
              listdir(f"{directory}") if isfile(join(f"{directory}", file))][:-9]
 
     if not files:
@@ -377,8 +368,8 @@ def clean_logs(directory):
 
 
 def execution(path_channel_data_base_json, path_playlist_ids_json, latest_date, oldest_date, api_service,
-              selected_category="MUSIQUE", short_vid_index="music", long_vid_index="mix", min_dur_long_vids=10):
-    """Full execution of the process.
+              selected_category="MUSIQUE", short_vid_index="music", long_vid_index="mix", min_dur_long_vid=10):
+    """Execute the whole process.
 
     :param path_channel_data_base_json: file path to channel data_base. (Corresponding with 'get_channel_list' function)
     :param path_playlist_ids_json: file path to playlists URL. (Corresponding with 'read_json' function)
@@ -391,7 +382,7 @@ def execution(path_channel_data_base_json, path_playlist_ids_json, latest_date, 
                             default, feel free to change it).
     :param long_vid_index: key value corresponding to long videos playlist in 'playlist_ids_json' file ("mix" by
                            default, feel free to change it).
-    :param min_dur_long_vids: minimum duration to consider that a video is long (10 minutes by default, feel free to
+    :param min_dur_long_vid: minimum duration to consider that a video is long (10 minutes by default, feel free to
                               change it). (Corresponding with 'minute_threshold' argument in 'duration_filter' function)
     """
 
@@ -406,12 +397,12 @@ def execution(path_channel_data_base_json, path_playlist_ids_json, latest_date, 
     music_channels = get_channel_list(path_channel_data_base_json, category=selected_category)
     playlist_ids = read_json(path_playlist_ids_json)
 
-    all_vids = get_all_videos(music_channels, latest_date=latest_date, oldest_date=oldest_date, api_service=api_service)
-    log += f'{all_vids["log_str"]}\n'
+    all_vid = get_all_videos(music_channels, latest_date=latest_date, oldest_date=oldest_date, api_service=api_service)
+    log += f'{all_vid["log_str"]}\n'
 
-    duration_dict = api_get_videos_duration(all_vids["all_video_ids"], api_service)
+    duration_dict = api_get_videos_duration(all_vid["all_video_ids"], api_service)
 
-    duration_filter_dict = duration_filter(duration_dict, minute_threshold=min_dur_long_vids)
+    duration_filter_dict = duration_filter(duration_dict, minute_threshold=min_dur_long_vid)
     log += f'{duration_filter_dict["logs"]}\n'
 
     print("Adding videos into playlists...\n")
@@ -464,4 +455,4 @@ if __name__ == "__main__":
               selected_category="MUSIQUE",
               short_vid_index="music",
               long_vid_index="mix",
-              min_dur_long_vids=10)
+              min_dur_long_vid=10)

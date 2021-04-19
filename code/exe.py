@@ -28,7 +28,7 @@ service = Create_Service(CLIENT_SECRET_FILE, API_NAME, API_VERSION, SCOPES)
 
 
 def get_last_exe_date(logs_directory):
-    """A function to get the last script execution date from logs' directory (so from most recent log file).
+    """Get the last script execution date from logs' directory (so from most recent log file).
 
     :param logs_directory: Logs' directory.
     :return: last execution date as datetime.datetime object.
@@ -65,4 +65,4 @@ gv.execution(path_channel_data_base_json=music_channels,
              selected_category="MUSIQUE",
              short_vid_index="music",
              long_vid_index="mix",
-             min_dur_long_vids=10)
+             min_dur_long_vid=10)

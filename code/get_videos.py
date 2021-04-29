@@ -49,7 +49,9 @@ Summary
 
 channels_url_exception = {"UC4YCVy0ggUoFd2NVU2z04WA",
                           'UCh8awPsk105z9y9-BwEduGw',
-                          'UC3hV4vnwzTUPSb7CAx4mXvg'}  # Possible inactive channels to ignore.
+                          'UC3hV4vnwzTUPSb7CAx4mXvg',
+                          'UCbAEthmNnJk8JVZP8FWXqZg',
+                          'UC2ZsqkwvxEpw-aYAIJHTRDg'}  # Possible inactive channels to ignore.
 
 # channels_ignored = {'UC0n9yiP-AD2DpuuYCDwlNxQ'}
 channels_ignored = {''}

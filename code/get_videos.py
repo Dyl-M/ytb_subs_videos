@@ -51,7 +51,8 @@ channels_url_exception = {"UC4YCVy0ggUoFd2NVU2z04WA",
                           'UCh8awPsk105z9y9-BwEduGw',
                           'UC3hV4vnwzTUPSb7CAx4mXvg',
                           'UCbAEthmNnJk8JVZP8FWXqZg',
-                          'UC2ZsqkwvxEpw-aYAIJHTRDg'}  # Possible inactive channels to ignore.
+                          'UC2ZsqkwvxEpw-aYAIJHTRDg',
+                          'UCU3ba7mBFprROpg1hJK7e_g'}  # Possible inactive channels to ignore.
 
 # channels_ignored = {'UC0n9yiP-AD2DpuuYCDwlNxQ'}
 channels_ignored = {''}
@@ -73,16 +74,20 @@ def api_get_channel_videos(a_channel_id, api_service):
     request = api_service.channels().list(id=a_channel_id, part='contentDetails').execute()
     playlist_id = request['items'][0]['contentDetails']['relatedPlaylists']['uploads']
 
-    while 1:
+    try:
+        while 1:
 
-        request = api_service.playlistItems().list(playlistId=playlist_id, part=['snippet', 'contentDetails'],
-                                                   maxResults=50,
-                                                   pageToken=next_page_token).execute()
-        lst_of_videos += request['items']
-        next_page_token = request.get('nextPageToken')
+            request = api_service.playlistItems().list(playlistId=playlist_id, part=['snippet', 'contentDetails'],
+                                                       maxResults=50,
+                                                       pageToken=next_page_token).execute()
+            lst_of_videos += request['items']
+            next_page_token = request.get('nextPageToken')
 
-        if next_page_token is None:
-            break
+            if next_page_token is None:
+                break
+
+    except HttpError:
+        pass
 
     return lst_of_videos
 
@@ -210,33 +215,37 @@ def video_selection(api_videos_list, latest_date, oldest_date):
     :param oldest_date: Lower bound of time interval. (Corresponding with 'video_in_period' function)
     :return: a dictionary containing selected videos and number of video uploaded in a year.
     """
-    channel_name = api_videos_list[0]["snippet"]["channelTitle"]  # Get the channel name to write into logs.
+    if api_videos_list:
+        channel_name = api_videos_list[0]["snippet"]["channelTitle"]  # Get the channel name to write into logs.
 
-    selection_list = []
-    a_year_ago_count = int()
-    a_year_ago = datetime.today() - relativedelta(years=1)
+        selection_list = []
+        a_year_ago_count = int()
+        a_year_ago = datetime.today() - relativedelta(years=1)
 
-    # cpt_test = 1
+        # cpt_test = 1
 
-    for video in api_videos_list:
+        for video in api_videos_list:
 
-        try:
-            # Convert date string in ISO 8601 format into a datetime object.
-            upload_date = datetime.strptime(video["contentDetails"]["videoPublishedAt"], "%Y-%m-%dT%H:%M:%S%z")
+            try:
+                # Convert date string in ISO 8601 format into a datetime object.
+                upload_date = datetime.strptime(video["contentDetails"]["videoPublishedAt"], "%Y-%m-%dT%H:%M:%S%z")
 
-            if video_in_period(latest_date, oldest_date, upload_date):
-                selection_list.append(video["snippet"]["resourceId"]["videoId"])
+                if video_in_period(latest_date, oldest_date, upload_date):
+                    selection_list.append(video["snippet"]["resourceId"]["videoId"])
 
-            if video_in_period(latest_date, a_year_ago, upload_date):
-                a_year_ago_count += 1
+                if video_in_period(latest_date, a_year_ago, upload_date):
+                    a_year_ago_count += 1
 
-        except KeyError:
-            webbrowser.open(f'https://www.youtube.com/watch?v={video}')
+            except KeyError:
+                webbrowser.open(f'https://www.youtube.com/watch?v={video}')
 
-        # cpt_test += 1
+            # cpt_test += 1
 
-    return {"selection_list": selection_list, "a_year_ago_count": a_year_ago_count,
-            "channel_name": channel_name}
+        return {"selection_list": selection_list, "a_year_ago_count": a_year_ago_count, "channel_name": channel_name}
+
+    else:
+
+        return {"selection_list": [], "a_year_ago_count": 0, "channel_name": 'No Video so No Name lol'}
 
 
 def get_all_videos(channel_ids_list, latest_date, oldest_date, api_service):

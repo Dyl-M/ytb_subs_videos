@@ -134,10 +134,15 @@ def api_add_to_playlist(playlist_id, ids_list, api_service):
             sleep(1 + (cpt - 1) / 10)
             cpt += 1
 
-            try:
-                the_body = {"snippet": {"playlistId": playlist_id,
-                                        "resourceId": {"videoId": video_id, "kind": "youtube#video"}}}
+            the_body = {"snippet": {"playlistId": playlist_id,
+                                    "resourceId": {"videoId": video_id, "kind": "youtube#video"}}}
 
+            try:
+                api_service.playlistItems().insert(part="snippet", body=the_body).execute()
+
+            except ConnectionResetError:
+                # TODO: Find a better way to handle ConnectionResetError.
+                sleep(5)
                 api_service.playlistItems().insert(part="snippet", body=the_body).execute()
 
             except HttpError:

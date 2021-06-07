@@ -137,19 +137,23 @@ def api_add_to_playlist(playlist_id, ids_list, api_service):
             the_body = {"snippet": {"playlistId": playlist_id,
                                     "resourceId": {"videoId": video_id, "kind": "youtube#video"}}}
 
-            try:
-                api_service.playlistItems().insert(part="snippet", body=the_body).execute()
+            success = False
 
-            except ConnectionResetError:
-                # TODO: Find a better way to handle ConnectionResetError.
-                sleep(5)
-                api_service.playlistItems().insert(part="snippet", body=the_body).execute()
+            while not success:
+                try:
+                    api_service.playlistItems().insert(part="snippet", body=the_body).execute()
+                    success = True
 
-            except HttpError:
+                except ConnectionResetError:
+                    print("ConnectionResetError: let me sleep for 5 seconds, just enough time to recover...")
+                    sleep(5)
 
-                error_message = f"Problem encountered with this video: https://www.youtube.com/watch?v={video_id}"
-                print(error_message)
-                to_print += error_message + '\n'
+                except HttpError:
+
+                    error_message = f"Problem encountered with this video: https://www.youtube.com/watch?v={video_id}"
+                    print(error_message)
+                    to_print += error_message + '\n'
+                    success = True
 
     else:
         to_print = "No video in this list.\n"

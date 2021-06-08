@@ -92,6 +92,52 @@ def api_get_channel_videos(a_channel_id, api_service):
     return lst_of_videos
 
 
+def api_isin_playlist(a_playlist_id, a_video_id, api_service):
+    """
+    Define a boolean if a video is in a YouTube playlist or not.
+
+    :param a_playlist_id: A playlist ID (https://www.youtube.com/watch?v=[VIDEO ID]&list=[THIS PART]).
+    :param a_video_id: A video ID (https://www.youtube.com/watch?v=[THIS PART]).
+    :param api_service: API Google Token generated with Google.py call.
+    :return: A boolean to say if the video is in the playlist or not.
+    """
+
+    lst_of_videos = []
+    next_page_token = None
+
+    while 1:
+
+        success = False
+
+        while not success:
+            try:
+                request = api_service.playlistItems().list(playlistId=a_playlist_id,
+                                                           part=['snippet', 'contentDetails'],
+                                                           maxResults=50,
+                                                           pageToken=next_page_token).execute()
+                lst_of_videos += request['items']
+                next_page_token = request.get('nextPageToken')
+                success = True
+
+            except ConnectionResetError:
+                print("ConnectionResetError: let me sleep for 5 seconds, just enough time to recover...")
+                sleep(5)
+
+            except HttpError:
+                print("OUT OF GOOGLE CREDIT - COME BACK LATER")
+                success = True
+
+        if next_page_token is None:
+            break
+
+    id_set = {video['contentDetails']['videoId'] for video in lst_of_videos}
+
+    if a_video_id not in id_set:
+        return False
+
+    return True
+
+
 def api_get_videos_duration(list_videos_ids, api_service):
     """Get the duration of 50 videos at once.
 
@@ -139,7 +185,7 @@ def api_add_to_playlist(playlist_id, ids_list, api_service):
 
             success = False
 
-            while not success:
+            while not success and not api_isin_playlist(playlist_id, video_id, api_service):
                 try:
                     api_service.playlistItems().insert(part="snippet", body=the_body).execute()
                     success = True

@@ -93,8 +93,7 @@ def api_get_channel_videos(a_channel_id, api_service):
 
 
 def api_isin_playlist(a_playlist_id, a_video_id, api_service):
-    """
-    Define a boolean if a video is in a YouTube playlist or not.
+    """Define if a video is in a YouTube playlist or not.
 
     :param a_playlist_id: A playlist ID (https://www.youtube.com/watch?v=[VIDEO ID]&list=[THIS PART]).
     :param a_video_id: A video ID (https://www.youtube.com/watch?v=[THIS PART]).

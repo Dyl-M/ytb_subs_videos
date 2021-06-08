@@ -100,7 +100,6 @@ def api_isin_playlist(a_playlist_id, a_video_id, api_service):
     :param api_service: API Google Token generated with Google.py call.
     :return: A boolean to say if the video is in the playlist or not.
     """
-
     lst_of_videos = []
     next_page_token = None
 

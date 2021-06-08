@@ -157,6 +157,33 @@ def api_get_videos_duration(list_videos_ids, api_service):
     return id_and_duration
 
 
+def api_get_channel_name(channel_id, api_service):
+    """Get the duration of 50 videos at once.
+
+    :param channel_id: A YouTube channel ID.
+    :param api_service: API Google Token generated with Google.py call.
+    :return: the channel name (characters string).
+    """
+    request = api_service.channels().list(id=channel_id, part='snippet')
+    success = False
+
+    response = None
+
+    while not success:
+
+        try:
+            response = request.execute()
+            success = True
+
+        except ConnectionResetError:
+            print("ConnectionResetError: let me sleep for 5 seconds, just enough time to recover...")
+            sleep(5)
+
+    name = response['items'][0]['snippet']['title']
+
+    return name
+
+
 def api_add_to_playlist(playlist_id, ids_list, api_service):
     """Add selected video to a playlist.
 
@@ -261,12 +288,14 @@ def video_in_period(latest_date, oldest_date, video_date):
     return False
 
 
-def video_selection(api_videos_list, latest_date, oldest_date):
+def video_selection(api_videos_list, latest_date, oldest_date, channel_id, api_service):
     """Give videos uploaded by a channel in a specified period and the number of videos upload in a year.
 
     :param api_videos_list: list of videos got from 'api_get_channel_videos' function.
     :param latest_date: Upper bound of time interval. (Corresponding with 'video_in_period' function)
     :param oldest_date: Lower bound of time interval. (Corresponding with 'video_in_period' function)
+    :param channel_id: YouTube channel ID, in case there is no video on the channel yet.
+    :param api_service: API Google Token generated with Google.py call, in case there is no video on the channel yet.
     :return: a dictionary containing selected videos and number of video uploaded in a year.
     """
     if api_videos_list:
@@ -297,9 +326,7 @@ def video_selection(api_videos_list, latest_date, oldest_date):
 
         return {"selection_list": selection_list, "a_year_ago_count": a_year_ago_count, "channel_name": channel_name}
 
-    else:
-
-        return {"selection_list": [], "a_year_ago_count": 0, "channel_name": 'No Video so No Name lol'}
+    return {"selection_list": [], "a_year_ago_count": 0, "channel_name": api_get_channel_name(channel_id, api_service)}
 
 
 def get_all_videos(channel_ids_list, latest_date, oldest_date, api_service):
@@ -322,7 +349,8 @@ def get_all_videos(channel_ids_list, latest_date, oldest_date, api_service):
     for channel_id in channel_ids_list:
         count += 1
 
-        channel_selection = video_selection(api_get_channel_videos(channel_id, api_service), latest_date, oldest_date)
+        channel_selection = video_selection(api_get_channel_videos(channel_id, api_service), latest_date, oldest_date,
+                                            channel_id, api_service)
 
         to_print = f"Channel {count} out of {nb_channels} ({count * 100 / nb_channels:.2f} %).\n\n" \
                    f"Channel ID: {channel_id}\n" \

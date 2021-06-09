@@ -131,6 +131,7 @@ def api_isin_playlist(a_playlist_id, a_video_id, api_service):
     id_set = {video['contentDetails']['videoId'] for video in lst_of_videos}
 
     if a_video_id not in id_set:
+        print(f"Oops, the video \" https://www.youtube.com/watch?v={a_video_id} \" is not here yet!")
         return False
 
     return True
@@ -210,10 +211,15 @@ def api_add_to_playlist(playlist_id, ids_list, api_service):
 
             success = False
 
-            while not success and not api_isin_playlist(playlist_id, video_id, api_service):
+            while not success:
                 try:
                     api_service.playlistItems().insert(part="snippet", body=the_body).execute()
-                    success = True
+
+                    if not api_isin_playlist(playlist_id, video_id, api_service):
+                        pass
+
+                    else:
+                        success = True
 
                 except ConnectionResetError:
                     print("ConnectionResetError: let me sleep for 5 seconds, just enough time to recover...")

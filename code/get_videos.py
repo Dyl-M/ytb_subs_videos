@@ -130,6 +130,8 @@ def api_isin_playlist(a_playlist_id, a_video_id, api_service):
 
     id_set = {video['contentDetails']['videoId'] for video in lst_of_videos}
 
+    # print(id_set)
+
     if a_video_id not in id_set:
         print(f"Oops, the video \" https://www.youtube.com/watch?v={a_video_id} \" is not here yet!")
         return False
@@ -193,33 +195,25 @@ def api_add_to_playlist(playlist_id, ids_list, api_service):
     :return: small text for logs.
     """
     if ids_list:
-
         to_print = f"Estimated cost: {len(ids_list) * 50}\n"
         print(to_print)
 
         cpt = 1
 
         for video_id in ids_list:
-
-            print(f"{cpt:02d}. Adding https://www.youtube.com/watch?v={video_id}...")
-
-            sleep(1 + (cpt - 1) / 10)
-            cpt += 1
-
             the_body = {"snippet": {"playlistId": playlist_id,
                                     "resourceId": {"videoId": video_id, "kind": "youtube#video"}}}
+
+            sleep(1 + (cpt - 1) / 10)
 
             success = False
 
             while not success:
+                print(f"{cpt:02d}. Adding https://www.youtube.com/watch?v={video_id}...")
+
                 try:
                     api_service.playlistItems().insert(part="snippet", body=the_body).execute()
-
-                    if not api_isin_playlist(playlist_id, video_id, api_service):
-                        pass
-
-                    else:
-                        success = True
+                    success = api_isin_playlist(playlist_id, video_id, api_service)
 
                 except ConnectionResetError:
                     print("ConnectionResetError: let me sleep for 5 seconds, just enough time to recover...")
@@ -231,6 +225,8 @@ def api_add_to_playlist(playlist_id, ids_list, api_service):
                     print(error_message)
                     to_print += error_message + '\n'
                     success = True
+
+            cpt += 1
 
     else:
         to_print = "No video in this list.\n"
@@ -325,7 +321,7 @@ def video_selection(api_videos_list, latest_date, oldest_date, channel_id, api_s
                     a_year_ago_count += 1
 
             except KeyError:
-                webbrowser.open(f'https://www.youtube.com/watch?v={video}')
+                print(f'Can\'t find this video: https://www.youtube.com/watch?v={video}')
 
             # cpt_test += 1
 

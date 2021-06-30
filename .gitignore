@@ -362,7 +362,7 @@ MigrationBackup/
 /code/token_youtube_v3.pickle
 /code/youtube_playlist_generator.py
 /files/API_KEY.txt
-/files/graph.png
+/files/*.png
 /files/temp_playlist.json
 /files/time_series.csv
 /files/output*.xlsx

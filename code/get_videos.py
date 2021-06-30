@@ -321,7 +321,7 @@ def video_selection(api_videos_list, latest_date, oldest_date, channel_id, api_s
                     a_year_ago_count += 1
 
             except KeyError:
-                print(f'Can\'t find this video: https://www.youtube.com/watch?v={video}')
+                print(f'Can\'t find this video: https://www.youtube.com/watch?v={video["contentDetails"]["videoId"]}')
 
             # cpt_test += 1
 

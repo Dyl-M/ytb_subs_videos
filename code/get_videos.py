@@ -6,7 +6,7 @@ import webbrowser
 from datetime import datetime, timedelta  # , timezone
 from dateutil import tz
 from dateutil.relativedelta import relativedelta
-from Google import Create_Service
+from Google import create_service
 from googleapiclient.errors import HttpError
 from isodate import parse_duration
 from os import listdir, remove
@@ -358,7 +358,7 @@ def get_all_videos(channel_ids_list, latest_date, oldest_date, api_service):
                    f"Channel Name: {channel_selection['channel_name']}\n\n" \
                    f"Number of selected videos: {len(channel_selection['selection_list'])}\n"
 
-        if channel_id in channels_ignored or len(channel_selection['selection_list']) * 50 > 800:
+        if channel_id in channels_ignored or len(channel_selection['selection_list']) * 50 > 2000:
             to_print += f"Number of videos uploaded in a year: {channel_selection['a_year_ago_count']}\n" \
                         f"STATUS: IGNORED\n"
             if channel_id in channels_ignored:
@@ -368,6 +368,7 @@ def get_all_videos(channel_ids_list, latest_date, oldest_date, api_service):
                                        'n': len(channel_selection['selection_list'])})
             else:
                 ignored_report.append({'channel_id': channel_id,
+                                       'channel_name': channel_selection['channel_name'],
                                        'cause': 'To many videos selected',
                                        'n': len(channel_selection['selection_list'])})
 
@@ -520,7 +521,7 @@ if __name__ == "__main__":
     API_VERSION = 'v3'
     SCOPES = ['https://www.googleapis.com/auth/youtube']
 
-    my_service = Create_Service(CLIENT_SECRET_FILE, API_NAME, API_VERSION, SCOPES)
+    my_service = create_service(CLIENT_SECRET_FILE, API_NAME, API_VERSION, SCOPES)
 
     music_channels_test = "../files/PocketTube_DB.json"
     playlist_ids_json = "../files/temp_playlist.json"

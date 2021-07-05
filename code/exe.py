@@ -5,7 +5,7 @@ import glob
 import os
 import re
 from datetime import datetime
-from Google import Create_Service
+from Google import create_service
 
 """- SCRIPT INFORMATION -
 
@@ -22,7 +22,7 @@ API_NAME = 'YouTube'
 API_VERSION = 'v3'
 SCOPES = ['https://www.googleapis.com/auth/youtube']
 
-service = Create_Service(CLIENT_SECRET_FILE, API_NAME, API_VERSION, SCOPES)
+service = create_service(CLIENT_SECRET_FILE, API_NAME, API_VERSION, SCOPES)
 
 " - Local Functions - "
 

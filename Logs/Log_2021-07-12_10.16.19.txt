@@ -1,6 +1,6 @@
-Date of execution: 2021-06-27 13:08:51
-Latest Date: 2021-06-27 13:08:51
-Oldest Date: 2021-06-26 14:38:44
+Date of execution: 2021-07-12 10:16:19
+Latest Date: 2021-07-12 10:16:19
+Oldest Date: 2021-07-11 18:26:44
 
 Channel 1 out of 138 (0.72 %).
 
@@ -8,7 +8,7 @@ Channel ID: UCvNjdDE6xRuvYVhUGAl2BIQ
 Channel Name: 2Dutch Music Group
 
 Number of selected videos: 0
-Number of videos uploaded in a year: 81
+Number of videos uploaded in a year: 76
 STATUS: ACTIVE
 
 Total number of videos selected so far: 0
@@ -20,7 +20,7 @@ Channel ID: UCalCDSmZAYD73tqVZ4l8yJg
 Channel Name: A State Of Trance
 
 Number of selected videos: 0
-Number of videos uploaded in a year: 225
+Number of videos uploaded in a year: 215
 STATUS: ACTIVE
 
 Total number of videos selected so far: 0
@@ -32,7 +32,7 @@ Channel ID: UCmKm7HJdOfkWLyml-fzKlVg
 Channel Name: Afrojack
 
 Number of selected videos: 0
-Number of videos uploaded in a year: 58
+Number of videos uploaded in a year: 60
 STATUS: ACTIVE
 
 Total number of videos selected so far: 0
@@ -55,11 +55,11 @@ Channel 5 out of 138 (3.62 %).
 Channel ID: UCwIgPuUJXuf2nY-nKsEvLOg
 Channel Name: AirwaveMusicTV
 
-Number of selected videos: 1
-Number of videos uploaded in a year: 373
+Number of selected videos: 0
+Number of videos uploaded in a year: 372
 STATUS: ACTIVE
 
-Total number of videos selected so far: 1
+Total number of videos selected so far: 0
 //////////////////////////////////////////////////
 
 Channel 6 out of 138 (4.35 %).
@@ -71,7 +71,7 @@ Number of selected videos: 0
 Number of videos uploaded in a year: 7
 STATUS: ACTIVE
 
-Total number of videos selected so far: 1
+Total number of videos selected so far: 0
 //////////////////////////////////////////////////
 
 Channel 7 out of 138 (5.07 %).
@@ -83,7 +83,7 @@ Number of selected videos: 0
 Number of videos uploaded in a year: 26
 STATUS: ACTIVE
 
-Total number of videos selected so far: 1
+Total number of videos selected so far: 0
 //////////////////////////////////////////////////
 
 Channel 8 out of 138 (5.80 %).
@@ -95,7 +95,7 @@ Number of selected videos: 0
 Number of videos uploaded in a year: 4
 STATUS: ACTIVE
 
-Total number of videos selected so far: 1
+Total number of videos selected so far: 0
 //////////////////////////////////////////////////
 
 Channel 9 out of 138 (6.52 %).
@@ -103,11 +103,11 @@ Channel 9 out of 138 (6.52 %).
 Channel ID: UCGZXYc32ri4D0gSLPf2pZXQ
 Channel Name: Armada Music
 
-Number of selected videos: 1
-Number of videos uploaded in a year: 532
+Number of selected videos: 0
+Number of videos uploaded in a year: 515
 STATUS: ACTIVE
 
-Total number of videos selected so far: 2
+Total number of videos selected so far: 0
 //////////////////////////////////////////////////
 
 Channel 10 out of 138 (7.25 %).
@@ -116,10 +116,10 @@ Channel ID: UCU2KRSjJd1_NnBc2re0efDQ
 Channel Name: Armada Record Box
 
 Number of selected videos: 0
-Number of videos uploaded in a year: 11
+Number of videos uploaded in a year: 10
 STATUS: ACTIVE
 
-Total number of videos selected so far: 2
+Total number of videos selected so far: 0
 //////////////////////////////////////////////////
 
 Channel 11 out of 138 (7.97 %).
@@ -128,10 +128,10 @@ Channel ID: UCu5jfQcpRLm9xhmlSd5S8xw
 Channel Name: Armin van Buuren
 
 Number of selected videos: 0
-Number of videos uploaded in a year: 94
+Number of videos uploaded in a year: 92
 STATUS: ACTIVE
 
-Total number of videos selected so far: 2
+Total number of videos selected so far: 0
 //////////////////////////////////////////////////
 
 Channel 12 out of 138 (8.70 %).
@@ -140,10 +140,10 @@ Channel ID: UCCvVpbYRgYjMN7mG7qQN0Pg
 Channel Name: Bass Nation
 
 Number of selected videos: 0
-Number of videos uploaded in a year: 237
+Number of videos uploaded in a year: 236
 STATUS: ACTIVE
 
-Total number of videos selected so far: 2
+Total number of videos selected so far: 0
 //////////////////////////////////////////////////
 
 Channel 13 out of 138 (9.42 %).
@@ -152,10 +152,10 @@ Channel ID: UCDCCLsZ0OBG8Dt-3JMc3hkA
 Channel Name: Big Beat Records
 
 Number of selected videos: 0
-Number of videos uploaded in a year: 111
+Number of videos uploaded in a year: 113
 STATUS: ACTIVE
 
-Total number of videos selected so far: 2
+Total number of videos selected so far: 0
 //////////////////////////////////////////////////
 
 Channel 14 out of 138 (10.14 %).
@@ -164,10 +164,10 @@ Channel ID: UCp6bpinXPzdx7d7-gekWzZQ
 Channel Name: Bigflo et Oli
 
 Number of selected videos: 0
-Number of videos uploaded in a year: 7
+Number of videos uploaded in a year: 6
 STATUS: ACTIVE
 
-Total number of videos selected so far: 2
+Total number of videos selected so far: 0
 //////////////////////////////////////////////////
 
 Channel 15 out of 138 (10.87 %).
@@ -176,10 +176,10 @@ Channel ID: UCIDA4NNU3jL8zqfs5huy0zA
 Channel Name: bitbird
 
 Number of selected videos: 0
-Number of videos uploaded in a year: 166
+Number of videos uploaded in a year: 183
 STATUS: ACTIVE
 
-Total number of videos selected so far: 2
+Total number of videos selected so far: 0
 //////////////////////////////////////////////////
 
 Channel 16 out of 138 (11.59 %).
@@ -191,7 +191,7 @@ Number of selected videos: 0
 Number of videos uploaded in a year: 1
 STATUS: ACTIVE
 
-Total number of videos selected so far: 2
+Total number of videos selected so far: 0
 //////////////////////////////////////////////////
 
 Channel 17 out of 138 (12.32 %).
@@ -200,10 +200,10 @@ Channel ID: UCDAaatJidv4z_5aE71bV6yg
 Channel Name: Brooks
 
 Number of selected videos: 0
-Number of videos uploaded in a year: 2
+Number of videos uploaded in a year: 1
 STATUS: ACTIVE
 
-Total number of videos selected so far: 2
+Total number of videos selected so far: 0
 //////////////////////////////////////////////////
 
 Channel 18 out of 138 (13.04 %).
@@ -215,7 +215,7 @@ Number of selected videos: 0
 Number of videos uploaded in a year: 26
 STATUS: ACTIVE
 
-Total number of videos selected so far: 2
+Total number of videos selected so far: 0
 //////////////////////////////////////////////////
 
 Channel 19 out of 138 (13.77 %).
@@ -227,7 +227,7 @@ Number of selected videos: 0
 Number of videos uploaded in a year: 11
 STATUS: ACTIVE
 
-Total number of videos selected so far: 2
+Total number of videos selected so far: 0
 //////////////////////////////////////////////////
 
 Channel 20 out of 138 (14.49 %).
@@ -236,10 +236,10 @@ Channel ID: UCLxqd1S685Mpyk9wy8jkVJQ
 Channel Name: Dannic
 
 Number of selected videos: 0
-Number of videos uploaded in a year: 53
+Number of videos uploaded in a year: 52
 STATUS: ACTIVE
 
-Total number of videos selected so far: 2
+Total number of videos selected so far: 0
 //////////////////////////////////////////////////
 
 Channel 21 out of 138 (15.22 %).
@@ -251,7 +251,7 @@ Number of selected videos: 0
 Number of videos uploaded in a year: 0
 STATUS: INACTIVE
 
-Total number of videos selected so far: 2
+Total number of videos selected so far: 0
 //////////////////////////////////////////////////
 
 Channel 22 out of 138 (15.94 %).
@@ -260,10 +260,10 @@ Channel ID: UC32W3Kpoh6T6pG5PrWm0LTQ
 Channel Name: Dharma Worldwide
 
 Number of selected videos: 0
-Number of videos uploaded in a year: 50
+Number of videos uploaded in a year: 49
 STATUS: ACTIVE
 
-Total number of videos selected so far: 2
+Total number of videos selected so far: 0
 //////////////////////////////////////////////////
 
 Channel 23 out of 138 (16.67 %).
@@ -272,10 +272,10 @@ Channel ID: UCrUT57KGEzrCrmLb4PRgluw
 Channel Name: DIM MAK
 
 Number of selected videos: 0
-Number of videos uploaded in a year: 143
+Number of videos uploaded in a year: 138
 STATUS: ACTIVE
 
-Total number of videos selected so far: 2
+Total number of videos selected so far: 0
 //////////////////////////////////////////////////
 
 Channel 24 out of 138 (17.39 %).
@@ -284,10 +284,10 @@ Channel ID: UCulBShlQjLBSwC9bbJqAdVw
 Channel Name: Dirty Palm
 
 Number of selected videos: 0
-Number of videos uploaded in a year: 4
+Number of videos uploaded in a year: 5
 STATUS: ACTIVE
 
-Total number of videos selected so far: 2
+Total number of videos selected so far: 0
 //////////////////////////////////////////////////
 
 Channel 25 out of 138 (18.12 %).
@@ -295,11 +295,11 @@ Channel 25 out of 138 (18.12 %).
 Channel ID: UCALs6y97IVNeuzPg-j56lOg
 Channel Name: Disciple
 
-Number of selected videos: 1
-Number of videos uploaded in a year: 435
+Number of selected videos: 0
+Number of videos uploaded in a year: 428
 STATUS: ACTIVE
 
-Total number of videos selected so far: 3
+Total number of videos selected so far: 0
 //////////////////////////////////////////////////
 
 Channel 26 out of 138 (18.84 %).
@@ -307,11 +307,11 @@ Channel 26 out of 138 (18.84 %).
 Channel ID: UCZRiXu9UWkOnavBTc8DHq4g
 Channel Name: Distraction
 
-Number of selected videos: 1
-Number of videos uploaded in a year: 247
+Number of selected videos: 0
+Number of videos uploaded in a year: 238
 STATUS: ACTIVE
 
-Total number of videos selected so far: 4
+Total number of videos selected so far: 0
 //////////////////////////////////////////////////
 
 Channel 27 out of 138 (19.57 %).
@@ -320,10 +320,10 @@ Channel ID: UC7tD6Ifrwbiy-BoaAHEinmQ
 Channel Name: Diversity
 
 Number of selected videos: 0
-Number of videos uploaded in a year: 144
+Number of videos uploaded in a year: 151
 STATUS: ACTIVE
 
-Total number of videos selected so far: 4
+Total number of videos selected so far: 0
 //////////////////////////////////////////////////
 
 Channel 28 out of 138 (20.29 %).
@@ -332,10 +332,10 @@ Channel ID: UCOwp0yt9MI-w7jiwctWa8_w
 Channel Name: dolltr!ck
 
 Number of selected videos: 0
-Number of videos uploaded in a year: 130
+Number of videos uploaded in a year: 129
 STATUS: ACTIVE
 
-Total number of videos selected so far: 4
+Total number of videos selected so far: 0
 //////////////////////////////////////////////////
 
 Channel 29 out of 138 (21.01 %).
@@ -344,10 +344,10 @@ Channel ID: UC8y7Xa0E1Lo6PnVsu2KJbOA
 Channel Name: Don Diablo
 
 Number of selected videos: 0
-Number of videos uploaded in a year: 19
+Number of videos uploaded in a year: 20
 STATUS: ACTIVE
 
-Total number of videos selected so far: 4
+Total number of videos selected so far: 0
 //////////////////////////////////////////////////
 
 Channel 30 out of 138 (21.74 %).
@@ -356,10 +356,10 @@ Channel ID: UC_c4pYoEDy2NSkv3-hNvHHA
 Channel Name: DOORN Records
 
 Number of selected videos: 0
-Number of videos uploaded in a year: 27
+Number of videos uploaded in a year: 28
 STATUS: ACTIVE
 
-Total number of videos selected so far: 4
+Total number of videos selected so far: 0
 //////////////////////////////////////////////////
 
 Channel 31 out of 138 (22.46 %).
@@ -371,7 +371,7 @@ Number of selected videos: 0
 Number of videos uploaded in a year: 28
 STATUS: ACTIVE
 
-Total number of videos selected so far: 4
+Total number of videos selected so far: 0
 //////////////////////////////////////////////////
 
 Channel 32 out of 138 (23.19 %).
@@ -383,7 +383,7 @@ Number of selected videos: 0
 Number of videos uploaded in a year: 0
 STATUS: INACTIVE
 
-Total number of videos selected so far: 4
+Total number of videos selected so far: 0
 //////////////////////////////////////////////////
 
 Channel 33 out of 138 (23.91 %).
@@ -395,7 +395,7 @@ Number of selected videos: 0
 Number of videos uploaded in a year: 3
 STATUS: ACTIVE
 
-Total number of videos selected so far: 4
+Total number of videos selected so far: 0
 //////////////////////////////////////////////////
 
 Channel 34 out of 138 (24.64 %).
@@ -404,10 +404,10 @@ Channel ID: UCGXkgynD9YyoEIVyqpaUElw
 Channel Name: Enhanced Music
 
 Number of selected videos: 0
-Number of videos uploaded in a year: 232
+Number of videos uploaded in a year: 226
 STATUS: ACTIVE
 
-Total number of videos selected so far: 4
+Total number of videos selected so far: 0
 //////////////////////////////////////////////////
 
 Channel 35 out of 138 (25.36 %).
@@ -416,10 +416,10 @@ Channel ID: UCpl_hLTsmqiWTJEiErCOk_g
 Channel Name: Eonity
 
 Number of selected videos: 0
-Number of videos uploaded in a year: 30
+Number of videos uploaded in a year: 29
 STATUS: ACTIVE
 
-Total number of videos selected so far: 4
+Total number of videos selected so far: 0
 //////////////////////////////////////////////////
 
 Channel 36 out of 138 (26.09 %).
@@ -431,7 +431,7 @@ Number of selected videos: 0
 Number of videos uploaded in a year: 6
 STATUS: ACTIVE
 
-Total number of videos selected so far: 4
+Total number of videos selected so far: 0
 //////////////////////////////////////////////////
 
 Channel 37 out of 138 (26.81 %).
@@ -440,10 +440,10 @@ Channel ID: UCPgH1KIGI1Zrp0mqy99kgkg
 Channel Name: Felckin
 
 Number of selected videos: 0
-Number of videos uploaded in a year: 52
+Number of videos uploaded in a year: 53
 STATUS: ACTIVE
 
-Total number of videos selected so far: 4
+Total number of videos selected so far: 0
 //////////////////////////////////////////////////
 
 Channel 38 out of 138 (27.54 %).
@@ -452,10 +452,10 @@ Channel ID: UCKhvCrZV95i7-czm8dHCzEQ
 Channel Name: Fonk Recordings
 
 Number of selected videos: 0
-Number of videos uploaded in a year: 7
+Number of videos uploaded in a year: 6
 STATUS: ACTIVE
 
-Total number of videos selected so far: 4
+Total number of videos selected so far: 0
 //////////////////////////////////////////////////
 
 Channel 39 out of 138 (28.26 %).
@@ -463,11 +463,11 @@ Channel 39 out of 138 (28.26 %).
 Channel ID: UCO0sfpPwj3PGVVH_jiqBA6A
 Channel Name: Future House Cloud
 
-Number of selected videos: 3
-Number of videos uploaded in a year: 740
+Number of selected videos: 1
+Number of videos uploaded in a year: 760
 STATUS: ACTIVE
 
-Total number of videos selected so far: 7
+Total number of videos selected so far: 1
 //////////////////////////////////////////////////
 
 Channel 40 out of 138 (28.99 %).
@@ -475,11 +475,11 @@ Channel 40 out of 138 (28.99 %).
 Channel ID: UCXvSeBDvzmPO05k-0RyB34w
 Channel Name: Future House Music
 
-Number of selected videos: 1
-Number of videos uploaded in a year: 244
+Number of selected videos: 0
+Number of videos uploaded in a year: 253
 STATUS: ACTIVE
 
-Total number of videos selected so far: 8
+Total number of videos selected so far: 1
 //////////////////////////////////////////////////
 
 Channel 41 out of 138 (29.71 %).
@@ -488,10 +488,10 @@ Channel ID: UCxZElbCNUCxM9aORoDI6E4g
 Channel Name: Future House Records
 
 Number of selected videos: 0
-Number of videos uploaded in a year: 47
+Number of videos uploaded in a year: 46
 STATUS: ACTIVE
 
-Total number of videos selected so far: 8
+Total number of videos selected so far: 1
 //////////////////////////////////////////////////
 
 Channel 42 out of 138 (30.43 %).
@@ -499,11 +499,11 @@ Channel 42 out of 138 (30.43 %).
 Channel ID: UCljsGZjRVayVZHgSAxeSafg
 Channel Name: Galacy
 
-Number of selected videos: 0
-Number of videos uploaded in a year: 49
+Number of selected videos: 1
+Number of videos uploaded in a year: 50
 STATUS: ACTIVE
 
-Total number of videos selected so far: 8
+Total number of videos selected so far: 2
 //////////////////////////////////////////////////
 
 Channel 43 out of 138 (31.16 %).
@@ -515,7 +515,7 @@ Number of selected videos: 0
 Number of videos uploaded in a year: 17
 STATUS: ACTIVE
 
-Total number of videos selected so far: 8
+Total number of videos selected so far: 2
 //////////////////////////////////////////////////
 
 Channel 44 out of 138 (31.88 %).
@@ -527,7 +527,7 @@ Number of selected videos: 0
 Number of videos uploaded in a year: 1
 STATUS: ACTIVE
 
-Total number of videos selected so far: 8
+Total number of videos selected so far: 2
 //////////////////////////////////////////////////
 
 Channel 45 out of 138 (32.61 %).
@@ -535,11 +535,11 @@ Channel 45 out of 138 (32.61 %).
 Channel ID: UCIKF1msqN7lW9gplsifOPkQ
 Channel Name: GalaxyMusic
 
-Number of selected videos: 1
-Number of videos uploaded in a year: 173
+Number of selected videos: 0
+Number of videos uploaded in a year: 172
 STATUS: ACTIVE
 
-Total number of videos selected so far: 9
+Total number of videos selected so far: 2
 //////////////////////////////////////////////////
 
 Channel 46 out of 138 (33.33 %).
@@ -548,10 +548,10 @@ Channel ID: UCDVKYPXwdYUQfgA05CkyFSg
 Channel Name: GameChops
 
 Number of selected videos: 0
-Number of videos uploaded in a year: 59
+Number of videos uploaded in a year: 60
 STATUS: ACTIVE
 
-Total number of videos selected so far: 9
+Total number of videos selected so far: 2
 //////////////////////////////////////////////////
 
 Channel 47 out of 138 (34.06 %).
@@ -563,7 +563,7 @@ Number of selected videos: 0
 Number of videos uploaded in a year: 54
 STATUS: ACTIVE
 
-Total number of videos selected so far: 9
+Total number of videos selected so far: 2
 //////////////////////////////////////////////////
 
 Channel 48 out of 138 (34.78 %).
@@ -575,7 +575,7 @@ Number of selected videos: 0
 Number of videos uploaded in a year: 121
 STATUS: ACTIVE
 
-Total number of videos selected so far: 9
+Total number of videos selected so far: 2
 //////////////////////////////////////////////////
 
 Channel 49 out of 138 (35.51 %).
@@ -587,7 +587,7 @@ Number of selected videos: 0
 Number of videos uploaded in a year: 5
 STATUS: ACTIVE
 
-Total number of videos selected so far: 9
+Total number of videos selected so far: 2
 //////////////////////////////////////////////////
 
 Channel 50 out of 138 (36.23 %).
@@ -595,11 +595,11 @@ Channel 50 out of 138 (36.23 %).
 Channel ID: UC8tyyA-UIbefEexcLatHmUQ
 Channel Name: HalcyonMusic / ハルシオン Anime Piano Covers
 
-Number of selected videos: 2
-Number of videos uploaded in a year: 61
+Number of selected videos: 0
+Number of videos uploaded in a year: 60
 STATUS: ACTIVE
 
-Total number of videos selected so far: 11
+Total number of videos selected so far: 2
 //////////////////////////////////////////////////
 
 Channel 51 out of 138 (36.96 %).
@@ -608,10 +608,10 @@ Channel ID: UCPT5Q93YbgJ_7du1gV7UHQQ
 Channel Name: Hardwell
 
 Number of selected videos: 0
-Number of videos uploaded in a year: 58
+Number of videos uploaded in a year: 54
 STATUS: ACTIVE
 
-Total number of videos selected so far: 11
+Total number of videos selected so far: 2
 //////////////////////////////////////////////////
 
 Channel 52 out of 138 (37.68 %).
@@ -623,7 +623,7 @@ Number of selected videos: 0
 Number of videos uploaded in a year: 6
 STATUS: ACTIVE
 
-Total number of videos selected so far: 11
+Total number of videos selected so far: 2
 //////////////////////////////////////////////////
 
 Channel 53 out of 138 (38.41 %).
@@ -635,7 +635,7 @@ Number of selected videos: 0
 Number of videos uploaded in a year: 6
 STATUS: ACTIVE
 
-Total number of videos selected so far: 11
+Total number of videos selected so far: 2
 //////////////////////////////////////////////////
 
 Channel 54 out of 138 (39.13 %).
@@ -647,7 +647,7 @@ Number of selected videos: 0
 Number of videos uploaded in a year: 68
 STATUS: ACTIVE
 
-Total number of videos selected so far: 11
+Total number of videos selected so far: 2
 //////////////////////////////////////////////////
 
 Channel 55 out of 138 (39.86 %).
@@ -656,10 +656,10 @@ Channel ID: UCLOGIsYh9g6_YDRnJHet-aQ
 Channel Name: Hellberg
 
 Number of selected videos: 0
-Number of videos uploaded in a year: 14
+Number of videos uploaded in a year: 13
 STATUS: ACTIVE
 
-Total number of videos selected so far: 11
+Total number of videos selected so far: 2
 //////////////////////////////////////////////////
 
 Channel 56 out of 138 (40.58 %).
@@ -667,11 +667,11 @@ Channel 56 out of 138 (40.58 %).
 Channel ID: UCWp8Rc0qh08RZKlWxNfQ6PQ
 Channel Name: HEXAGON
 
-Number of selected videos: 2
-Number of videos uploaded in a year: 471
+Number of selected videos: 0
+Number of videos uploaded in a year: 473
 STATUS: ACTIVE
 
-Total number of videos selected so far: 13
+Total number of videos selected so far: 2
 //////////////////////////////////////////////////
 
 Channel 57 out of 138 (41.30 %).
@@ -679,11 +679,11 @@ Channel 57 out of 138 (41.30 %).
 Channel ID: UCj_Y-xJ2DRDGP4ilfzplCOQ
 Channel Name: House Nation
 
-Number of selected videos: 1
-Number of videos uploaded in a year: 217
+Number of selected videos: 0
+Number of videos uploaded in a year: 215
 STATUS: ACTIVE
 
-Total number of videos selected so far: 14
+Total number of videos selected so far: 2
 //////////////////////////////////////////////////
 
 Channel 58 out of 138 (42.03 %).
@@ -692,10 +692,10 @@ Channel ID: UCLnzhrD2Te8g6x83MhMkkWA
 Channel Name: HouseYourSpeakers
 
 Number of selected videos: 0
-Number of videos uploaded in a year: 20
+Number of videos uploaded in a year: 16
 STATUS: ACTIVE
 
-Total number of videos selected so far: 14
+Total number of videos selected so far: 2
 //////////////////////////////////////////////////
 
 Channel 59 out of 138 (42.75 %).
@@ -704,10 +704,10 @@ Channel ID: UC_OtnV-9QZmBj6oWBelMoZw
 Channel Name: insaneintherainmusic
 
 Number of selected videos: 0
-Number of videos uploaded in a year: 40
+Number of videos uploaded in a year: 38
 STATUS: ACTIVE
 
-Total number of videos selected so far: 14
+Total number of videos selected so far: 2
 //////////////////////////////////////////////////
 
 Channel 60 out of 138 (43.48 %).
@@ -719,7 +719,7 @@ Number of selected videos: 0
 Number of videos uploaded in a year: 9
 STATUS: ACTIVE
 
-Total number of videos selected so far: 14
+Total number of videos selected so far: 2
 //////////////////////////////////////////////////
 
 Channel 61 out of 138 (44.20 %).
@@ -728,10 +728,10 @@ Channel ID: UC1WKD9pJt5Sa4DCVaoJSAGw
 Channel Name: JompaMusic
 
 Number of selected videos: 0
-Number of videos uploaded in a year: 244
+Number of videos uploaded in a year: 246
 STATUS: ACTIVE
 
-Total number of videos selected so far: 14
+Total number of videos selected so far: 2
 //////////////////////////////////////////////////
 
 Channel 62 out of 138 (44.93 %).
@@ -740,10 +740,10 @@ Channel ID: UCZyINKAa5O4FH15Zbw3L32w
 Channel Name: Julian Jordan
 
 Number of selected videos: 0
-Number of videos uploaded in a year: 5
+Number of videos uploaded in a year: 3
 STATUS: ACTIVE
 
-Total number of videos selected so far: 14
+Total number of videos selected so far: 2
 //////////////////////////////////////////////////
 
 Channel 63 out of 138 (45.65 %).
@@ -755,7 +755,7 @@ Number of selected videos: 0
 Number of videos uploaded in a year: 1
 STATUS: ACTIVE
 
-Total number of videos selected so far: 14
+Total number of videos selected so far: 2
 //////////////////////////////////////////////////
 
 Channel 64 out of 138 (46.38 %).
@@ -767,7 +767,7 @@ Number of selected videos: 0
 Number of videos uploaded in a year: 2
 STATUS: ACTIVE
 
-Total number of videos selected so far: 14
+Total number of videos selected so far: 2
 //////////////////////////////////////////////////
 
 Channel 65 out of 138 (47.10 %).
@@ -779,7 +779,7 @@ Number of selected videos: 0
 Number of videos uploaded in a year: 111
 STATUS: ACTIVE
 
-Total number of videos selected so far: 14
+Total number of videos selected so far: 2
 //////////////////////////////////////////////////
 
 Channel 66 out of 138 (47.83 %).
@@ -791,7 +791,7 @@ Number of selected videos: 0
 Number of videos uploaded in a year: 47
 STATUS: ACTIVE
 
-Total number of videos selected so far: 14
+Total number of videos selected so far: 2
 //////////////////////////////////////////////////
 
 Channel 67 out of 138 (48.55 %).
@@ -803,7 +803,7 @@ Number of selected videos: 0
 Number of videos uploaded in a year: 34
 STATUS: ACTIVE
 
-Total number of videos selected so far: 14
+Total number of videos selected so far: 2
 //////////////////////////////////////////////////
 
 Channel 68 out of 138 (49.28 %).
@@ -812,10 +812,10 @@ Channel ID: UCyC_4jvPzLiSkJkLIkA7B8g
 Channel Name: Lindsey Stirling
 
 Number of selected videos: 0
-Number of videos uploaded in a year: 18
+Number of videos uploaded in a year: 17
 STATUS: ACTIVE
 
-Total number of videos selected so far: 14
+Total number of videos selected so far: 2
 //////////////////////////////////////////////////
 
 Channel 69 out of 138 (50.00 %).
@@ -824,10 +824,10 @@ Channel ID: UCSXm6c-n6lsjtyjvdD0bFVw
 Channel Name: Liquicity
 
 Number of selected videos: 0
-Number of videos uploaded in a year: 166
+Number of videos uploaded in a year: 163
 STATUS: ACTIVE
 
-Total number of videos selected so far: 14
+Total number of videos selected so far: 2
 //////////////////////////////////////////////////
 
 Channel 70 out of 138 (50.72 %).
@@ -836,10 +836,10 @@ Channel ID: UCSJ4gkVC6NrvII8umztf0Ow
 Channel Name: Lofi Girl
 
 Number of selected videos: 0
-Number of videos uploaded in a year: 123
+Number of videos uploaded in a year: 127
 STATUS: ACTIVE
 
-Total number of videos selected so far: 14
+Total number of videos selected so far: 2
 //////////////////////////////////////////////////
 
 Channel 71 out of 138 (51.45 %).
@@ -848,10 +848,10 @@ Channel ID: UCbr_gpafjcwT_MjV6K3Nh5g
 Channel Name: Lowly.
 
 Number of selected videos: 0
-Number of videos uploaded in a year: 47
+Number of videos uploaded in a year: 45
 STATUS: ACTIVE
 
-Total number of videos selected so far: 14
+Total number of videos selected so far: 2
 //////////////////////////////////////////////////
 
 Channel 72 out of 138 (52.17 %).
@@ -863,7 +863,7 @@ Number of selected videos: 0
 Number of videos uploaded in a year: 7
 STATUS: ACTIVE
 
-Total number of videos selected so far: 14
+Total number of videos selected so far: 2
 //////////////////////////////////////////////////
 
 Channel 73 out of 138 (52.90 %).
@@ -872,10 +872,10 @@ Channel ID: UCp1onwPbFRBtgniH2Gm0TCg
 Channel Name: M4SONIC
 
 Number of selected videos: 0
-Number of videos uploaded in a year: 15
+Number of videos uploaded in a year: 14
 STATUS: ACTIVE
 
-Total number of videos selected so far: 14
+Total number of videos selected so far: 2
 //////////////////////////////////////////////////
 
 Channel 74 out of 138 (53.62 %).
@@ -884,10 +884,10 @@ Channel ID: UCqMDNf3Pn5L7pcNkuSEeO3w
 Channel Name: Madeon
 
 Number of selected videos: 0
-Number of videos uploaded in a year: 3
+Number of videos uploaded in a year: 2
 STATUS: ACTIVE
 
-Total number of videos selected so far: 14
+Total number of videos selected so far: 2
 //////////////////////////////////////////////////
 
 Channel 75 out of 138 (54.35 %).
@@ -895,11 +895,11 @@ Channel 75 out of 138 (54.35 %).
 Channel ID: UC5H_KXkPbEsGs0tFt8R35mA
 Channel Name: Martin Garrix
 
-Number of selected videos: 1
-Number of videos uploaded in a year: 63
+Number of selected videos: 0
+Number of videos uploaded in a year: 62
 STATUS: ACTIVE
 
-Total number of videos selected so far: 15
+Total number of videos selected so far: 2
 //////////////////////////////////////////////////
 
 Channel 76 out of 138 (55.07 %).
@@ -908,10 +908,10 @@ Channel ID: UCMRrge2ToIanH-mU-2sYWFw
 Channel Name: Melodic Airwave
 
 Number of selected videos: 1
-Number of videos uploaded in a year: 83
+Number of videos uploaded in a year: 81
 STATUS: ACTIVE
 
-Total number of videos selected so far: 16
+Total number of videos selected so far: 3
 //////////////////////////////////////////////////
 
 Channel 77 out of 138 (55.80 %).
@@ -923,7 +923,7 @@ Number of selected videos: 0
 Number of videos uploaded in a year: 1
 STATUS: ACTIVE
 
-Total number of videos selected so far: 16
+Total number of videos selected so far: 3
 //////////////////////////////////////////////////
 
 Channel 78 out of 138 (56.52 %).
@@ -932,10 +932,10 @@ Channel ID: UCVGTuylKPv8SfVDSyho5WFw
 Channel Name: Mike Williams
 
 Number of selected videos: 0
-Number of videos uploaded in a year: 78
+Number of videos uploaded in a year: 79
 STATUS: ACTIVE
 
-Total number of videos selected so far: 16
+Total number of videos selected so far: 3
 //////////////////////////////////////////////////
 
 Channel 79 out of 138 (57.25 %).
@@ -944,10 +944,10 @@ Channel ID: UCiiN5Ld9pGMwcYrLUJfYlCQ
 Channel Name: Mixmash Records
 
 Number of selected videos: 0
-Number of videos uploaded in a year: 179
+Number of videos uploaded in a year: 184
 STATUS: ACTIVE
 
-Total number of videos selected so far: 16
+Total number of videos selected so far: 3
 //////////////////////////////////////////////////
 
 Channel 80 out of 138 (57.97 %).
@@ -956,10 +956,10 @@ Channel ID: UCp8OOssjSjGZRVYK6zWbNLg
 Channel Name: Monstercat Instinct
 
 Number of selected videos: 0
-Number of videos uploaded in a year: 108
+Number of videos uploaded in a year: 111
 STATUS: ACTIVE
 
-Total number of videos selected so far: 16
+Total number of videos selected so far: 3
 //////////////////////////////////////////////////
 
 Channel 81 out of 138 (58.70 %).
@@ -968,10 +968,10 @@ Channel ID: UCX4sShAQf01LYjYQhG2ZgKg
 Channel Name: Monstercat Silk
 
 Number of selected videos: 0
-Number of videos uploaded in a year: 158
+Number of videos uploaded in a year: 154
 STATUS: ACTIVE
 
-Total number of videos selected so far: 16
+Total number of videos selected so far: 3
 //////////////////////////////////////////////////
 
 Channel 82 out of 138 (59.42 %).
@@ -979,11 +979,11 @@ Channel 82 out of 138 (59.42 %).
 Channel ID: UCJ6td3C9QlPO9O_J5dF4ZzA
 Channel Name: Monstercat Uncaged
 
-Number of selected videos: 0
-Number of videos uploaded in a year: 116
+Number of selected videos: 1
+Number of videos uploaded in a year: 121
 STATUS: ACTIVE
 
-Total number of videos selected so far: 16
+Total number of videos selected so far: 4
 //////////////////////////////////////////////////
 
 Channel 83 out of 138 (60.14 %).
@@ -991,11 +991,11 @@ Channel 83 out of 138 (60.14 %).
 Channel ID: UC5nc_ZtjKW1htCVZVRxlQAQ
 Channel Name: MrSuicideSheep
 
-Number of selected videos: 0
-Number of videos uploaded in a year: 285
+Number of selected videos: 1
+Number of videos uploaded in a year: 284
 STATUS: ACTIVE
 
-Total number of videos selected so far: 16
+Total number of videos selected so far: 5
 //////////////////////////////////////////////////
 
 Channel 84 out of 138 (60.87 %).
@@ -1004,10 +1004,10 @@ Channel ID: UCuCFbUOszL3QkYVUWZzKH8Q
 Channel Name: Musical Freedom
 
 Number of selected videos: 1
-Number of videos uploaded in a year: 185
+Number of videos uploaded in a year: 180
 STATUS: ACTIVE
 
-Total number of videos selected so far: 17
+Total number of videos selected so far: 6
 //////////////////////////////////////////////////
 
 Channel 85 out of 138 (61.59 %).
@@ -1016,10 +1016,10 @@ Channel ID: UCiJnBO_XuDsi1SSRAmt4n5g
 Channel Name: NCS Arcade
 
 Number of selected videos: 0
-Number of videos uploaded in a year: 19
+Number of videos uploaded in a year: 21
 STATUS: ACTIVE
 
-Total number of videos selected so far: 17
+Total number of videos selected so far: 6
 //////////////////////////////////////////////////
 
 Channel 86 out of 138 (62.32 %).
@@ -1027,11 +1027,11 @@ Channel 86 out of 138 (62.32 %).
 Channel ID: UCCTYQM7L9G_Lr2w8KH6C-Tw
 Channel Name: Never Say Die Records
 
-Number of selected videos: 1
-Number of videos uploaded in a year: 93
+Number of selected videos: 0
+Number of videos uploaded in a year: 89
 STATUS: ACTIVE
 
-Total number of videos selected so far: 18
+Total number of videos selected so far: 6
 //////////////////////////////////////////////////
 
 Channel 87 out of 138 (63.04 %).
@@ -1043,7 +1043,7 @@ Number of selected videos: 0
 Number of videos uploaded in a year: 0
 STATUS: INACTIVE
 
-Total number of videos selected so far: 18
+Total number of videos selected so far: 6
 //////////////////////////////////////////////////
 
 Channel 88 out of 138 (63.77 %).
@@ -1051,11 +1051,11 @@ Channel 88 out of 138 (63.77 %).
 Channel ID: UCaAlh3Iy7rAcO3MgD_O3Kkg
 Channel Name: Nik Cooper Music
 
-Number of selected videos: 1
-Number of videos uploaded in a year: 174
+Number of selected videos: 0
+Number of videos uploaded in a year: 173
 STATUS: ACTIVE
 
-Total number of videos selected so far: 19
+Total number of videos selected so far: 6
 //////////////////////////////////////////////////
 
 Channel 89 out of 138 (64.49 %).
@@ -1064,10 +1064,10 @@ Channel ID: UCl8iwAEa4i5LsFMXbiI2J-g
 Channel Name: Ninety9Lives
 
 Number of selected videos: 0
-Number of videos uploaded in a year: 64
+Number of videos uploaded in a year: 62
 STATUS: ACTIVE
 
-Total number of videos selected so far: 19
+Total number of videos selected so far: 6
 //////////////////////////////////////////////////
 
 Channel 90 out of 138 (65.22 %).
@@ -1075,11 +1075,11 @@ Channel 90 out of 138 (65.22 %).
 Channel ID: UC_aEa8K-EOJ3D6gOs7HcyNg
 Channel Name: NoCopyrightSounds
 
-Number of selected videos: 1
+Number of selected videos: 0
 Number of videos uploaded in a year: 159
 STATUS: ACTIVE
 
-Total number of videos selected so far: 20
+Total number of videos selected so far: 6
 //////////////////////////////////////////////////
 
 Channel 91 out of 138 (65.94 %).
@@ -1088,10 +1088,10 @@ Channel ID: UC0qXX3G-8nxJmyCK4G5BuLQ
 Channel Name: Nokturn
 
 Number of selected videos: 0
-Number of videos uploaded in a year: 19
+Number of videos uploaded in a year: 20
 STATUS: ACTIVE
 
-Total number of videos selected so far: 20
+Total number of videos selected so far: 6
 //////////////////////////////////////////////////
 
 Channel 92 out of 138 (66.67 %).
@@ -1103,7 +1103,7 @@ Number of selected videos: 0
 Number of videos uploaded in a year: 14
 STATUS: ACTIVE
 
-Total number of videos selected so far: 20
+Total number of videos selected so far: 6
 //////////////////////////////////////////////////
 
 Channel 93 out of 138 (67.39 %).
@@ -1112,10 +1112,10 @@ Channel ID: UC-EVnno6x6-aAG6g1ZVoN3A
 Channel Name: Oliver Heldens
 
 Number of selected videos: 0
-Number of videos uploaded in a year: 73
+Number of videos uploaded in a year: 71
 STATUS: ACTIVE
 
-Total number of videos selected so far: 20
+Total number of videos selected so far: 6
 //////////////////////////////////////////////////
 
 Channel 94 out of 138 (68.12 %).
@@ -1124,10 +1124,10 @@ Channel ID: UCZDbwxi1owenInykTi6Y8Bw
 Channel Name: Playbox Music
 
 Number of selected videos: 0
-Number of videos uploaded in a year: 46
+Number of videos uploaded in a year: 48
 STATUS: ACTIVE
 
-Total number of videos selected so far: 20
+Total number of videos selected so far: 6
 //////////////////////////////////////////////////
 
 Channel 95 out of 138 (68.84 %).
@@ -1139,7 +1139,7 @@ Number of selected videos: 0
 Number of videos uploaded in a year: 26
 STATUS: ACTIVE
 
-Total number of videos selected so far: 20
+Total number of videos selected so far: 6
 //////////////////////////////////////////////////
 
 Channel 96 out of 138 (69.57 %).
@@ -1151,7 +1151,7 @@ Number of selected videos: 0
 Number of videos uploaded in a year: 226
 STATUS: ACTIVE
 
-Total number of videos selected so far: 20
+Total number of videos selected so far: 6
 //////////////////////////////////////////////////
 
 Channel 97 out of 138 (70.29 %).
@@ -1160,10 +1160,10 @@ Channel ID: UC3ifTl5zKiCAhHIBQYcaTeg
 Channel Name: Proximity
 
 Number of selected videos: 0
-Number of videos uploaded in a year: 156
+Number of videos uploaded in a year: 151
 STATUS: ACTIVE
 
-Total number of videos selected so far: 20
+Total number of videos selected so far: 6
 //////////////////////////////////////////////////
 
 Channel 98 out of 138 (71.01 %).
@@ -1175,7 +1175,7 @@ Number of selected videos: 0
 Number of videos uploaded in a year: 25
 STATUS: ACTIVE
 
-Total number of videos selected so far: 20
+Total number of videos selected so far: 6
 //////////////////////////////////////////////////
 
 Channel 99 out of 138 (71.74 %).
@@ -1184,10 +1184,10 @@ Channel ID: UCO6Rq8SSY5ui4ptyMkLirIQ
 Channel Name: R3HAB
 
 Number of selected videos: 0
-Number of videos uploaded in a year: 63
+Number of videos uploaded in a year: 60
 STATUS: ACTIVE
 
-Total number of videos selected so far: 20
+Total number of videos selected so far: 6
 //////////////////////////////////////////////////
 
 Channel 100 out of 138 (72.46 %).
@@ -1199,7 +1199,7 @@ Number of selected videos: 0
 Number of videos uploaded in a year: 41
 STATUS: ACTIVE
 
-Total number of videos selected so far: 20
+Total number of videos selected so far: 6
 //////////////////////////////////////////////////
 
 Channel 101 out of 138 (73.19 %).
@@ -1208,10 +1208,10 @@ Channel ID: UC_DRS3lamW6T1_iheYLhEkQ
 Channel Name: RetroVision
 
 Number of selected videos: 0
-Number of videos uploaded in a year: 24
+Number of videos uploaded in a year: 25
 STATUS: ACTIVE
 
-Total number of videos selected so far: 20
+Total number of videos selected so far: 6
 //////////////////////////////////////////////////
 
 Channel 102 out of 138 (73.91 %).
@@ -1219,11 +1219,11 @@ Channel 102 out of 138 (73.91 %).
 Channel ID: UCnhHe0_bk_1_0So41vsZvWw
 Channel Name: Revealed Music
 
-Number of selected videos: 1
-Number of videos uploaded in a year: 236
+Number of selected videos: 0
+Number of videos uploaded in a year: 237
 STATUS: ACTIVE
 
-Total number of videos selected so far: 21
+Total number of videos selected so far: 6
 //////////////////////////////////////////////////
 
 Channel 103 out of 138 (74.64 %).
@@ -1232,10 +1232,10 @@ Channel ID: UC3TWxgFn6UfUIK3DkF9OTIw
 Channel Name: Revealed Radar
 
 Number of selected videos: 1
-Number of videos uploaded in a year: 188
+Number of videos uploaded in a year: 187
 STATUS: ACTIVE
 
-Total number of videos selected so far: 22
+Total number of videos selected so far: 7
 //////////////////////////////////////////////////
 
 Channel 104 out of 138 (75.36 %).
@@ -1244,10 +1244,10 @@ Channel ID: UCPZUQqtVDmcjm4NY5FkzqLA
 Channel Name: Rousseau
 
 Number of selected videos: 0
-Number of videos uploaded in a year: 5
+Number of videos uploaded in a year: 4
 STATUS: ACTIVE
 
-Total number of videos selected so far: 22
+Total number of videos selected so far: 7
 //////////////////////////////////////////////////
 
 Channel 105 out of 138 (76.09 %).
@@ -1256,10 +1256,10 @@ Channel ID: UCXGB0P-AhyZ4qYHWooiQzLA
 Channel Name: Rushdown
 
 Number of selected videos: 0
-Number of videos uploaded in a year: 88
+Number of videos uploaded in a year: 95
 STATUS: ACTIVE
 
-Total number of videos selected so far: 22
+Total number of videos selected so far: 7
 //////////////////////////////////////////////////
 
 Channel 106 out of 138 (76.81 %).
@@ -1271,7 +1271,7 @@ Number of selected videos: 0
 Number of videos uploaded in a year: 3
 STATUS: ACTIVE
 
-Total number of videos selected so far: 22
+Total number of videos selected so far: 7
 //////////////////////////////////////////////////
 
 Channel 107 out of 138 (77.54 %).
@@ -1283,7 +1283,7 @@ Number of selected videos: 1
 Number of videos uploaded in a year: 370
 STATUS: ACTIVE
 
-Total number of videos selected so far: 23
+Total number of videos selected so far: 8
 //////////////////////////////////////////////////
 
 Channel 108 out of 138 (78.26 %).
@@ -1295,7 +1295,7 @@ Number of selected videos: 0
 Number of videos uploaded in a year: 15
 STATUS: ACTIVE
 
-Total number of videos selected so far: 23
+Total number of videos selected so far: 8
 //////////////////////////////////////////////////
 
 Channel 109 out of 138 (78.99 %).
@@ -1304,10 +1304,10 @@ Channel ID: UCNwFuUbJXKQpP1ot1ZEE6Yg
 Channel Name: SKINK Records
 
 Number of selected videos: 0
-Number of videos uploaded in a year: 67
+Number of videos uploaded in a year: 70
 STATUS: ACTIVE
 
-Total number of videos selected so far: 23
+Total number of videos selected so far: 8
 //////////////////////////////////////////////////
 
 Channel 110 out of 138 (79.71 %).
@@ -1319,7 +1319,7 @@ Number of selected videos: 0
 Number of videos uploaded in a year: 6
 STATUS: ACTIVE
 
-Total number of videos selected so far: 23
+Total number of videos selected so far: 8
 //////////////////////////////////////////////////
 
 Channel 111 out of 138 (80.43 %).
@@ -1331,7 +1331,7 @@ Number of selected videos: 0
 Number of videos uploaded in a year: 15
 STATUS: ACTIVE
 
-Total number of videos selected so far: 23
+Total number of videos selected so far: 8
 //////////////////////////////////////////////////
 
 Channel 112 out of 138 (81.16 %).
@@ -1339,11 +1339,11 @@ Channel 112 out of 138 (81.16 %).
 Channel ID: UC3S6m1mbQbyYed33uK3-n1w
 Channel Name: Smash The House
 
-Number of selected videos: 1
-Number of videos uploaded in a year: 266
+Number of selected videos: 0
+Number of videos uploaded in a year: 259
 STATUS: ACTIVE
 
-Total number of videos selected so far: 24
+Total number of videos selected so far: 8
 //////////////////////////////////////////////////
 
 Channel 113 out of 138 (81.88 %).
@@ -1352,10 +1352,10 @@ Channel ID: UCtwSCDjbQKShJU0kIzBgTdA
 Channel Name: SOUNTEC
 
 Number of selected videos: 0
-Number of videos uploaded in a year: 13
+Number of videos uploaded in a year: 15
 STATUS: ACTIVE
 
-Total number of videos selected so far: 24
+Total number of videos selected so far: 8
 //////////////////////////////////////////////////
 
 Channel 114 out of 138 (82.61 %).
@@ -1363,11 +1363,11 @@ Channel 114 out of 138 (82.61 %).
 Channel ID: UCpDJl2EmP7Oh90Vylx0dZtA
 Channel Name: Spinnin' Records
 
-Number of selected videos: 3
-Number of videos uploaded in a year: 612
+Number of selected videos: 1
+Number of videos uploaded in a year: 613
 STATUS: ACTIVE
 
-Total number of videos selected so far: 27
+Total number of videos selected so far: 9
 //////////////////////////////////////////////////
 
 Channel 115 out of 138 (83.33 %).
@@ -1376,10 +1376,10 @@ Channel ID: UCB-7IEpKGIdXkgGUObE5D5A
 Channel Name: STMPD RCRDS
 
 Number of selected videos: 0
-Number of videos uploaded in a year: 186
+Number of videos uploaded in a year: 181
 STATUS: ACTIVE
 
-Total number of videos selected so far: 27
+Total number of videos selected so far: 9
 //////////////////////////////////////////////////
 
 Channel 116 out of 138 (84.06 %).
@@ -1388,10 +1388,10 @@ Channel ID: UCLTZddgA_La9H4Ngg99t_QQ
 Channel Name: SuicideSheeep
 
 Number of selected videos: 0
-Number of videos uploaded in a year: 85
+Number of videos uploaded in a year: 80
 STATUS: ACTIVE
 
-Total number of videos selected so far: 27
+Total number of videos selected so far: 9
 //////////////////////////////////////////////////
 
 Channel 117 out of 138 (84.78 %).
@@ -1403,7 +1403,7 @@ Number of selected videos: 0
 Number of videos uploaded in a year: 3
 STATUS: ACTIVE
 
-Total number of videos selected so far: 27
+Total number of videos selected so far: 9
 //////////////////////////////////////////////////
 
 Channel 118 out of 138 (85.51 %).
@@ -1415,7 +1415,7 @@ Number of selected videos: 0
 Number of videos uploaded in a year: 32
 STATUS: ACTIVE
 
-Total number of videos selected so far: 27
+Total number of videos selected so far: 9
 //////////////////////////////////////////////////
 
 Channel 119 out of 138 (86.23 %).
@@ -1424,10 +1424,10 @@ Channel ID: UCPk3RMMXAfLhMJPFpQhye9g
 Channel Name: Tiësto
 
 Number of selected videos: 0
-Number of videos uploaded in a year: 71
+Number of videos uploaded in a year: 70
 STATUS: ACTIVE
 
-Total number of videos selected so far: 27
+Total number of videos selected so far: 9
 //////////////////////////////////////////////////
 
 Channel 120 out of 138 (86.96 %).
@@ -1439,7 +1439,7 @@ Number of selected videos: 0
 Number of videos uploaded in a year: 5
 STATUS: ACTIVE
 
-Total number of videos selected so far: 27
+Total number of videos selected so far: 9
 //////////////////////////////////////////////////
 
 Channel 121 out of 138 (87.68 %).
@@ -1448,10 +1448,10 @@ Channel ID: UCRD5h8GEUzygdTL_sdU9_DQ
 Channel Name: Tom & Jame
 
 Number of selected videos: 0
-Number of videos uploaded in a year: 6
+Number of videos uploaded in a year: 4
 STATUS: ACTIVE
 
-Total number of videos selected so far: 27
+Total number of videos selected so far: 9
 //////////////////////////////////////////////////
 
 Channel 122 out of 138 (88.41 %).
@@ -1460,10 +1460,10 @@ Channel ID: UCsN8M73DMWa8SPp5o_0IAQQ
 Channel Name: Tomorrowland
 
 Number of selected videos: 0
-Number of videos uploaded in a year: 148
+Number of videos uploaded in a year: 153
 STATUS: ACTIVE
 
-Total number of videos selected so far: 27
+Total number of videos selected so far: 9
 //////////////////////////////////////////////////
 
 Channel 123 out of 138 (89.13 %).
@@ -1475,7 +1475,7 @@ Number of selected videos: 1
 Number of videos uploaded in a year: 297
 STATUS: ACTIVE
 
-Total number of videos selected so far: 28
+Total number of videos selected so far: 10
 //////////////////////////////////////////////////
 
 Channel 124 out of 138 (89.86 %).
@@ -1483,11 +1483,11 @@ Channel 124 out of 138 (89.86 %).
 Channel ID: UCa10nxShhzNrCE1o2ZOPztg
 Channel Name: Trap Nation
 
-Number of selected videos: 0
-Number of videos uploaded in a year: 256
+Number of selected videos: 1
+Number of videos uploaded in a year: 257
 STATUS: ACTIVE
 
-Total number of videos selected so far: 28
+Total number of videos selected so far: 11
 //////////////////////////////////////////////////
 
 Channel 125 out of 138 (90.58 %).
@@ -1495,11 +1495,11 @@ Channel 125 out of 138 (90.58 %).
 Channel ID: UCFUMI05jgO_O88Px8qfCQeQ
 Channel Name: Tribal Trap
 
-Number of selected videos: 2
-Number of videos uploaded in a year: 618
+Number of selected videos: 1
+Number of videos uploaded in a year: 629
 STATUS: ACTIVE
 
-Total number of videos selected so far: 30
+Total number of videos selected so far: 12
 //////////////////////////////////////////////////
 
 Channel 126 out of 138 (91.30 %).
@@ -1511,7 +1511,7 @@ Number of selected videos: 0
 Number of videos uploaded in a year: 50
 STATUS: ACTIVE
 
-Total number of videos selected so far: 30
+Total number of videos selected so far: 12
 //////////////////////////////////////////////////
 
 Channel 127 out of 138 (92.03 %).
@@ -1520,10 +1520,10 @@ Channel ID: UC9UTBXS_XpBCUIcOG7fwM8A
 Channel Name: UKF
 
 Number of selected videos: 0
-Number of videos uploaded in a year: 62
+Number of videos uploaded in a year: 61
 STATUS: ACTIVE
 
-Total number of videos selected so far: 30
+Total number of videos selected so far: 12
 //////////////////////////////////////////////////
 
 Channel 128 out of 138 (92.75 %).
@@ -1535,7 +1535,7 @@ Number of selected videos: 0
 Number of videos uploaded in a year: 247
 STATUS: ACTIVE
 
-Total number of videos selected so far: 30
+Total number of videos selected so far: 12
 //////////////////////////////////////////////////
 
 Channel 129 out of 138 (93.48 %).
@@ -1544,10 +1544,10 @@ Channel ID: UCfLFTP1uTuIizynWsZq2nkQ
 Channel Name: UKF Dubstep
 
 Number of selected videos: 0
-Number of videos uploaded in a year: 125
+Number of videos uploaded in a year: 126
 STATUS: ACTIVE
 
-Total number of videos selected so far: 30
+Total number of videos selected so far: 12
 //////////////////////////////////////////////////
 
 Channel 130 out of 138 (94.20 %).
@@ -1556,10 +1556,10 @@ Channel ID: UCpYkkFDnvHka9CBuwxPpqXw
 Channel Name: UKF On Air
 
 Number of selected videos: 0
-Number of videos uploaded in a year: 53
+Number of videos uploaded in a year: 38
 STATUS: ACTIVE
 
-Total number of videos selected so far: 30
+Total number of videos selected so far: 12
 //////////////////////////////////////////////////
 
 Channel 131 out of 138 (94.93 %).
@@ -1567,11 +1567,11 @@ Channel 131 out of 138 (94.93 %).
 Channel ID: UC4rasfm9J-X4jNl9SvXp8xA
 Channel Name: Ultra Music
 
-Number of selected videos: 2
-Number of videos uploaded in a year: 338
+Number of selected videos: 1
+Number of videos uploaded in a year: 344
 STATUS: ACTIVE
 
-Total number of videos selected so far: 32
+Total number of videos selected so far: 13
 //////////////////////////////////////////////////
 
 Channel 132 out of 138 (95.65 %).
@@ -1583,7 +1583,7 @@ Number of selected videos: 0
 Number of videos uploaded in a year: 4
 STATUS: ACTIVE
 
-Total number of videos selected so far: 32
+Total number of videos selected so far: 13
 //////////////////////////////////////////////////
 
 Channel 133 out of 138 (96.38 %).
@@ -1592,10 +1592,10 @@ Channel ID: UC_GPMS6hGLIKyafmNUsjY7g
 Channel Name: Universal Melody
 
 Number of selected videos: 0
-Number of videos uploaded in a year: 54
+Number of videos uploaded in a year: 55
 STATUS: ACTIVE
 
-Total number of videos selected so far: 32
+Total number of videos selected so far: 13
 //////////////////////////////////////////////////
 
 Channel 134 out of 138 (97.10 %).
@@ -1607,7 +1607,7 @@ Number of selected videos: 0
 Number of videos uploaded in a year: 11
 STATUS: ACTIVE
 
-Total number of videos selected so far: 32
+Total number of videos selected so far: 13
 //////////////////////////////////////////////////
 
 Channel 135 out of 138 (97.83 %).
@@ -1619,7 +1619,7 @@ Number of selected videos: 0
 Number of videos uploaded in a year: 0
 STATUS: INACTIVE
 
-Total number of videos selected so far: 32
+Total number of videos selected so far: 13
 //////////////////////////////////////////////////
 
 Channel 136 out of 138 (98.55 %).
@@ -1628,10 +1628,10 @@ Channel ID: UCVBXlR7YhYUr-DfNG1XLrHA
 Channel Name: Waxx
 
 Number of selected videos: 0
-Number of videos uploaded in a year: 35
+Number of videos uploaded in a year: 33
 STATUS: ACTIVE
 
-Total number of videos selected so far: 32
+Total number of videos selected so far: 13
 //////////////////////////////////////////////////
 
 Channel 137 out of 138 (99.28 %).
@@ -1639,11 +1639,11 @@ Channel 137 out of 138 (99.28 %).
 Channel ID: UCMOgdURr7d8pOVlc-alkfRg
 Channel Name: xKito Music
 
-Number of selected videos: 1
-Number of videos uploaded in a year: 172
+Number of selected videos: 0
+Number of videos uploaded in a year: 166
 STATUS: ACTIVE
 
-Total number of videos selected so far: 33
+Total number of videos selected so far: 13
 //////////////////////////////////////////////////
 
 Channel 138 out of 138 (100.00 %).
@@ -1655,55 +1655,35 @@ Number of selected videos: 0
 Number of videos uploaded in a year: 4
 STATUS: ACTIVE
 
-Total number of videos selected so far: 33
+Total number of videos selected so far: 13
 //////////////////////////////////////////////////
 
 
 - END OF THE RETRIEVING PROCESS -
 
-Number of short videos: 27
-['https://www.youtube.com/watch?v=nkY6ykqMtQc',
- 'https://www.youtube.com/watch?v=YaXP64Pzvvc',
- 'https://www.youtube.com/watch?v=vJEbB387i9U',
- 'https://www.youtube.com/watch?v=vsFoPwXuIhA',
- 'https://www.youtube.com/watch?v=CkzVtzP6T8c',
- 'https://www.youtube.com/watch?v=Uw7RUAuNGIQ',
- 'https://www.youtube.com/watch?v=_an4kXoSuRY',
- 'https://www.youtube.com/watch?v=Y1fPq_0iORs',
- 'https://www.youtube.com/watch?v=bucFdRtfx_g',
- 'https://www.youtube.com/watch?v=zha2S8-h6oc',
- 'https://www.youtube.com/watch?v=0InXL6Ng0po',
- 'https://www.youtube.com/watch?v=nli1RVzpWa4',
- 'https://www.youtube.com/watch?v=ZmUcfXIMU1k',
- 'https://www.youtube.com/watch?v=zNfiZgWsICM',
- 'https://www.youtube.com/watch?v=vsLxA4GXP3g',
- 'https://www.youtube.com/watch?v=FA9vqPWR0Ks',
- 'https://www.youtube.com/watch?v=Yw8NGLdni9s',
- 'https://www.youtube.com/watch?v=lwrzE73C-GQ',
- 'https://www.youtube.com/watch?v=babZOxmQglo',
- 'https://www.youtube.com/watch?v=F_UvAlVnW3c',
- 'https://www.youtube.com/watch?v=Cx5UCXETdhg',
- 'https://www.youtube.com/watch?v=1C6eiylPKXY',
- 'https://www.youtube.com/watch?v=KE4bc936Wig',
- 'https://www.youtube.com/watch?v=8HnNDuw2hpo',
- 'https://www.youtube.com/watch?v=Xvlq1bhJEt4',
- 'https://www.youtube.com/watch?v=eI2KtKJCzq0',
- 'https://www.youtube.com/watch?v=wiUfdptkfYE']
+Number of short videos: 10
+['https://www.youtube.com/watch?v=AViFWWuCofM',
+ 'https://www.youtube.com/watch?v=rYs_UjAj8I4',
+ 'https://www.youtube.com/watch?v=L303WEKP6Q4',
+ 'https://www.youtube.com/watch?v=ZpF49qWTZZI',
+ 'https://www.youtube.com/watch?v=HkC6Il57aDo',
+ 'https://www.youtube.com/watch?v=63OgJuAlWEs',
+ 'https://www.youtube.com/watch?v=7uClbgm6c3o',
+ 'https://www.youtube.com/watch?v=vl1-giT9XYs',
+ 'https://www.youtube.com/watch?v=FHQoa8DyY_Q',
+ 'https://www.youtube.com/watch?v=go9W3E1ZrbA']
 
-Number of long videos: 6
-['https://www.youtube.com/watch?v=_XtGW6GgcuM',
- 'https://www.youtube.com/watch?v=nzxRe_ntGxs',
- 'https://www.youtube.com/watch?v=PYIQwsmlfQg',
- 'https://www.youtube.com/watch?v=7wh7ogrRmVU',
- 'https://www.youtube.com/watch?v=kmwwtL8XGmo',
- 'https://www.youtube.com/watch?v=vsgdYsk4uBo']
+Number of long videos: 3
+['https://www.youtube.com/watch?v=Gi2rQ1otUMc',
+ 'https://www.youtube.com/watch?v=VM-nnCpZWqg',
+ 'https://www.youtube.com/watch?v=c68kyDllYAg']
 
 Adding videos into playlists...
 
-Estimated cost: 1350
+Estimated cost: 500
 
-Estimated cost: 300
+Estimated cost: 150
 
 - ALL DONE! -
 
-../Logs/Log_2021-06-16_09.44.40.txt removed!
+../Logs/Log_2021-06-29_11.41.13.txt removed!

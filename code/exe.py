@@ -64,5 +64,4 @@ gv.execution(path_channel_data_base_json=music_channels,
              api_service=service,
              selected_category="MUSIQUE",
              short_vid_index="music",
-             long_vid_index="mix",
-             min_dur_long_vid=10)
+             long_vid_index="mix")

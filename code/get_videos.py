@@ -3,7 +3,7 @@
 import json
 import webbrowser
 
-from datetime import datetime, timedelta  # , timezone
+from datetime import datetime, timedelta
 from dateutil import tz
 from dateutil.relativedelta import relativedelta
 from Google import create_service
@@ -11,11 +11,8 @@ from googleapiclient.errors import HttpError
 from isodate import parse_duration
 from os import listdir, remove
 from os.path import isfile, join, getctime
-from pprint import pformat  # , pprint
+from pprint import pformat
 from time import sleep
-
-# import os
-# import numpy as np
 
 """ - CREDITS -
 
@@ -139,24 +136,43 @@ def api_isin_playlist(a_playlist_id, a_video_id, api_service):
     return True
 
 
-def api_get_videos_duration(list_videos_ids, api_service):
+def api_get_videos_duration(list_videos, api_service):
     """Get the duration of 50 videos at once.
 
-    :param list_videos_ids: A list of video IDs, maximum size 50.
+    :param list_videos: A list of video IDs, maximum size 50.
     :param api_service: API Google Token generated with Google.py call.
     :return: a dictionary associating video id and duration of said video.
     """
-    durations = []
+    if list_videos:
+        durations = []
+        dates = []
 
-    chunks50 = divide_chunks(list_videos_ids, 50)
+        if isinstance(list_videos[0], tuple):
+            chunks50 = divide_chunks([video[0] for video in list_videos], 50)
 
-    for chunk in chunks50:
-        request = api_service.videos().list(id=",".join(chunk), part='contentDetails', maxResults=50).execute()
-        durations += [parse_duration(element["contentDetails"]["duration"]) for element in request["items"]]
+        else:
+            chunks50 = divide_chunks([video for video in list_videos], 50)
 
-    id_and_duration = dict(zip(list_videos_ids, durations))
+        # print(chunks50)
 
-    return id_and_duration
+        for chunk in chunks50:
+            request = api_service.videos().list(id=",".join(chunk),
+                                                part=['contentDetails', 'snippet'],
+                                                maxResults=50).execute()
+
+            # print(request)
+
+            durations += [parse_duration(element["contentDetails"]["duration"]) for element in request["items"]]
+            dates += [element["snippet"]["publishedAt"] for element in request["items"]]
+
+        # print(len(list_videos), len(durations), len(dates))
+
+        id_and_duration = sorted([(video_id, durations[idx], datetime.strptime(dates[idx], "%Y-%m-%dT%H:%M:%S%z"))
+                                  for idx, video_id in enumerate(list_videos)], key=lambda tup: tup[2])
+
+        return id_and_duration
+
+    return []
 
 
 def api_get_channel_name(channel_id, api_service):
@@ -186,21 +202,24 @@ def api_get_channel_name(channel_id, api_service):
     return name
 
 
-def api_add_to_playlist(playlist_id, ids_list, api_service):
+def api_add_to_playlist(playlist_id, videos_list, api_service):
     """Add selected video to a playlist.
 
     :param playlist_id: A specified playlist ID.
-    :param ids_list: List of videos' ID
+    :param videos_list: List of videos (ID, duration, date)
     :param api_service: API Google Token generated with Google.py call.
     :return: small text for logs.
     """
-    if ids_list:
-        to_print = f"Estimated cost: {len(ids_list) * 50}\n"
+    added = set()
+    not_added = set()
+
+    if videos_list:
+        to_print = f"Estimated cost: {len(videos_list) * 50}\n"
         print(to_print)
 
-        cpt = 1
+        for cpt, video in enumerate(videos_list):
+            video_id = video[0]
 
-        for video_id in ids_list:
             the_body = {"snippet": {"playlistId": playlist_id,
                                     "resourceId": {"videoId": video_id, "kind": "youtube#video"}}}
 
@@ -209,7 +228,7 @@ def api_add_to_playlist(playlist_id, ids_list, api_service):
             success = False
 
             while not success:
-                print(f"{cpt:02d}. Adding https://www.youtube.com/watch?v={video_id}...")
+                print(f"{cpt + 1:02d}. Adding https://www.youtube.com/watch?v={video_id}...")
 
                 try:
                     api_service.playlistItems().insert(part="snippet", body=the_body).execute()
@@ -222,14 +241,20 @@ def api_add_to_playlist(playlist_id, ids_list, api_service):
                 except HttpError:
 
                     error_message = f"Problem encountered with this video: https://www.youtube.com/watch?v={video_id}"
+                    not_added.add(video_id)
                     print(error_message)
                     to_print += error_message + '\n'
                     success = True
 
-            cpt += 1
+            added.add(video_id)
 
     else:
         to_print = "No video in this list.\n"
+
+    to_save = list(not_added.union({video[0] for video in videos_list if video[0] not in added}))
+
+    with open(f'../files/NOT_ADDED_{playlist_id}.json', 'w', encoding='utf8') as json_file:
+        json.dump(to_save, json_file, default=str, indent=4)
 
     return to_print
 
@@ -315,7 +340,8 @@ def video_selection(api_videos_list, latest_date, oldest_date, channel_id, api_s
                 upload_date = datetime.strptime(video["contentDetails"]["videoPublishedAt"], "%Y-%m-%dT%H:%M:%S%z")
 
                 if video_in_period(latest_date, oldest_date, upload_date):
-                    selection_list.append(video["snippet"]["resourceId"]["videoId"])
+                    selection_list.append((video["snippet"]["resourceId"]["videoId"],
+                                           video["contentDetails"]["videoPublishedAt"]))
 
                 if video_in_period(latest_date, a_year_ago, upload_date):
                     a_year_ago_count += 1
@@ -342,18 +368,15 @@ def get_all_videos(channel_ids_list, latest_date, oldest_date, api_service):
     """
     log_str = str()
     all_video_ids = []
-    count = int()
     ignored_report = []
 
     nb_channels = len(channel_ids_list)
 
-    for channel_id in channel_ids_list:
-        count += 1
-
+    for count, channel_id in enumerate(channel_ids_list):
         channel_selection = video_selection(api_get_channel_videos(channel_id, api_service), latest_date, oldest_date,
                                             channel_id, api_service)
 
-        to_print = f"Channel {count} out of {nb_channels} ({count * 100 / nb_channels:.2f} %).\n\n" \
+        to_print = f"Channel {count + 1} out of {nb_channels} ({(count + 1) * 100 / nb_channels:.2f} %).\n\n" \
                    f"Channel ID: {channel_id}\n" \
                    f"Channel Name: {channel_selection['channel_name']}\n\n" \
                    f"Number of selected videos: {len(channel_selection['selection_list'])}\n"
@@ -403,23 +426,23 @@ def get_all_videos(channel_ids_list, latest_date, oldest_date, api_service):
     return {"all_video_ids": all_video_ids, "log_str": log_str}
 
 
-def duration_filter(dict_ids_and_durations, minute_threshold):
+def duration_filter(ids_and_durations, minute_threshold):
     """Sort short and long videos in two list.
 
-    :param dict_ids_and_durations: dictionary of video's id and associated duration (from 'api_get_videos_duration').
+    :param ids_and_durations: dictionary of video's id and associated duration (from 'api_get_videos_duration').
     :param minute_threshold: minimum number of minutes to consider a video as a long video (10 minutes by default).
     :return: dictionary separating short and long videos.
     """
     delta_sec = minute_threshold * 60  # Threshold passed in second to fit 'timedelta'.
 
-    short_videos = [key for key, value in dict_ids_and_durations.items() if value <= timedelta(seconds=delta_sec)]
-    long_videos = [key for key, value in dict_ids_and_durations.items() if value > timedelta(seconds=delta_sec)]
+    short_videos = [video[0] for video in ids_and_durations if video[1] <= timedelta(seconds=delta_sec)]
+    long_videos = [video[0] for video in ids_and_durations if video[1] > timedelta(seconds=delta_sec)]
 
     to_print = f"- END OF THE RETRIEVING PROCESS -\n\n" \
                f"Number of short videos: {len(short_videos)}\n" \
-               f'{pformat([f"https://www.youtube.com/watch?v={element}" for element in short_videos])}\n\n' \
+               f'{pformat([f"https://www.youtube.com/watch?v={element[0]}" for element in short_videos])}\n\n' \
                f"Number of long videos: {len(long_videos)}\n" \
-               f'{pformat([f"https://www.youtube.com/watch?v={element}" for element in long_videos])}\n'
+               f'{pformat([f"https://www.youtube.com/watch?v={element[0]}" for element in long_videos])}\n'
 
     print(to_print)
 
@@ -452,7 +475,7 @@ def clean_logs(directory):
 
 
 def execution(path_channel_data_base_json, path_playlist_ids_json, latest_date, oldest_date, api_service,
-              selected_category="MUSIQUE", short_vid_index="music", long_vid_index="mix", min_dur_long_vid=10):
+              selected_category, short_vid_index, long_vid_index, min_dur_long_vid=10):
     """Execute the whole process.
 
     :param path_channel_data_base_json: file path to channel data_base. (Corresponding with 'get_channel_list' function)
@@ -483,9 +506,9 @@ def execution(path_channel_data_base_json, path_playlist_ids_json, latest_date, 
     all_vid = get_all_videos(music_channels, latest_date=latest_date, oldest_date=oldest_date, api_service=api_service)
     log += f'{all_vid["log_str"]}\n'
 
-    duration_dict = api_get_videos_duration(all_vid["all_video_ids"], api_service)
+    duration_list = api_get_videos_duration(all_vid["all_video_ids"], api_service)
 
-    duration_filter_dict = duration_filter(duration_dict, minute_threshold=min_dur_long_vid)
+    duration_filter_dict = duration_filter(duration_list, minute_threshold=min_dur_long_vid)
     log += f'{duration_filter_dict["logs"]}\n'
 
     print("Adding videos into playlists...\n")
@@ -537,5 +560,4 @@ if __name__ == "__main__":
               api_service=my_service,
               selected_category="MUSIQUE",
               short_vid_index="music",
-              long_vid_index="mix",
-              min_dur_long_vid=10)
+              long_vid_index="mix")

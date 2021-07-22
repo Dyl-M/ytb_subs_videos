@@ -370,3 +370,4 @@ MigrationBackup/
 files/Specific_logs/
 /files/code_secret_client.json
 /files/code_secret_client_2.json
+*/NOT_ADDED*.json

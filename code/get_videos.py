@@ -202,12 +202,13 @@ def api_get_channel_name(channel_id, api_service):
     return name
 
 
-def api_add_to_playlist(playlist_id, videos_list, api_service):
+def api_add_to_playlist(playlist_id, videos_list, api_service, delay=True):
     """Add selected video to a playlist.
 
     :param playlist_id: A specified playlist ID.
     :param videos_list: List of videos (ID, duration, date)
     :param api_service: API Google Token generated with Google.py call.
+    :param delay: if True, will input delay between videos' additions into playlist.
     :return: small text for logs.
     """
     added = set()
@@ -222,8 +223,8 @@ def api_add_to_playlist(playlist_id, videos_list, api_service):
 
             the_body = {"snippet": {"playlistId": playlist_id,
                                     "resourceId": {"videoId": video_id, "kind": "youtube#video"}}}
-
-            sleep(1 + (cpt - 1) / 10)
+            if delay:
+                sleep(1 + (cpt - 1) / 10)
 
             success = False
 
@@ -475,7 +476,7 @@ def clean_logs(directory):
 
 
 def execution(path_channel_data_base_json, path_playlist_ids_json, latest_date, oldest_date, api_service,
-              selected_category, short_vid_index, long_vid_index, min_dur_long_vid=10):
+              selected_category, short_vid_index, long_vid_index, min_dur_long_vid=10, delay=True):
     """Execute the whole process.
 
     :param path_channel_data_base_json: file path to channel data_base. (Corresponding with 'get_channel_list' function)
@@ -491,6 +492,7 @@ def execution(path_channel_data_base_json, path_playlist_ids_json, latest_date, 
                            default, feel free to change it).
     :param min_dur_long_vid: minimum duration to consider that a video is long (10 minutes by default, feel free to
                               change it). (Corresponding with 'minute_threshold' argument in 'duration_filter' function)
+    :param delay: if True, will input delay between videos' additions into playlist.
     """
     today_date = datetime.today()
 
@@ -515,11 +517,11 @@ def execution(path_channel_data_base_json, path_playlist_ids_json, latest_date, 
     log += "Adding videos into playlists...\n\n"
 
     log_short_vid_text = api_add_to_playlist(playlist_ids[short_vid_index], duration_filter_dict["short_videos"],
-                                             api_service)
+                                             api_service, delay=delay)
     log += f'{log_short_vid_text}\n'
 
     log_long_vid_text = api_add_to_playlist(playlist_ids[long_vid_index], duration_filter_dict["long_videos"],
-                                            api_service)
+                                            api_service, delay=delay)
     log += f'{log_long_vid_text}\n'
 
     print("- ALL DONE! -\n")
@@ -539,7 +541,7 @@ def execution(path_channel_data_base_json, path_playlist_ids_json, latest_date, 
 " - MAIN PROGRAM -"
 
 if __name__ == "__main__":
-    CLIENT_SECRET_FILE = '../files/code_secret_client.json'
+    CLIENT_SECRET_FILE = '../files/code_secret_client_2.json'
     API_NAME = 'YouTube'
     API_VERSION = 'v3'
     SCOPES = ['https://www.googleapis.com/auth/youtube']

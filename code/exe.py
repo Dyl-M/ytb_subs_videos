@@ -17,7 +17,7 @@ For more information, see 'get_videos.py' file.
 
 " - Google Service Creation - "
 
-CLIENT_SECRET_FILE = '../files/code_secret_client.json'
+CLIENT_SECRET_FILE = '../files/code_secret_client_2.json'
 API_NAME = 'YouTube'
 API_VERSION = 'v3'
 SCOPES = ['https://www.googleapis.com/auth/youtube']
